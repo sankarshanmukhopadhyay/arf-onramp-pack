@@ -1,13 +1,6 @@
-# ARF On‑Ramp Pack (Non‑normative)
-This folder is a drop-in set of “explainer” documents intended to make the ARF easier to understand and navigate.
+# ARF Onramp Pack  
+### EU Digital Identity Wallet Architecture & Reference Framework (ARF) Implementation Companion
 
-## Contents
-- `docs/arf-explained.md`
-- `docs/reading-paths/*`
+This repository provides structured orientation, implementation guidance, and conformance interpretation support for the EU Digital Identity Wallet Architecture and Reference Framework (ARF).
 
-## Source of truth
-The normative ARF text remains in:
-- `docs/architecture-and-reference-framework-main.md`
-
----
-End
+See /docs for companion artifacts including conformance interpretation and governance-to-control mapping.
