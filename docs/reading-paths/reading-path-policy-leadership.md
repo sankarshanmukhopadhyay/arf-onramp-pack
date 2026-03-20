@@ -1,100 +1,397 @@
-# Reading Path A: Policy, Leadership, and Program Owners
-**Target time:** 15–25 minutes  
-**Outcome:** You can explain what the EUDI Wallet ecosystem is, why it exists, what “good” looks like at scale, and what must be true for rollout credibility.
+# Reading Path: Policy Leadership & Program Management
 
-**Primary ARF references:**  
-- [ARF §1.1 EUDI Wallet ecosystem](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md#11-eudi-wallet-ecosystem)  
-- [ARF §1.3 Purpose, scope and audience](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md#13-purpose-scope-and-audience)  
-- [ARF §3 EUDI Wallet ecosystem (roles)](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md#3-eudi-wallet-ecosystem)  
-- [ARF §7 Privacy](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md#7-privacy)
+**For:** Program managers, policy officers, executive sponsors, member state representatives  
+**Focus:** Regulatory landscape, governance models, ecosystem coordination, strategic decisions  
+**Time:** 30–45 minutes to read; 2–3 hours with ARF deep-dive  
+**Outcome:** Understand EUDI mandate, governance structures, certification requirements, and member state responsibilities
 
 ---
 
-## 1) The one-paragraph story you should be able to repeat
-The EUDI Wallet ecosystem is a standardized EU-wide way for a person to hold authoritative identity data (PID), receive trusted attestations (attributes/qualifications), and present privacy-preserving proofs to services (Relying Parties). The ARF exists to make this interoperable across borders and vendors, while enforcing security, privacy, and governance requirements that can be certified and supervised.
+## Before You Start
+
+**You should know:**
+- What the eIDAS Regulation is (or read [EU Digital Identity Regulation](https://eur-lex.europa.eu/eli/reg/2014/910/2024-10-18))
+- Your role (implementing, overseeing, or policy-making)
+- Your geographic scope (one member state, EU-wide, etc.)
+
+**You might skip if:**
+- You're purely a technical implementer (see [Implementer path](./reading-path-implementer.md))
+- You need immediate protocol details (see [Implementer path](./reading-path-implementer.md))
 
 ---
 
-## 2) What problem this solves (in program terms)
-### Interoperability at EU scale
-Without a shared architecture, each Member State and vendor becomes a silo, and cross-border usage collapses into bespoke integrations.
+## Key Concepts for Policy Leaders
 
-### Trust you can audit
-Relying Parties must be able to accept proofs with confidence, based on verifiable trust anchors and certified implementations.
+### 1. The Regulatory Mandate
 
-### Privacy as a scaling prerequisite
-If the ecosystem enables tracking or data over-collection, it will fail adoption and legitimacy tests, even if it is technically interoperable.
+**What:** EU Digital Identity Regulation 2024/910 requires member states to provide citizens and businesses with digital identity wallets.
 
-**ARF pointers:**  
-- [ARF §7.4.3.5.2 Mitigating Relying Party linkability](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md#74352-mitigating-relying-party-linkability)
+**Why:** To enable:
+- Universal access to government services online across EU
+- Strong authentication without relying on private platforms
+- User control over personal data
+- Cross-border interoperability
 
----
+**Your role:** Decide *how* your member state implements this (government-run, private operator, hybrid, etc.)
 
-## 3) Roles: who does what (minimum viable clarity)
-- **User** (citizen / resident): controls use of the wallet.
-- **Wallet Unit:** user’s wallet instance and proof engine.
-- **PID Provider:** authoritative issuer of PID.
-- **Attestation Providers:** issuers of attributes and qualifications.
-- **Relying Party:** service consuming proofs.
-- **Registrars / Access Certificate Authorities:** registration + access certificates for ecosystem participants.
+### 2. The Architecture & Reference Framework (ARF)
 
-**ARF pointers:**  
-- [ARF §3.1 Introduction (roles overview)](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md#31-introduction)  
-- [ARF §3.17 Registrars](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md#317-registrars)  
-- [ARF §3.18 Access Certificate Authorities](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md#318-access-certificate-authorities)
+**What:** Technical specification describing how wallets must work
 
----
+**Who created it:** European Digital Identity Cooperation Group (EDICG)
 
-## 4) The three journeys (what happens in the real world)
-1) **Provision** a Wallet Unit into a trustworthy state  
-2) **Issue** PID and attestations into the wallet  
-3) **Present** proofs to Relying Parties
+**Your role:** Ensure your wallet implementation conforms to ARF to achieve EU interoperability
 
-**ARF pointers (entry points):**  
-- [ARF §4 EUDI Wallet ecosystem lifecycle and interactions](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md#4-eudi-wallet-ecosystem-lifecycle-and-interactions)
+### 3. Governance Layers
 
----
+The EUDI ecosystem has governance at three levels:
 
-## 5) Non-negotiables (the “board slide”)
-### Security-by-design
-- Compromise must be survivable (revocation, recovery, rotation).
-- Update and lifecycle mechanisms are critical infrastructure.
+| Level | Players | Decisions |
+|-------|---------|-----------|
+| **EU/Commission** | EC, EDICG | Technical standards, CIRs, toolbox |
+| **Member State** | Supervisory Body, wallets, issuers | Certification, oversight, national rules |
+| **Wallet Operator** | Wallet Provider, issuers, RPs | Product design, service policies, SLAs |
 
-### Privacy-by-design
-- Data minimization is mandatory.
-- Anti-correlation is a systemic requirement.
+**Your role (Member State):** Design national governance while conforming to EU standards.
 
-### Conformance
-- “Interoperable” means testable outcomes with evidence artifacts.
-- Certification must reduce false positives and increase auditability.
+### 4. Certification & Compliance
+
+**What:** Wallets must be certified by Supervisory Bodies to prove ARF conformance (CIR 2024/2981)
+
+**Why:** Ensures interoperability and security across EU
+
+**Your role:** Designate Supervisory Body, set certification timelines, oversee member state wallets
+
+### 5. Ecosystem Coordination
+
+**What:** Different member states' wallets must recognize each other's credentials
+
+**Why:** User in Spain should be able to use Portuguese government ID to authenticate in German bank
+
+**Your role:** Coordinate with other member states, contribute to EU trust lists, participate in EDICG
 
 ---
 
-## 6) What to ask teams (high-leverage governance questions)
-### A) Ecosystem trust
-- Who are the trust anchors for PID Providers, Attestation Providers, Wallet Providers, and Relying Parties?
-- How does an RP discover and validate who is authorized to issue what?
+## Recommended Reading Order
 
-### B) Rollout readiness
-- What is the incident response model for compromised issuers/wallets?
-- What is the revocation and recovery model at population scale?
+### Section 1: Regulatory Landscape (10 min)
 
-### C) Adoption and legitimacy
-- How do we prevent the wallet from becoming a tracking layer?
-- What’s the consent model and how is it enforced?
+**Read:** [ARF Explained](../arf-explained.md) → "What Is the ARF?" section
 
-### D) Conformance and certification
-- What evidence is required to claim a pass for each flow?
-- How are “passes without proof” prevented in test harnesses?
+**Then:** Understand the regulatory mandate from the [EU Digital Identity Regulation](https://eur-lex.europa.eu/eli/reg/2014/910/2024-10-18) (or read a summary)
+
+**Key Questions to Answer:**
+- [ ] What does the EU regulation require of member states?
+- [ ] What is the EDICG and what role does it play?
+- [ ] What is the ARF and who maintains it?
 
 ---
 
-## 7) Decision checklist (definition of done for governance)
-- [ ] Roles and accountability mapped per use case
-- [ ] Trust anchor discovery model defined for RPs
-- [ ] Privacy and anti-correlation requirements operationalized
-- [ ] Conformance criteria defined as evidence-backed assertions
-- [ ] Supervision and incident response mechanisms documented
+### Section 2: EUDI Wallet Overview (10 min)
+
+**Read:** [ARF Explained](../arf-explained.md) → "Key Concepts" section
+
+**Then:** Review [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → **Chapter 1** (Introduction) and **Chapter 2** (Roles & Governance)
+
+**Key Questions to Answer:**
+- [ ] What is a wallet and what does it do?
+- [ ] Who are the participants (Wallet Provider, PID Provider, Relying Party, Supervisory Body)?
+- [ ] What are the governance responsibilities of each role?
 
 ---
-**End**
+
+### Section 3: Governance Model & Member State Role (10 min)
+
+**Read:** [ARF Explained](../arf-explained.md) → "Governance & Oversight" section
+
+**Then:** [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → **Chapter 7** (Conformance & Certification)
+
+**Also Read:** [Commission Implementing Regulation 2024/2981](https://data.europa.eu/eli/reg_impl/2024/2981/oj) → Certification criteria (executive summary)
+
+**Key Questions to Answer:**
+- [ ] What are the member state's responsibilities?
+- [ ] What is the role of the Supervisory Body?
+- [ ] What does wallet certification entail?
+- [ ] What oversight mechanisms exist?
+
+---
+
+### Section 4: Certification & Compliance Process (10 min)
+
+**Read:** [Conformance Interpretation Companion](../conformance-interpretation-companion.md) → "Conformance Certification Process" section
+
+**Then:** [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → **Chapter 7** in detail
+
+**Key Questions to Answer:**
+- [ ] What is the certification process?
+- [ ] What evidence is needed?
+- [ ] What is the member state's role in certification?
+- [ ] How long does certification typically take?
+
+---
+
+### Section 5: Interoperability & Ecosystem Coordination (5 min)
+
+**Read:** [ARF Explained](../arf-explained.md) → "Interoperability" section
+
+**Then:** [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → **Chapter 2, Section 2.3** (Cross-border interoperability)
+
+**Key Questions to Answer:**
+- [ ] How do member state wallets recognize each other?
+- [ ] What is the role of trust lists and metadata?
+- [ ] How is cross-border compliance coordinated?
+
+---
+
+## Deep-Dive Topics (Optional)
+
+### If You're Designing Member State Wallet Strategy
+
+**Additional Reading:**
+1. [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → Chapter 3 (Wallet Architecture)
+2. [Governance to Control Mapping](../governance-to-control-mapping.md) → Understand how governance translates to controls
+3. [Upstream Alignment Guide](../upstream-alignment-guide.md) → Understand ARF evolution and plan for updates
+
+**Questions to Explore:**
+- What assurance levels will your wallet support (L0–L3)?
+- Will your wallet be government-run or outsourced?
+- How will you handle multiple issuers (PID, EAA, educational credentials)?
+- What is your timeline for certification?
+
+### If You're Setting Up Supervisory Body
+
+**Additional Reading:**
+1. [CIR 2024/2981](https://data.europa.eu/eli/reg_impl/2024/2981/oj) → Full certification regulation
+2. [CIR 2024/2980](https://data.europa.eu/eli/reg_impl/2024/2980/oj) → Ecosystem notifications
+3. [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → Chapter 7 (Supervisory Body Responsibilities)
+
+**Questions to Explore:**
+- What is the certification approval timeline?
+- What resources are needed for oversight?
+- How will you maintain the certified wallet list?
+- How will you handle incident reports?
+
+### If You're Coordinating Cross-Border Implementation
+
+**Additional Reading:**
+1. [EDICG Page](https://digital-strategy.ec.europa.eu/en/policies/european-digital-identity-cooperation-group) → Governance body info
+2. [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → Chapter 2, Section 2.3 (Interoperability)
+3. [CIR 2025/846](https://data.europa.eu/eli/reg_impl/2025/846/oj) → Cross-border identity matching
+
+**Questions to Explore:**
+- How are trust lists maintained?
+- How are metadata and ecosystem information shared?
+- What is the process for member state wallets recognizing each other's credentials?
+
+---
+
+## Common Questions for Policy Leaders
+
+### Q1: "What's the difference between the Regulation and the ARF?"
+
+**A:** The **Regulation** is law—what member states must do. The **ARF** is technical guidance—how to do it.
+
+```
+Regulation 2024/910 says: "Member states SHALL offer citizens digital wallets"
+  ↓
+ARF says: "Here's how to build one that interoperates with others"
+```
+
+You need both to implement successfully.
+
+### Q2: "Can we build a wallet that doesn't conform to ARF?"
+
+**A:** Technically yes, but it won't interoperate with other member states. The ARF is the basis for EU interoperability.
+
+**Recommendation:** Conform to ARF to enable citizens to use your wallet across EU.
+
+### Q3: "How long does certification take?"
+
+**A:** 3–6 months typically, depending on wallet maturity and evidence completeness. CIR 2024/2981 specifies the process, but timelines vary by member state.
+
+**Planning:** Budget 6–9 months from "ready to certify" to "certified."
+
+### Q4: "What is an 'assurance level' and why does it matter?"
+
+**A:** Assurance levels (L0–L3) are confidence levels in wallet security:
+
+| Level | Use Case | Example |
+|-------|----------|---------|
+| L0 | Very low stakes | Blog comment login |
+| L1 | Standard services | Gov info access |
+| L2 | Sensitive services | Bank login |
+| L3 | High-value transactions | Land registry, legal docs |
+
+**Implication:** Your wallet must declare what level it targets. L3 requires more stringent security controls.
+
+### Q5: "What role does the Supervisory Body play?"
+
+**A:** The Supervisory Body (member state designated):
+- Certifies wallets
+- Maintains certified wallet list
+- Oversees compliance
+- Handles incident reports
+
+**Your role:** Designate a body (government agency, independent authority, etc.) and give it authority.
+
+### Q6: "Can member states have different rules?"
+
+**A:** Some variation is possible, but must stay within ARF envelope. Example:
+
+```
+ARF baseline: Device binding is RECOMMENDED (optional)
+Member State A: Requires device binding for L2+ (adds requirement)
+Member State B: Allows device binding (follows ARF default)
+Both are valid as long as both support ARF minimum
+```
+
+**Rule:** You can add requirements above ARF minimum, but not below it.
+
+### Q7: "How do we handle incidents (e.g., security breach)?"
+
+**A:** ARF requires incident reporting to Supervisory Body (CIR 2025/847):
+- Wallet Provider discovers breach
+- Reports to member state within 72 hours
+- Supervisory Body notifies EC
+- Public notification if user data compromised
+
+**Your role:** Define incident response procedures for your member state.
+
+---
+
+## Strategic Decision Framework
+
+Use this to guide member state wallet strategy:
+
+### Decision 1: Wallet Operator Model
+
+```
+Question: Who operates the wallet?
+
+Option A: Government-run
+  ✅ Full control, public trust
+  ❌ High cost, slower innovation
+
+Option B: Private provider (certified)
+  ✅ Market innovation, private sector efficiency
+  ❌ Regulatory oversight needed
+
+Option C: Hybrid (government + private alternatives)
+  ✅ Choice for citizens, market incentive
+  ❌ Complex coordination
+
+ARF Requirement: CIR 2024/2981 applies to all
+```
+
+### Decision 2: Assurance Level Target
+
+```
+Question: Which assurance levels will your wallet support?
+
+L0–L1: Faster to market, broader use cases
+L2: Standard for most government services, good security
+L3: High-value transactions, most stringent controls
+
+ARF Requirement: Must support at least some level
+Recommendation: Start with L1–L2; L3 optional for later
+```
+
+### Decision 3: Credential Scope
+
+```
+Question: What credentials will your wallet support at launch?
+
+Baseline: PID (Person ID, government-issued)
+Extended: EAAs (educational, professional credentials)
+Custom: Industry-specific or domain-specific
+
+ARF Requirement: PID is mandated; others are optional
+Recommendation: Define roadmap (what's in v1, v2, v3)
+```
+
+### Decision 4: Cross-Border Strategy
+
+```
+Question: How will you handle EU interoperability?
+
+Option A: Full interoperability (recognize all EU credentials)
+  ✅ Best for citizens, most interoperable
+  ❌ Requires coordination and updates
+
+Option B: Gradual (start with trusted partners)
+  ✅ Manageable rollout
+  ❌ Fragmented user experience initially
+
+ARF Requirement: Member states SHALL coordinate
+Recommendation: Join EDICG, participate in trust list maintenance
+```
+
+---
+
+## Organizational Checklist
+
+### Before You Start Implementation
+
+- [ ] Understand EU Digital Identity Regulation 2024/910
+- [ ] Review ARF main document (especially Chapters 2 & 7)
+- [ ] Identify your member state's governance body
+- [ ] Designate or establish Supervisory Body
+- [ ] Define wallet strategy (operator model, assurance levels, scope)
+- [ ] Estimate timeline and budget
+- [ ] Plan for EDICG participation
+
+### As You Implement
+
+- [ ] Establish certification criteria for wallet providers
+- [ ] Set up compliance monitoring process
+- [ ] Maintain certified wallet list
+- [ ] Coordinate with other member states (trust lists, metadata)
+- [ ] Plan for updates when ARF changes
+
+### Before Certification
+
+- [ ] Ensure wallet provider has conformance evidence
+- [ ] Verify traceability matrix completeness
+- [ ] Conduct certification review
+- [ ] Prepare incident response procedures
+- [ ] Train Supervisory Body on oversight duties
+
+---
+
+## Key Resources
+
+### Regulatory Documents
+- **EU Digital Identity Regulation 2024/910:** https://eur-lex.europa.eu/eli/reg/2014/910/2024-10-18
+- **CIR 2024/2981 (Certification):** https://data.europa.eu/eli/reg_impl/2024/2981/oj
+- **Other CIRs:** See [Quick Reference](../quick-reference.md)
+
+### ARF Documentation
+- **ARF Main Document:** https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md
+- **ARF Annexes (high-level requirements):** https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/annexes
+- **ARF Repository:** https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework
+
+### Community & Governance
+- **EDICG (European Digital Identity Cooperation Group):** https://digital-strategy.ec.europa.eu/en/policies/european-digital-identity-cooperation-group
+- **EUDI Wallet Home:** https://ec.europa.eu/digital-building-blocks/sites/spaces/EUDIGITALIDENTITYWALLET/
+
+### On-Ramp Guides (Complementary)
+- **Quick Reference:** [../quick-reference.md](../quick-reference.md) — Glossary, regulatory links, resources
+- **Upstream Alignment Guide:** [../upstream-alignment-guide.md](../upstream-alignment-guide.md) — Track ARF changes
+- **Conformance Interpretation:** [../conformance-interpretation-companion.md](../conformance-interpretation-companion.md) — How to assess conformance
+
+---
+
+## Next Steps
+
+1. **Brief your leadership** on EUDI mandate and ARF landscape
+2. **Define your member state strategy** (operator model, timeline, assurance levels)
+3. **Establish governance structure** (designate Supervisory Body, set oversight procedures)
+4. **Engage with EDICG** for cross-border coordination
+5. **Share ARF with implementers** (give them [Implementer path](./reading-path-implementer.md))
+6. **Set up compliance monitoring** using [Conformance Interpretation Companion](../conformance-interpretation-companion.md)
+7. **Plan for updates** using [Upstream Alignment Guide](../upstream-alignment-guide.md)
+
+---
+
+**Last Updated:** March 2026  
+**ARF Alignment:** 2.8.0 (2026-02-02)
