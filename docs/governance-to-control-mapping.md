@@ -9,6 +9,19 @@ Use this to understand:
 - What evidence is needed to prove compliance
 - How to organize your security program around ARF mandates
 - Where governance and engineering responsibilities intersect
+- How eIDAS Regulation and CIR 2024/1183 mandate these controls
+
+---
+
+## Regulatory Foundation
+
+All mappings in this document are grounded in:
+
+- **[eIDAS Regulation 2014/910/EU](https://eur-lex.europa.eu/eli/reg/2014/910/2024-10-18)** (Articles 1–11 on digital identity)
+- **[Commission Implementing Regulation 2024/1183](https://eur-lex.europa.eu/eli/reg/2024/1183/oj)** (Technical specifications & conformance, Articles 1–13)
+- **[ARF v2.8.0](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md)** (Chapter 6: Security, Integrity, and Accessibility; Chapter 7: Governance; Annexes 2–3)
+- **[GDPR 2016/679](https://eur-lex.europa.eu/eli/reg/2016/679/oj)** (Articles 25, 32–34 on data protection)
+- **[ISO/IEC 27001:2022](https://www.iso.org/standard/54534.html)** (Information security management systems)
 
 ---
 
@@ -18,86 +31,95 @@ A **governance requirement** is typically a policy mandate. A **control** is a c
 
 ### Example: Device Binding
 
-**Governance Requirement (ARF Section 4.3.2, Topic 26):**
+**Governance Requirement** ([ARF Chapter 3, Section 3.4](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md), [Topic 26](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/discussion-topics)):
 ```
 "Wallet SHOULD cryptographically bind credentials to the device"
 (ARF 2.6.0+: Device binding is recommended, not mandatory)
+Regulatory Basis: CIR 2024/1183 Article 9(3) (Conformance Profiles)
 ```
 
 **Technical Controls:**
 ```
 Control 1: Device Key Derivation
   - Generate unique key pair per device during provisioning
-  - Derive from device hardware (TEE, Secure Enclave)
+  - Derive from device hardware (TEE, Secure Enclave) per ISO/IEC 18013-5
   - Never export private key from device
+  - Store in WSCD (Wallet Secure Crypto Device) per ARF Section 3.4
 
 Control 2: Credential Binding
-  - Embed device public key in credential
-  - Require device private key signature for presentation
-  - Binding stored in credential metadata
+  - Embed device public key in credential metadata (per OpenID4VCI 1.0)
+  - Require device private key signature for presentation (per OpenID4VP 1.0)
+  - Binding validated per SD-JWT spec (RFC 9052)
 
 Control 3: Presentation Verification
   - Service verifies device public key in credential
   - Service verifies device signature on presentation
-  - Reject if device binding missing (if device binding is required for your profile)
+  - Reject if device binding missing (if device binding required for your AL)
 ```
 
 **Evidence:**
 ```
-- Architecture documentation (device key generation)
-- Code review (key storage in secure hardware)
+- Architecture documentation (device key generation, per ARF Annex II)
+- Code review (key storage in WSCD per CIR 2024/1183 Annex III)
 - Test cases (device binding acceptance/rejection)
-- Threat model (attack scenarios and mitigations)
+- Threat model (attack scenarios per ARF Chapter 6, Section 6.2)
+- Cryptographic test vectors (NIST FIPS 140-3 validation)
 ```
 
 ---
 
 ## Governance Domains
 
-ARF governance requirements fall into **four domains**:
+ARF governance requirements fall into **four domains**, each grounded in regulatory and security frameworks:
 
 ### Domain 1: Identity Verification & Issuance
 
-**ARF Sections:** 4.2, 4.4, Topic 7–10
+**ARF Sections:** [Chapter 4, Sections 4.2, 4.4](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md); [Topics 7–10](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/discussion-topics)
 
-**Core Requirement:** Issuers must verify users' identities before issuing credentials.
+**Regulatory Basis:** [CIR 2024/1183 Articles 1–8](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) (Technical specs for issuance); eIDAS Articles 5–6 (Identity verification mandates)
+
+**Core Requirement:** Issuers must verify users' identities before issuing credentials ([eIDAS Article 5](https://eur-lex.europa.eu/eli/reg/2014/910/2024-10-18)).
 
 **Sample Governance Requirements:**
 
-| Requirement | Technical Control | Evidence |
-|---|---|---|
-| "Issuer SHALL verify user identity before issuing PID" (Topic 7) | User identification process (docs, biometrics, in-person) | Policy doc, enrollment logs |
-| "PID SHALL contain authentic source data" (Topic 8) | Integration with government ID registers | System architecture, data integration tests |
-| "Attestation Provider SHALL bind attestation to specific user" (Topic 9) | User database with unique identifiers | Database schema, access logs |
-| "Credential lifecycle SHALL be managed" (Topic 10) | Expiration dates, revocation lists, status endpoints | Credential metadata, revocation status service |
+| Requirement | Regulatory Basis | Technical Control | Evidence |
+|---|---|---|---|
+| "Issuer SHALL verify user identity before issuing PID" | [ARF Topic 7](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/discussion-topics), [eIDAS Art. 5](https://eur-lex.europa.eu/eli/reg/2014/910/2024-10-18) | User identification process (docs, biometrics, in-person; per ISO/IEC 14882) | Policy doc, enrollment logs, audit trail |
+| "PID SHALL contain authentic source data" | [ARF Topic 8](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/discussion-topics), [CIR 2024/1183 Annex I](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) | Integration with government ID registers with audit logging | System architecture, data integration tests, audit logs |
+| "Attestation Provider SHALL bind attestation to specific user" | [ARF Topic 9](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/discussion-topics) | User database with unique identifiers, audit controls | Database schema, access logs, GDPR compliance logs |
+| "Credential lifecycle SHALL be managed" | [ARF Topic 10](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/discussion-topics), [CIR 2024/1183 Art. 1–2](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) | Expiration dates, revocation lists, status endpoints per [RFC 6960](https://datatracker.ietf.org/doc/html/rfc6960) (OCSP) | Credential metadata, revocation status service logs |
 
 ### Domain 2: Wallet Security & Key Management
 
-**ARF Sections:** 6.3, 6.5, Topic 26–30
+**ARF Sections:** [Chapter 6, Sections 6.3, 6.5](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md); [Topics 26–30](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/discussion-topics)
 
-**Core Requirement:** Wallets must protect user keys and credentials cryptographically.
+**Regulatory Basis:** [CIR 2024/1183 Articles 9–13](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) (Conformance & security assurance levels); [GDPR Articles 32–34](https://eur-lex.europa.eu/eli/reg/2016/679/oj) (Technical safeguards)
+
+**Core Requirement:** Wallets must protect user keys and credentials cryptographically ([CIR 2024/1183 Article 9](https://eur-lex.europa.eu/eli/reg/2024/1183/oj)).
 
 **Sample Governance Requirements:**
 
-| Requirement | Technical Control | Evidence |
-|---|---|---|
-| "Wallet SHALL protect private keys" (Topic 26) | Secure key storage (Secure Enclave, HSM, encrypted storage) | Arch doc, security review, key protection tests |
-| "Wallet SHOULD support device binding" (Topic 26) | Device key derivation + credential binding | Arch doc, binding verification tests |
-| "Keys SHALL use approved cryptographic algorithms" (Topic 27) | RS256, ECDSA, SHA-256+ | Cryptographic test vectors, code review |
-| "Wallet SHALL handle key rotation" (Topic 28) | Key lifecycle management, versioning | Operational procedure, rotation tests |
-| "Wallet SHALL prevent unauthorized key access" (Topic 29) | User authentication (PIN, biometric) before key use | UX tests, threat model, access control tests |
+| Requirement | Regulatory Basis | Technical Control | Evidence |
+|---|---|---|---|
+| "Wallet SHALL protect private keys" | [ARF Topic 26](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/discussion-topics), [CIR 2024/1183 Art. 9(2)](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) | Secure key storage: Secure Enclave, HSM, encrypted storage per [FIPS 140-3](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.140-3.pdf) | Arch doc, [FIPS 140-3](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.140-3.pdf) validation cert, security review, key protection tests |
+| "Wallet SHOULD support device binding" | [ARF Topic 26](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/discussion-topics), [ISO/IEC 18013-5:2021](https://www.iso.org/standard/69084.html) | Device key derivation + credential binding per [RFC 9052](https://datatracker.ietf.org/doc/html/rfc9052) (SD-JWT) | Arch doc, binding verification tests, threat model |
+| "Keys SHALL use approved cryptographic algorithms" | [CIR 2024/1183 Annex III](https://eur-lex.europa.eu/eli/reg/2024/1183/oj), [NIST SP 800-38D](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38d.pdf) | RS256, ECDSA, AES-256-GCM, SHA-256+ only | Cryptographic test vectors, code review, [NIST](https://nvlpubs.nist.gov/) validation |
+| "Wallet SHALL handle key rotation" | [ARF Topic 28](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/discussion-topics), [GDPR Art. 32](https://eur-lex.europa.eu/eli/reg/2016/679/oj) | Key lifecycle management, versioning, audit logging | Operational procedure, rotation tests, audit logs |
+| "Wallet SHALL prevent unauthorized key access" | [ARF Topic 29](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/discussion-topics), [GDPR Art. 32](https://eur-lex.europa.eu/eli/reg/2016/679/oj) | User authentication (PIN, biometric) before key use per [NIST SP 800-63B](https://pages.nist.gov/800-63-3/sp800-63b.html) | UX tests, threat model, access control tests, audit logs |
 
 ### Domain 3: User Authentication & Consent
 
-**ARF Sections:** 6.5.3.3, Topic 40, Chapter 8
+**ARF Sections:** [Chapter 6, Section 6.5.3.3](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md); [Topic 40](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/discussion-topics); [Chapter 8 (Accessibility)](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md)
 
-**Core Requirement:** Users must explicitly approve and authenticate credential sharing.
+**Regulatory Basis:** [GDPR Articles 6, 7](https://eur-lex.europa.eu/eli/reg/2016/679/oj) (Legal basis, consent); eIDAS Articles 8–9 (User control)
+
+**Core Requirement:** Users must explicitly approve and authenticate credential sharing ([GDPR Article 7](https://eur-lex.europa.eu/eli/reg/2016/679/oj)).
 
 **Sample Governance Requirements:**
 
-| Requirement | Technical Control | Evidence |
-|---|---|---|
-| "Wallet SHALL display credential request to user" (Topic 40) | UI showing requested claims, issuer, purpose | UI review, screenshots |
+| Requirement | Regulatory Basis | Technical Control | Evidence |
+|---|---|---|---|
+| "Wallet SHALL display credential request to user" | [ARF Topic 40](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/discussion-topics), [GDPR Art. 7](https://eur-lex.europa.eu/eli/reg/2016/679/oj), [WCAG 2.1 AA](https://www.w3.org/WAI/WCAG21/quickref/) | UI showing requested claims, issuer, purpose; [EN 301 549](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf) accessible | UI review, screenshots, accessibility audit ([WCAG](https://www.w3.org/WAI/WCAG21/quickref/)) |
 | "User SHALL authenticate before sharing" (Topic 40, Section 6.5.3.3) | Biometric, PIN, device unlock | UX tests, authentication logs |
 | "Wallet SHALL NOT share without user approval" (Topic 40) | Explicit approval button; no auto-sharing | Code review, user acceptance tests |
 | "Wallet SHALL be accessible to all users" (Topic 54, Chapter 8) | WCAG 2.1 AA compliance, keyboard nav, screen reader support | Accessibility audit, test report |

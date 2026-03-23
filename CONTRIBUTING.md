@@ -285,13 +285,114 @@ If you're unsure about something:
 
 ---
 
+## Citation & Reference Standards
+
+All contributions must include proper citations to authoritative sources. This builds trust and enables readers to verify claims.
+
+### Mandatory References
+
+When writing guidance, cite:
+
+1. **ARF Main Document** (v2.8.0+)
+   - **Format:** "ARF Chapter X, Section Y: [topic]"
+   - **Example:** "ARF Chapter 6, Section 6.2: Cryptographic Requirements"
+   - **Link:** Include GitHub URL to specific chapter/section
+
+2. **Commission Implementing Regulations**
+   - **Current Standard:** CIR 2024/1183 (entered into force Oct 18, 2024)
+   - **Format:** "CIR 2024/1183 Article X"
+   - **Example:** "CIR 2024/1183 Article 9: Conformance Rules"
+   - **Link:** EUR-Lex URL (https://eur-lex.europa.eu/eli/reg/2024/1183/oj)
+
+3. **eIDAS Regulation (2014/910/EU as amended)**
+   - **Format:** "eIDAS Regulation Article X" or "eIDAS Article 5–6: Wallet Definition"
+   - **Link:** EUR-Lex (https://eur-lex.europa.eu/eli/reg/2014/910/2024-10-18)
+
+4. **Technical Specifications**
+   - **OpenID4VCI/OpenID4VP:** Include version and link
+   - **ISO/IEC Standards:** Include standard ID and date
+   - **IETF RFCs:** Include RFC number and link (https://datatracker.ietf.org/)
+   - **W3C Standards:** Include recommendation version and W3C URL
+
+### Citation Style Guide
+
+#### Example 1: Citing ARF Requirement
+```markdown
+According to ARF Chapter 5, Section 5.3 (Protocol Bindings), 
+wallet implementations MUST support OpenID4VCI 1.0 and OpenID4VP 1.0 protocols.
+**Reference:** [ARF Chapter 5](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md), 
+Section 5.3
+```
+
+#### Example 2: Citing Regulatory Requirement
+```markdown
+CIR 2024/1183 Article 9 (Conformance Profiles) mandates that wallet providers 
+must declare conformance to Assurance Level (AL) 1–4 based on their security architecture.
+**Reference:** [CIR 2024/1183 Article 9](https://eur-lex.europa.eu/eli/reg/2024/1183/oj)
+```
+
+#### Example 3: Citing Technical Standard
+```markdown
+All cryptographic operations MUST use NIST-approved algorithms as per FIPS 140-3.
+**Reference:** [FIPS PUB 140-3: Security Requirements for Cryptographic Modules](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.140-3.pdf)
+```
+
+#### Example 4: Citing Protocol Specification
+```markdown
+The wallet MUST implement the OpenID4VCI pre-authorized code flow for credential issuance.
+**Reference:** [OpenID for Verifiable Credential Issuance 1.0, Section 3.1](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html)
+```
+
+### What Requires Citation?
+
+- ✅ **Always cite:** Legal requirements (ARF, CIRs, eIDAS), technical standards, security controls
+- ✅ **Always cite:** Numbers, statistics, compliance deadlines
+- ✅ **Always cite:** Direct quotes (even paraphrased)
+- ⚠️  **Cite when unclear:** Implementation approaches (link to examples or precedents)
+- ⚠️  **Cite when debated:** Any topic mentioned in Discussion Topics (link to GitHub discussion)
+
+### What Doesn't Require Citation?
+
+- ❌ **General knowledge:** "The ARF covers wallet security" (but cite specifics like Chapter 6)
+- ❌ **Common sense:** "Wallets should be tested before release"
+- ❌ **Definitions from glossary:** Use on-ramp's own [quick-reference.md](./docs/quick-reference.md)
+
+### Checking Citations
+
+Before submitting:
+
+1. **Verify all links work** — Test each URL
+2. **Confirm version is current** — ARF v2.8.0+, CIR 2024/1183 (not older versions)
+3. **Match quote to source** — Re-read the original to ensure accuracy
+4. **Use permanent URLs** — GitHub raw or EUR-Lex URNs (avoid shortened links)
+
+### Reference Management
+
+For larger contributions:
+
+- **Use this reference guide:** [REFERENCES.md](./REFERENCES.md) (comprehensive citation guide)
+- **EUR-Lex search:** https://eur-lex.europa.eu/ for CIR lookup
+- **ARF releases:** https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/releases
+- **OpenID specs:** https://openid.net/developers/specs/ for protocol versions
+
+### Handling Outdated References
+
+If you find outdated citations in existing docs:
+
+1. **Create an issue** with the old citation and new correct reference
+2. **Include the reason** why it's outdated (ARF version changed, CIR amended, etc.)
+3. **Suggest the fix** with current version and link
+4. **Reference this guide** in your issue
+
+---
+
 ## Versioning & Release Process
 
 The on-ramp follows [Semantic Versioning](https://semver.org/):
 
 - **MAJOR** version bumps align with upstream ARF major versions
 - **MINOR** version bumps for expanded guidance, new documents
-- **PATCH** version bumps for clarifications, fixes, upstream tracking updates
+- **PATCH** version bumps for clarifications, fixes, upstream tracking updates, citation updates
 
 See [CHANGELOG.md](./CHANGELOG.md) for version history.
 

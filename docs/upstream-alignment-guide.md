@@ -8,51 +8,135 @@ This document helps you track how the upstream ARF evolves and map those changes
 - Understand the impact of changes on your system
 - Plan migration or conformance updates
 - Keep your on-ramp documentation current
+- **Monitor Commission Implementing Regulation (CIR) amendments** that impact ARF compliance
 
 ---
 
-## Current ARF Version
+## Current ARF Version & Regulatory Status
 
 | Attribute | Value |
 |-----------|-------|
-| **Latest Release** | 2.8.0 |
-| **Release Date** | 2026-02-02 |
-| **Link** | https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/releases/tag/2.8.0 |
-| **Repository** | https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework |
+| **Latest ARF Release** | 2.8.0 |
+| **ARF Release Date** | February 2, 2026 |
+| **ARF Link** | [GitHub](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/releases/tag/2.8.0) |
+| **Current CIR** | **Commission Implementing Regulation (EU) 2024/1183** |
+| **CIR Entry into Force** | October 18, 2024 |
+| **CIR Application Date** | October 18, 2025 |
+| **CIR EUR-Lex Link** | [CIR 2024/1183](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) |
+| **CIR Amendment Search** | [EUR-Lex Query](https://eur-lex.europa.eu/search.html?queryText=2024/1183&type=reg) |
 
 ---
 
-## ARF 2.8.0 (2026-02-02) — Changes & Impact
+## Commission Implementing Regulation (CIR) 2024/1183 Compliance
+
+### Regulatory Structure
+
+**CIR 2024/1183** establishes:
+- **Articles 1–8:** Technical specifications for wallet architecture, protocols, data formats
+- **Articles 9–13:** Conformance rules, certification procedures, assurance level definitions
+- **Annex I:** Data model and schema definitions
+- **Annex II:** Technical interoperability requirements
+- **Annex III:** Cryptographic algorithms and security parameters
+
+### Key CIR Articles & Implementation Impact
+
+| CIR Article | Title | Implementation Impact | Related ARF |
+|---|---|---|---|
+| **Art. 1** | Technical specifications for EU Digital Identity Wallet | Defines protocol binding requirements (OpenID4VCI, OpenID4VP) | [ARF Ch. 5](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) |
+| **Art. 2** | Definitions and acronyms | Aligns with ARF Annex 1 (Acronyms & Definitions) | [ARF Annex 1](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/annexes) |
+| **Art. 9** | Conformance profiles and assurance levels (AL0–AL3) | Governs certification scope and evidence requirements | [ARF Ch. 6](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md), [CIR Annex II](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) |
+| **Art. 10** | Supervisory body designation | Defines member state role in wallet oversight | [ARF Ch. 7](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) |
+| **Art. 11** | Certification process | Specifies evidence submission and audit procedures | [governance-to-control-mapping.md](./governance-to-control-mapping.md) |
+| **Art. 12** | Cross-border recognition | Enables member state wallet acceptance across EU | [ARF Ch. 4](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) |
+| **Art. 13** | Amendment procedure | Allows CIR updates through delegated acts | [EUR-Lex](https://eur-lex.europa.eu/search.html?queryText=2024/1183&type=reg) |
+
+### Monitoring CIR Amendments
+
+**Process:** Check for CIR 2024/1183 amendments quarterly using:
+
+1. **EUR-Lex Amendment Search:**  
+   https://eur-lex.europa.eu/search.html?queryText=2024/1183&type=reg
+   - Filter by "Act Type" = "Amending or Modified Act"
+   - Subscribe to EUR-Lex alerts for 2024/1183
+
+2. **Official Journal (OJ) Monitoring:**  
+   https://eur-lex.europa.eu/oj/direct-access.html?locale=en
+   - Monitor OJ-L (Legislation) for CIR 2024/1183 amendments
+   - Amendments typically published with notice periods (30–90 days)
+
+3. **EDICG Coordination:**  
+   [European Digital Identity Cooperation Group](https://digital-strategy.ec.europa.eu/en/policies/european-digital-identity-cooperation-group)
+   - Quarterly EDICG meetings often precede CIR amendments
+   - Subscribe to EDICG updates
+
+### CIR Amendment Impact Assessment Template
+
+When a CIR 2024/1183 amendment is published:
+
+```markdown
+## CIR 2024/1183 Amendment: [Title]
+- **Amendment ID:** [e.g., Regulation 2024/XXXX]
+- **Publication Date:** [OJ date]
+- **Entry Into Force:** [date, typically 20 days after OJ]
+- **Implementation Deadline:** [if specified]
+
+### Affected Articles/Annexes
+- [List articles changed]
+
+### Impact on ARF Implementation
+- Cryptographic algorithms: [Yes/No] → Check ARF Ch. 6, Annex III
+- Assurance levels: [Yes/No] → Check ARF Ch. 6, CIR Art. 9
+- Protocol specs: [Yes/No] → Check ARF Ch. 5, Technical Specs
+- Data model: [Yes/No] → Check ARF Annex 2, CIR Annex I
+
+### Required Implementation Changes
+- [ ] Code updates
+- [ ] Conformance documentation updates
+- [ ] Certification evidence re-collection
+- [ ] Compliance deadline tracking
+
+### Evidence Update Checklist
+- [ ] Update threat model (if security controls changed)
+- [ ] Update cryptographic test vectors (if algorithms changed)
+- [ ] Update conformance traceability matrix
+- [ ] Re-run security testing (if required)
+- [ ] Update audit logs and monitoring (if changed)
+```
+
+---
+
+## ARF 2.8.0 (February 2, 2026) — Changes & Impact
 
 ### Summary
 
-ARF 2.8.0 reflects feedback from Member States (44 comments, primarily on Annex 2), updates from the Certification workstream, progress on Technical Specifications, and finalization of Discussion Topics (F, P, Q, R, S, AA, T, E).
+ARF 2.8.0 reflects feedback from Member States (44 comments, primarily on Annex 2), updates from the Certification workstream, progress on Technical Specifications, and finalization of Discussion Topics (F, P, Q, R, S, AA, T, E). All changes align with [CIR 2024/1183](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) requirements.
 
 ### Key Changes
 
-| Change Area | What Changed | Impact on Implementation |
-|-------------|--------------|------------------------|
-| **Annex 2 (High-Level Requirements)** | 44 member state comments processed; restructured around discussion topics | **High** — Review your requirement traceability matrix; update conformance profiles if HLRs changed |
-| **Main Document (4 figures updated, 1 new)** | Visual updates to architecture and flow diagrams | **Medium** — Verify your architecture diagrams match; update training materials if needed |
-| **Discussion Topic F** | Integrated into main text | Check ARF Section 4.4.3.1 if this affects your implementation scope |
-| **Discussion Topic P** | Integrated into Section 4.5 | **High for Relying Parties** — Review RP registration and interaction patterns |
-| **Discussion Topic Q** | Integrated into Topic 54 (now in Annex 2) | **Medium** — May affect accessibility requirements |
-| **Discussion Topic R** | Integrated into Sections 2.2, 4.3.2, 6.5.3.3; Topic 40 updated | **High** — Device authentication mechanism changes; WSCA/WSCD vs. keystore distinction clarified |
-| **Discussion Topic S** | Integrated into Sections 6.3.2.3, 6.4.2; new Topic 55 (Certificate Transparency) | **High** — New transparency requirements for access certificates |
-| **Discussion Topic AA** | Electronic Payments SCA support integrated | **Medium** — Only if you're implementing payment scenarios |
-| **Discussion Topic E** | Pseudonym and user authentication mechanism updates | **Medium** — Review if pseudonym support is in scope |
-| **Discussion Topic T** | Wallet Provider support & maintenance integrated | **Low to Medium** — Operational guidance; may affect SLA definitions |
-| **Technical Specifications Progress** | Multiple specs advanced toward final release | **Ongoing** — Check [Technical Specs Roadmap](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/technical-specifications) for dependent work |
+| Change Area | What Changed | CIR Alignment | Impact on Implementation |
+|-------------|--------------|---|------------------------|
+| **Annex 2 (High-Level Requirements)** | 44 member state comments processed; restructured around discussion topics | [CIR Art. 9](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) | **High** — Review your requirement traceability matrix; update conformance profiles if HLRs changed |
+| **Main Document (4 figures updated, 1 new)** | Visual updates to architecture and flow diagrams | [CIR Annex II](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) | **Medium** — Verify your architecture diagrams match; update training materials if needed |
+| **Discussion Topic F** | Integrated into main text | [CIR Art. 1–8](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) | Check [ARF Section 4.4.3.1](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) if this affects your implementation scope |
+| **Discussion Topic P** | Integrated into Section 4.5 | [CIR Art. 2(7)](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) (RP definitions) | **High for Relying Parties** — Review RP registration and interaction patterns |
+| **Discussion Topic Q** | Integrated into Topic 54 (now in Annex 2) | [CIR Annex II](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) | **Medium** — May affect accessibility requirements |
+| **Discussion Topic R** | Integrated into Sections 2.2, 4.3.2, 6.5.3.3; Topic 40 updated | [CIR Annex III](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) (crypto params) | **High** — Device authentication mechanism changes; WSCA/WSCD vs. keystore distinction clarified |
+| **Discussion Topic S** | Integrated into Sections 6.3.2.3, 6.4.2; new Topic 55 (Certificate Transparency) | [CIR Art. 9(2)](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) | **High** — New transparency requirements for access certificates |
+| **Discussion Topic AA** | Electronic Payments SCA support integrated | [CIR Art. 1](https://eur-lex.europa.eu/eli/reg/2024/1183/oj), [PSD2 Directive](https://eur-lex.europa.eu/eli/dir/2015/2366/oj) Art. 67 | **Medium** — Only if you're implementing payment scenarios |
+| **Discussion Topic E** | Pseudonym and user authentication mechanism updates | [CIR Annex I](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) (data model) | **Medium** — Review if pseudonym support is in scope |
+| **Discussion Topic T** | Wallet Provider support & maintenance integrated | [CIR Art. 2(1)](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) | **Low to Medium** — Operational guidance; may affect SLA definitions |
+| **Technical Specifications Progress** | Multiple specs advanced toward final release | [CIR Art. 1–8](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) | **Ongoing** — Check [Technical Specs Roadmap](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/technical-specifications) for dependent work |
 
 ### Migration Checklist for 2.8.0
 
 - [ ] Read the [full 2.8.0 release notes](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/releases/tag/2.8.0)
-- [ ] Review Annex 2 changes; update traceability matrix
-- [ ] If implementing Relying Parties: review Section 4.5 (Topic P)
-- [ ] If implementing WSCA/WSCD: confirm alignment with Section 4.3.2 (Topic R)
-- [ ] If using certificates for access control: review new Topic 55 requirements
-- [ ] Update conformance test evidence for changed HLRs
-- [ ] Update architecture diagrams if they reference updated figures
+- [ ] Review [CIR 2024/1183](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) Articles 1–13 for unchanged mandates
+- [ ] Review Annex 2 changes; update traceability matrix against [CIR Annex II](https://eur-lex.europa.eu/eli/reg/2024/1183/oj)
+- [ ] If implementing Relying Parties: review [ARF Section 4.5](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) (Topic P) and [CIR Art. 2(7)](https://eur-lex.europa.eu/eli/reg/2024/1183/oj)
+- [ ] If implementing WSCA/WSCD: confirm alignment with [ARF Section 4.3.2](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) (Topic R) and [CIR Annex III](https://eur-lex.europa.eu/eli/reg/2024/1183/oj)
+- [ ] If using certificates for access control: review new Topic 55 requirements against [CIR Art. 9(2)](https://eur-lex.europa.eu/eli/reg/2024/1183/oj)
+- [ ] Update conformance test evidence for changed HLRs per [CIR Art. 11](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) (certification process)
+- [ ] Update architecture diagrams if they reference updated figures (compare with [CIR Annex II](https://eur-lex.europa.eu/eli/reg/2024/1183/oj))
 - [ ] Re-run conformance interpretation against new requirements
 
 ---
@@ -61,12 +145,12 @@ ARF 2.8.0 reflects feedback from Member States (44 comments, primarily on Annex 
 
 ### ARF 2.7.3 → 2.8.0 Summary
 
-| Topic | Previous Version | Current Version | On-Ramp Coverage |
-|-------|-----------------|-----------------|-----------------|
-| Device Authentication | Mandatory device binding | Recommended device binding | [reading-path-security-assurance.md](../reading-paths/reading-path-security-assurance.md) |
-| Requirement Structure | Monolithic Annex 2 PDF | CSV + Markdown formats | [conformance-interpretation-companion.md](./conformance-interpretation-companion.md) |
-| Accessibility | Distributed guidance | Chapter 8 + Topic 54 | [reading-path-architect.md](../reading-paths/reading-path-architect.md) |
-| Discussion Topics | Active topics F–T | Integrated into main text | [quick-reference.md](./quick-reference.md) |
+| Topic | Previous Version | Current Version | CIR Authority | On-Ramp Coverage |
+|-------|-----------------|-----------------|---|-----------------|
+| Device Authentication | Mandatory device binding | Recommended device binding | [CIR Annex III](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) | [reading-path-security-assurance.md](../reading-paths/reading-path-security-assurance.md) |
+| Requirement Structure | Monolithic Annex 2 PDF | CSV + Markdown formats | [CIR Annex II](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) | [conformance-interpretation-companion.md](./conformance-interpretation-companion.md) |
+| Accessibility | Distributed guidance | Chapter 8 + Topic 54 | [CIR Art. 9(3)](https://eur-lex.europa.eu/eli/reg/2024/1183/oj), [WCAG 2.1](https://www.w3.org/WAI/WCAG21/quickref/) | [reading-path-architect.md](../reading-paths/reading-path-architect.md) |
+| Discussion Topics | Active topics F–T | Integrated into main text | [CIR Art. 1–13](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) | [quick-reference.md](./quick-reference.md) |
 
 ---
 
