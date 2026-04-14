@@ -347,7 +347,7 @@ All files are in `/home/claude/arf-onramp-pack-enhanced/` and ready to:
 4. **Distribute to team** (zip, tar, git clone)
 
 ### GitHub Integration
-- Repository structure matches [upstream ARF](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework)
+- Repository structure matches [upstream ARF](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework)
 - All links are GitHub-relative (work in any fork)
 - CONTRIBUTING.md and CHANGELOG.md follow best practices
 - Ready for mkdocs or similar documentation site

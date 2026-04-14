@@ -674,10 +674,10 @@ User Rights:
 
 **A:** Official sources:
 
-- **ARF Main Document:** https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md
-- **Annexes (High-Level Requirements):** https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/annexes
-- **Discussion Topics:** https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/discussion-topics
-- **Technical Specifications:** https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/technical-specifications
+- **ARF Main Document:** https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md
+- **Annexes (High-Level Requirements):** https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/tree/main/docs/annexes
+- **Discussion Topics:** https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/tree/main/docs/discussion-topics
+- **Technical Specifications:** https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications
 
 **Authoritative = The upstream documents, not this on-ramp.**
 
@@ -706,7 +706,7 @@ User Rights:
 
 ```
 Monthly:
-  • Check [GitHub releases](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/releases)
+  • Check [GitHub releases](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/releases)
 
 Quarterly (Feb, May, Aug, Nov):
   • Run quarterly sync checklist
@@ -754,7 +754,7 @@ When ARF major version changes:
 
 **A:** Three sources:
 
-1. **ARF Annex 1** (Official) → https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/annexes
+1. **ARF Annex 1** (Official) → https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/tree/main/docs/annexes
 2. **On-Ramp Quick Reference** (100+ terms) → `docs/quick-reference.md`
 3. **This FAQ** (Common terms in context)
 
@@ -767,7 +767,7 @@ When ARF major version changes:
 
 **A:** Report to upstream:
 
-1. **Open GitHub issue:** https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/issues
+1. **Open GitHub issue:** https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/issues
 2. **Describe the error** (section, what's wrong, suggested fix)
 3. **EDICG team** will review and respond
 

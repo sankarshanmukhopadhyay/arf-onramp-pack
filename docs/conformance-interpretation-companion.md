@@ -4,7 +4,7 @@
 
 This document translates ARF normative expectations into implementation-facing interpretation guidance. It helps teams reason about what conformance means operationally and plan evidence collection.
 
-**Important:** This does not modify or override the ARF. Refer to the official [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) and [Annex 2 (High-Level Requirements)](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/annexes) for normative details.
+**Important:** This does not modify or override the ARF. Refer to the official [ARF Main Document](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) and [Annex 2 (High-Level Requirements)](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/tree/main/docs/annexes) for normative details.
 
 ---
 
@@ -95,7 +95,7 @@ Use this framework to plan and execute conformance assessment.
 
 ### Step 1: Extract Normative Clauses from ARF
 
-**Source:** [Annex 2 (High-Level Requirements)](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/annexes)
+**Source:** [Annex 2 (High-Level Requirements)](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/tree/main/docs/annexes)
 
 Annex 2 is organized by **Topics** (1–55). Each Topic contains:
 - Topic title (e.g., "Wallet Provider Functional Requirements")
@@ -109,7 +109,7 @@ HLR-012-02: Wallet SHALL check credential expiration
 HLR-012-03: Wallet SHALL verify credential not revoked (if applicable)
 ```
 
-**Tool:** Use the [ARF CSV file](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/hltr/high-level-requirements.csv) for searchable, sortable requirements.
+**Tool:** Use the [ARF CSV file](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/hltr/high-level-requirements.csv) for searchable, sortable requirements.
 
 ### Step 2: Classify Each Requirement
 
@@ -583,7 +583,7 @@ Once you have a traceability matrix and evidence, how do you get certified?
 
 ## Next Steps
 
-1. **Review your requirements** using [Annex 2 CSV](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/hltr/high-level-requirements.csv)
+1. **Review your requirements** using [Annex 2 CSV](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/hltr/high-level-requirements.csv)
 2. **Create a Conformance Profile** documenting your scope
 3. **Build a Traceability Matrix** linking ARF HLRs to your components
 4. **Plan evidence collection** using the types above

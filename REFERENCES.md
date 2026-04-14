@@ -4,7 +4,7 @@
 
 **Last Updated:** March 23, 2026  
 **ARF Alignment:** v2.8.0 (February 2, 2026)  
-**CIR Basis:** Commission Implementing Regulation 2024/1183
+**Regulatory Basis:** eIDAS Regulation together with the current implementing regulations referenced by the upstream ARF
 
 ---
 
@@ -34,27 +34,13 @@
 - **Entered into Force:** October 18, 2024
 - **Effective Date:** October 18, 2025
 
-#### Commission Implementing Regulation (EU) 2024/1183
-- **Official Title:** Commission Implementing Regulation (EU) 2024/1183 of 10 October 2024 establishing the technical specifications and procedures for EU digital identity wallets
-- **EUR-Lex Citation:** https://eur-lex.europa.eu/eli/reg/2024/1183/oj
-- **OJ Publication:** Official Journal L, 2024-10-11, volume 436, pages 1–67
-- **Key Sections:**
-  - **Articles 1–8:** Technical specifications (architecture, protocols, data formats)
-  - **Articles 9–13:** Conformance rules and certification
-  - **Articles 14–21:** Wallet holder responsibilities
-  - **Annex I:** Data model and schema definitions
-  - **Annex II:** Technical interoperability requirements
-  - **Annex III:** Cryptographic algorithms
-- **PDF Download:** https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32024R1183
-- **Implementation Status:** Active (since Oct 18, 2024)
+#### Implementing Regulations Referenced by the Current Upstream ARF
+- **Current upstream position:** The ARF repository now explicitly references a broader set of EUDI Wallet implementing regulations, including measures on PID/EAA, integrity and core functionalities, ecosystem notifications, certification of wallet solutions, protocols and interfaces, cross-border identity matching, security breaches, relying party registration, certified wallet lists, qualified trust service operations, supervisory reporting, and related procedures.
+- **Authoritative source:** https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework
+- **Practical guidance:** Use the upstream ARF README as the current regulatory index, then follow the linked Data.europa and EUR-Lex records for the exact legal text.
+- **Historic note:** Earlier versions of this on-ramp pack centered CIR 2024/1183. That reference remains important historical context, but it is no longer sufficient as a complete description of the current upstream regulatory set.
 
-#### Commission Implementing Regulation (EU) 2023/1411 (Pilot Phase)
-- **Official Title:** Commission Implementing Regulation (EU) 2023/1411 of 8 August 2023 establishing the technical specifications and procedures for a European Digital Identity Wallet
-- **EUR-Lex Citation:** https://eur-lex.europa.eu/eli/reg/2023/1411/oj
-- **Note:** Superseded by CIR 2024/1183 for final deployment; remains relevant for pilot phase documentation
-- **Reference:** Historical context for wallet evolution and lessons learned
-
-### CIR Amendment Tracking
+### Regulatory Update Tracking
 
 - **CIR Amendment Search:** https://eur-lex.europa.eu/search.html?queryText=2024/1183&type=reg
   - Regularly check EUR-Lex for amendments or corrigenda
@@ -69,26 +55,32 @@
   - https://eur-lex.europa.eu/eli/dir/2015/2366/oj
   - Relevant for payment-linked wallet scenarios
 
-- **Regulation (EU) 2022/868 (Digital Services Act - DSA):** Platform governance
+- **Regulation (EU) 2022/868 (Data Governance Act):** Data-sharing governance context
   - https://eur-lex.europa.eu/eli/reg/2022/868/oj
-  - Relevant for wallet provider responsibilities as digital service providers
+  - Tangential context only; not a primary wallet implementation authority
 
 ---
 
 ## Official ARF Documentation
 
+## Synchronization Review Notes
+
+- Repository references have been synchronized to the current upstream ARF repository name: `eudi-doc-architecture-and-reference-framework`.
+- Technical specification references have been synchronized to the dedicated STS repository.
+- Regulatory references have been reframed so this guide no longer implies that CIR 2024/1183 alone exhausts the current upstream legal and technical basis.
+
 ### ARF Main Repository & Releases
 
-- **GitHub Repository:** https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework
-  - **License:** European Union Public Licence (EUPL) 1.2
-  - **Issues & Discussions:** https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/issues
-  - **Release Notes:** https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/releases
+- **GitHub Repository:** https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework
+  - **License:** CC BY 4.0
+  - **Issues & Discussions:** https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/issues
+  - **Release Notes:** https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/releases
 
 ### ARF Main Document (v2.8.0)
 
 - **Document Title:** Architecture and Reference Framework — Version 2.8.0
 - **Publication Date:** February 2, 2026
-- **Full GitHub URL:** https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md
+- **Full GitHub URL:** https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md
 - **PDF Download:** Available in GitHub releases
 - **Size:** ~389 KB (Markdown format)
 
@@ -137,7 +129,7 @@
 ### ARF Annexes
 
 - **Annex 1: Acronyms & Definitions**
-  - GitHub URL: https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/annexes
+  - GitHub URL: https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/tree/main/docs/annexes
   - Comprehensive glossary (100+ terms)
 
 - **Annex 2: High-Level Requirements (HLRs)**
@@ -162,18 +154,18 @@
 
 ### ARF Discussion Topics (Open Consultation)
 
-- **GitHub Location:** https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/discussion-topics
+- **GitHub Location:** https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/tree/main/docs/discussion-topics
 
 #### Active Discussion Topics
 
 | Topic | Subject | Status | URL |
 |-------|---------|--------|-----|
-| **F** | Trust Registry Query Protocol (TRQP) | Active | [GitHub](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/discussion-topics) |
-| **P** | Device Binding & Hardware Security | Active | [GitHub](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/discussion-topics) |
-| **Q** | Relying Party Federation Models | Active | [GitHub](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/discussion-topics) |
-| **R** | Cross-Border Interoperability Enhancement | Active | [GitHub](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/discussion-topics) |
-| **S** | Attestation Rulebook Extensibility | Active | [GitHub](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/discussion-topics) |
-| **T, AA, etc.** | Emerging Requirements | In Preparation | [GitHub](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/discussion-topics) |
+| **F** | Trust Registry Query Protocol (TRQP) | Active | [GitHub](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/tree/main/docs/discussion-topics) |
+| **P** | Device Binding & Hardware Security | Active | [GitHub](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/tree/main/docs/discussion-topics) |
+| **Q** | Relying Party Federation Models | Active | [GitHub](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/tree/main/docs/discussion-topics) |
+| **R** | Cross-Border Interoperability Enhancement | Active | [GitHub](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/tree/main/docs/discussion-topics) |
+| **S** | Attestation Rulebook Extensibility | Active | [GitHub](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/tree/main/docs/discussion-topics) |
+| **T, AA, etc.** | Emerging Requirements | In Preparation | [GitHub](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/tree/main/docs/discussion-topics) |
 
 ---
 
@@ -212,7 +204,7 @@
 
 ### EU Digital Identity Wallet Technical Specifications
 
-- **GitHub Location:** https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/technical-specifications
+- **GitHub Location:** https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications
 - **Contents:**
   - OpenID4VCI EU Wallet Profile
   - OpenID4VP EU Wallet Profile
@@ -224,10 +216,9 @@
 
 #### Selective Disclosure JWT (SD-JWT)
 
-- **Specification Title:** SD-JWT: Securing JWTs with Selective Disclosure
-- **Status:** RFC 9052 (Internet Standard)
-- **IETF RFC:** https://datatracker.ietf.org/doc/html/rfc9052
-- **Key Use:** Wallet credential serialization, selective disclosure support
+- **Specification Title:** SD-JWT family of specifications
+- **Status:** Refer to the OpenID / IETF publication state for the exact current document status
+- **Practical note:** Use upstream ARF and STS references to determine which SD-JWT profile is actually in scope for your implementation
 
 #### CBOR Object Signing and Encryption (COSE)
 
@@ -452,7 +443,7 @@
 Architecture and Reference Framework v2.8.0. 
 EU Digital Identity Wallet Project. 
 February 2, 2026. 
-https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md
+https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md
 ```
 
 **In-text example:**
@@ -463,7 +454,7 @@ https://github.com/eu-digital-identity-wallet/architecture-and-reference-framewo
 ```
 Architecture and Reference Framework v2.8.0, Annex 2: High-Level Requirements.
 EU Digital Identity Wallet Project.
-https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/annexes
+https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/tree/main/docs/annexes
 ```
 
 #### Citing CIR 2024/1183
@@ -541,7 +532,7 @@ Many official documents have persistent identifiers:
 ## How to Keep This Reference Current
 
 1. **Monitor EUR-Lex** for amendments to CIR 2024/1183: https://eur-lex.europa.eu/search.html?queryText=2024/1183&type=reg
-2. **Check ARF GitHub** for version updates and new discussion topics: https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework
+2. **Check ARF GitHub** for version updates and new discussion topics: https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework
 3. **Subscribe to EDICG updates** for governance changes: https://digital-strategy.ec.europa.eu/en/policies/european-digital-identity-cooperation-group
 4. **Follow OpenID Foundation** for protocol specification updates: https://openid.net/
 

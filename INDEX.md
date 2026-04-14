@@ -149,7 +149,7 @@
 **Quick Reference:** All of these are detailed in [REFERENCES.md](./REFERENCES.md) with full citations:
 
 ### Authoritative Sources
-- **ARF Main Document:** https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md
+- **ARF Main Document:** https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md
 - **eIDAS Regulation:** https://eur-lex.europa.eu/eli/reg/2014/910/2024-10-18
 - **CIR 2024/1183:** https://eur-lex.europa.eu/eli/reg/2024/1183/oj
 
@@ -249,7 +249,7 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for:
 → Open a GitHub issue (include citation sources for claims)
 
 **Questions about the upstream ARF?**
-→ See the [ARF repository](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework)
+→ See the [ARF repository](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework)
 
 **Questions about regulatory compliance (eIDAS, CIRs)?**
 → [EUR-Lex](https://eur-lex.europa.eu/) for legal text, [EDICG](https://digital-strategy.ec.europa.eu/en/policies/european-digital-identity-cooperation-group) for governance
@@ -315,7 +315,7 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for:
 ## 🔗 Key External Resources
 
 ### Authoritative Sources
-- **ARF Main Document:** https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md
+- **ARF Main Document:** https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md
 - **EU Digital Identity Regulation:** https://eur-lex.europa.eu/eli/reg/2014/910/2024-10-18
 - **Commission Implementing Regulations:** See [docs/quick-reference.md](./docs/quick-reference.md) for complete list
 
@@ -386,7 +386,7 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for:
 → Open a GitHub issue in the [ARF On-Ramp Pack repository](https://github.com/sankarshanmukhopadhyay/arf-onramp-pack)
 
 **Questions about the upstream ARF?**
-→ See the [ARF repository](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework)
+→ See the [ARF repository](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework)
 
 **Need EUDI support?**
 → [Contact the European Commission](https://commission.europa.eu/about-european-commission/contact_en)

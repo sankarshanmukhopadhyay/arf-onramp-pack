@@ -107,7 +107,7 @@ You need test evidence for certification:
 
 **Read:** [ARF Explained](../arf-explained.md) → "Key Scenarios" section
 
-**Then:** [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → **Chapter 5** (Data Flows)
+**Then:** [ARF Main Document](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → **Chapter 5** (Data Flows)
 
 **Key Questions to Answer:**
 - [ ] What are the main data flows (issuance, presentation, registration)?
@@ -119,7 +119,7 @@ You need test evidence for certification:
 ### Section 2: Choose Your Role & Read Specific Sections (15 min)
 
 **If Wallet Provider (Backend):**
-- **Read:** [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → Chapter 4, Sections 4.1 (Ecosystem), 4.4 (Lifecycle)
+- **Read:** [ARF Main Document](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → Chapter 4, Sections 4.1 (Ecosystem), 4.4 (Lifecycle)
 - **Focus on:** Credential storage, issuance endpoints, audit logging
 - **Key Questions:**
   - [ ] How are credentials stored and retrieved?
@@ -127,7 +127,7 @@ You need test evidence for certification:
   - [ ] What audit logs are required?
 
 **If Wallet Instance (App/Web):**
-- **Read:** [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → Chapter 3 (Architecture), Chapter 5 (Flows)
+- **Read:** [ARF Main Document](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → Chapter 3 (Architecture), Chapter 5 (Flows)
 - **Focus on:** Key management, UI flows, credential display
 - **Key Questions:**
   - [ ] How do I handle user authentication (biometric, PIN)?
@@ -135,7 +135,7 @@ You need test evidence for certification:
   - [ ] Where do I store keys (Secure Enclave, encrypted local)?
 
 **If Service Integration (Relying Party):**
-- **Read:** [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → Chapter 4, Section 4.5 (Relying Parties), Chapter 5, Sections 5.2–5.3 (Remote flows)
+- **Read:** [ARF Main Document](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → Chapter 4, Section 4.5 (Relying Parties), Chapter 5, Sections 5.2–5.3 (Remote flows)
 - **Focus on:** Credential request creation, signature verification, registration
 - **Key Questions:**
   - [ ] How do I create a credential request?
@@ -146,7 +146,7 @@ You need test evidence for certification:
 
 ### Section 3: Understand Protocol Flows (20 min)
 
-**Read:** [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → **Chapter 5** in detail
+**Read:** [ARF Main Document](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → **Chapter 5** in detail
 
 **Then:** Review [Quick Reference](../quick-reference.md) → Protocol links
 
@@ -169,7 +169,7 @@ You need test evidence for certification:
 
 **Read:** [Conformance Interpretation Companion](../conformance-interpretation-companion.md) → "Evidence Types & Collection" → "Data Format" section
 
-**Then:** [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → Chapter 4, Section 4.2 (Attestations)
+**Then:** [ARF Main Document](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → Chapter 4, Section 4.2 (Attestations)
 
 **Also:** Rulebooks for credentials you support
 - **PID Rulebook:** https://github.com/eu-digital-identity-wallet/eudi-doc-attestation-rulebooks-catalog
@@ -184,7 +184,7 @@ You need test evidence for certification:
 
 ### Section 5: Security & Cryptography (15 min)
 
-**Read:** [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → **Chapter 6** (Security, Integrity)
+**Read:** [ARF Main Document](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → **Chapter 6** (Security, Integrity)
 
 **Then:** [Governance to Control Mapping](../governance-to-control-mapping.md) → "Cryptographic Controls" pattern
 
@@ -278,7 +278,7 @@ POST /audit-log             (log operations)
 **Additional Reading:**
 1. [OpenID4VP Spec](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html) — Full protocol
 2. [CIR 2025/848](https://data.europa.eu/eli/reg_impl/2025/848/oj) → RP registration
-3. [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → Chapter 4, Section 4.5 (Relying Party responsibilities)
+3. [ARF Main Document](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → Chapter 4, Section 4.5 (Relying Party responsibilities)
 
 **Implementation Topics:**
 - Metadata endpoint (advertising your service)
@@ -566,7 +566,7 @@ When signing:
 - Interop test events (annual EU testing)
 
 **Steps:**
-1. Download test vectors from [ARF repo](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework)
+1. Download test vectors from [ARF repo](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework)
 2. Run your implementation against them
 3. Compare output
 4. Participate in annual interop event (if public)

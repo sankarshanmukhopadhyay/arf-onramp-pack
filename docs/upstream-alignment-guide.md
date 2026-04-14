@@ -2,6 +2,7 @@
 
 ## Purpose
 
+
 This document helps you track how the upstream ARF evolves and map those changes to your implementation. Use it to:
 
 - Identify what changed between ARF versions
@@ -12,18 +13,26 @@ This document helps you track how the upstream ARF evolves and map those changes
 
 ---
 
+## 2026 Synchronization Findings
+
+- The canonical upstream repository is `eudi-doc-architecture-and-reference-framework`.
+- Standards and Technical Specifications work is now tracked in the dedicated STS repository: `eudi-doc-standards-and-technical-specifications`.
+- This guide still uses CIR 2024/1183 as a major anchor for interpretation, but the upstream ARF README now references a broader implementing-regulation set. Use the upstream repository as the authoritative regulatory index.
+
 ## Current ARF Version & Regulatory Status
 
 | Attribute | Value |
 |-----------|-------|
 | **Latest ARF Release** | 2.8.0 |
 | **ARF Release Date** | February 2, 2026 |
-| **ARF Link** | [GitHub](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/releases/tag/2.8.0) |
+| **ARF Link** | [GitHub](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/releases/tag/2.8.0) |
 | **Current CIR** | **Commission Implementing Regulation (EU) 2024/1183** |
 | **CIR Entry into Force** | October 18, 2024 |
 | **CIR Application Date** | October 18, 2025 |
 | **CIR EUR-Lex Link** | [CIR 2024/1183](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) |
 | **CIR Amendment Search** | [EUR-Lex Query](https://eur-lex.europa.eu/search.html?queryText=2024/1183&type=reg) |
+
+> Note: This table highlights one key CIR used throughout this guide. For current legal completeness, consult the upstream ARF repository, which now enumerates a wider set of implementing regulations.
 
 ---
 
@@ -42,12 +51,12 @@ This document helps you track how the upstream ARF evolves and map those changes
 
 | CIR Article | Title | Implementation Impact | Related ARF |
 |---|---|---|---|
-| **Art. 1** | Technical specifications for EU Digital Identity Wallet | Defines protocol binding requirements (OpenID4VCI, OpenID4VP) | [ARF Ch. 5](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) |
-| **Art. 2** | Definitions and acronyms | Aligns with ARF Annex 1 (Acronyms & Definitions) | [ARF Annex 1](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/annexes) |
-| **Art. 9** | Conformance profiles and assurance levels (AL0–AL3) | Governs certification scope and evidence requirements | [ARF Ch. 6](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md), [CIR Annex II](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) |
-| **Art. 10** | Supervisory body designation | Defines member state role in wallet oversight | [ARF Ch. 7](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) |
+| **Art. 1** | Technical specifications for EU Digital Identity Wallet | Defines protocol binding requirements (OpenID4VCI, OpenID4VP) | [ARF Ch. 5](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) |
+| **Art. 2** | Definitions and acronyms | Aligns with ARF Annex 1 (Acronyms & Definitions) | [ARF Annex 1](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/tree/main/docs/annexes) |
+| **Art. 9** | Conformance profiles and assurance levels (AL0–AL3) | Governs certification scope and evidence requirements | [ARF Ch. 6](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md), [CIR Annex II](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) |
+| **Art. 10** | Supervisory body designation | Defines member state role in wallet oversight | [ARF Ch. 7](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) |
 | **Art. 11** | Certification process | Specifies evidence submission and audit procedures | [governance-to-control-mapping.md](./governance-to-control-mapping.md) |
-| **Art. 12** | Cross-border recognition | Enables member state wallet acceptance across EU | [ARF Ch. 4](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) |
+| **Art. 12** | Cross-border recognition | Enables member state wallet acceptance across EU | [ARF Ch. 4](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) |
 | **Art. 13** | Amendment procedure | Allows CIR updates through delegated acts | [EUR-Lex](https://eur-lex.europa.eu/search.html?queryText=2024/1183&type=reg) |
 
 ### Monitoring CIR Amendments
@@ -117,7 +126,7 @@ ARF 2.8.0 reflects feedback from Member States (44 comments, primarily on Annex 
 |-------------|--------------|---|------------------------|
 | **Annex 2 (High-Level Requirements)** | 44 member state comments processed; restructured around discussion topics | [CIR Art. 9](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) | **High** — Review your requirement traceability matrix; update conformance profiles if HLRs changed |
 | **Main Document (4 figures updated, 1 new)** | Visual updates to architecture and flow diagrams | [CIR Annex II](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) | **Medium** — Verify your architecture diagrams match; update training materials if needed |
-| **Discussion Topic F** | Integrated into main text | [CIR Art. 1–8](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) | Check [ARF Section 4.4.3.1](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) if this affects your implementation scope |
+| **Discussion Topic F** | Integrated into main text | [CIR Art. 1–8](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) | Check [ARF Section 4.4.3.1](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) if this affects your implementation scope |
 | **Discussion Topic P** | Integrated into Section 4.5 | [CIR Art. 2(7)](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) (RP definitions) | **High for Relying Parties** — Review RP registration and interaction patterns |
 | **Discussion Topic Q** | Integrated into Topic 54 (now in Annex 2) | [CIR Annex II](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) | **Medium** — May affect accessibility requirements |
 | **Discussion Topic R** | Integrated into Sections 2.2, 4.3.2, 6.5.3.3; Topic 40 updated | [CIR Annex III](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) (crypto params) | **High** — Device authentication mechanism changes; WSCA/WSCD vs. keystore distinction clarified |
@@ -125,15 +134,15 @@ ARF 2.8.0 reflects feedback from Member States (44 comments, primarily on Annex 
 | **Discussion Topic AA** | Electronic Payments SCA support integrated | [CIR Art. 1](https://eur-lex.europa.eu/eli/reg/2024/1183/oj), [PSD2 Directive](https://eur-lex.europa.eu/eli/dir/2015/2366/oj) Art. 67 | **Medium** — Only if you're implementing payment scenarios |
 | **Discussion Topic E** | Pseudonym and user authentication mechanism updates | [CIR Annex I](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) (data model) | **Medium** — Review if pseudonym support is in scope |
 | **Discussion Topic T** | Wallet Provider support & maintenance integrated | [CIR Art. 2(1)](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) | **Low to Medium** — Operational guidance; may affect SLA definitions |
-| **Technical Specifications Progress** | Multiple specs advanced toward final release | [CIR Art. 1–8](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) | **Ongoing** — Check [Technical Specs Roadmap](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/technical-specifications) for dependent work |
+| **Technical Specifications Progress** | Multiple specs advanced toward final release | [CIR Art. 1–8](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) | **Ongoing** — Check [Technical Specs Roadmap](https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications) for dependent work |
 
 ### Migration Checklist for 2.8.0
 
-- [ ] Read the [full 2.8.0 release notes](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/releases/tag/2.8.0)
+- [ ] Read the [full 2.8.0 release notes](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/releases/tag/2.8.0)
 - [ ] Review [CIR 2024/1183](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) Articles 1–13 for unchanged mandates
 - [ ] Review Annex 2 changes; update traceability matrix against [CIR Annex II](https://eur-lex.europa.eu/eli/reg/2024/1183/oj)
-- [ ] If implementing Relying Parties: review [ARF Section 4.5](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) (Topic P) and [CIR Art. 2(7)](https://eur-lex.europa.eu/eli/reg/2024/1183/oj)
-- [ ] If implementing WSCA/WSCD: confirm alignment with [ARF Section 4.3.2](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) (Topic R) and [CIR Annex III](https://eur-lex.europa.eu/eli/reg/2024/1183/oj)
+- [ ] If implementing Relying Parties: review [ARF Section 4.5](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) (Topic P) and [CIR Art. 2(7)](https://eur-lex.europa.eu/eli/reg/2024/1183/oj)
+- [ ] If implementing WSCA/WSCD: confirm alignment with [ARF Section 4.3.2](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) (Topic R) and [CIR Annex III](https://eur-lex.europa.eu/eli/reg/2024/1183/oj)
 - [ ] If using certificates for access control: review new Topic 55 requirements against [CIR Art. 9(2)](https://eur-lex.europa.eu/eli/reg/2024/1183/oj)
 - [ ] Update conformance test evidence for changed HLRs per [CIR Art. 11](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) (certification process)
 - [ ] Update architecture diagrams if they reference updated figures (compare with [CIR Annex II](https://eur-lex.europa.eu/eli/reg/2024/1183/oj))
@@ -156,7 +165,7 @@ ARF 2.8.0 reflects feedback from Member States (44 comments, primarily on Annex 
 
 ## Historical ARF Releases
 
-For a complete history, see the [ARF CHANGELOG](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/CHANGELOG.md).
+For a complete history, see the [ARF CHANGELOG](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/CHANGELOG.md).
 
 ### Key Milestones
 
@@ -176,13 +185,13 @@ For a complete history, see the [ARF CHANGELOG](https://github.com/eu-digital-id
 ### Step 1: Monitor Upstream Releases
 
 **Subscribe to notifications:**
-- Watch the [ARF repository](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework) (GitHub watch button)
-- Subscribe to [releases only](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/releases)
+- Watch the [ARF repository](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework) (GitHub watch button)
+- Subscribe to [releases only](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/releases)
 
 **Check periodically:**
-- ARF Releases: https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/releases
-- ARF CHANGELOG: https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/CHANGELOG.md
-- Discussion Topics: https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/discussion-topics
+- ARF Releases: https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/releases
+- ARF CHANGELOG: https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/CHANGELOG.md
+- Discussion Topics: https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/tree/main/docs/discussion-topics
 
 ### Step 2: Assess Impact on Your Implementation
 
@@ -307,7 +316,7 @@ The ARF is anchored in Commission Implementing Regulations (CIRs). Monitor these
 | CIR 2025/848 | RP registration | https://data.europa.eu/eli/reg_impl/2025/848/oj |
 | CIR 2025/849 | List of certified Wallets | https://data.europa.eu/eli/reg_impl/2025/849/oj |
 
-For a complete list, see the [upstream README](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/README.md).
+For a complete list, see the [upstream README](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/README.md).
 
 **To stay current:** Subscribe to [EUR-Lex](https://eur-lex.europa.eu/) updates for new CIRs in the digital identity space.
 
@@ -319,10 +328,10 @@ Every quarter, perform this check to keep your implementation aligned with upstr
 
 ### Q1 / Q2 / Q3 / Q4 Sync Checklist
 
-- [ ] **Check for new ARF releases** → [Releases page](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/releases)
-- [ ] **Read CHANGELOG entries** → [CHANGELOG.md](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/CHANGELOG.md)
-- [ ] **Review new Discussion Topics** → [Discussion topics folder](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/discussion-topics)
-- [ ] **Check Technical Specs progress** → [Tech specs folder](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/technical-specifications)
+- [ ] **Check for new ARF releases** → [Releases page](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/releases)
+- [ ] **Read CHANGELOG entries** → [CHANGELOG.md](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/CHANGELOG.md)
+- [ ] **Review new Discussion Topics** → [Discussion topics folder](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/tree/main/docs/discussion-topics)
+- [ ] **Check Technical Specs progress** → [Tech specs folder](https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications)
 - [ ] **Monitor new CIRs** → [EUR-Lex](https://eur-lex.europa.eu/)
 - [ ] **Update your traceability matrix** → Map changed requirements to your components
 - [ ] **Run conformance tests** → Verify no regressions from ARF changes
@@ -367,16 +376,16 @@ Every quarter, perform this check to keep your implementation aligned with upstr
 ## Resources for Deep-Dives
 
 ### Understanding ARF Structure
-- **ARF Main Document:** https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md
-- **Annexes:** https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/annexes
-- **Index:** https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/index.md
+- **ARF Main Document:** https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md
+- **Annexes:** https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/tree/main/docs/annexes
+- **Index:** https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/index.md
 
 ### Understanding Regulatory Context
 - **EU Digital Identity Regulation:** https://eur-lex.europa.eu/eli/reg/2014/910/2024-10-18
-- **Commission Implementing Regulations:** Listed in [ARF README](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/README.md)
+- **Commission Implementing Regulations:** Listed in [ARF README](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/README.md)
 
 ### Standards & Technical Specs
-- **Technical Specifications Roadmap:** https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/technical-specifications
+- **Technical Specifications Roadmap:** https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications
 - **OpenID4VCI:** https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html
 - **OpenID4VP:** https://openid.net/specs/openid-4-verifiable-presentations-1_0.html
 
@@ -387,7 +396,7 @@ Every quarter, perform this check to keep your implementation aligned with upstr
 If you identify:
 
 - **Misalignment between ARF and on-ramp:** File an issue in this repo
-- **Ambiguity in ARF:** Contribute to the [upstream repo](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework) via issues or pull requests
+- **Ambiguity in ARF:** Contribute to the [upstream repo](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework) via issues or pull requests
 - **New discussion topics or specs:** They'll be linked here as they emerge
 
 ---

@@ -6,7 +6,7 @@ This repository provides **structured orientation, implementation guidance, and 
 The on-ramp is **not a fork** of the upstream ARF repository—it is a companion documentation and guidance project designed to help implementers, architects, policy leaders, and assurance teams navigate the ARF landscape more effectively.
 
 **ARF Version Alignment:** 2.8.0 (February 2, 2026)  
-**Regulatory Basis:** [eIDAS Regulation 2014/910/EU](https://eur-lex.europa.eu/eli/reg/2014/910/2024-10-18) (as amended by [Regulation 2024/1183](https://eur-lex.europa.eu/eli/reg/2024/1183/oj))
+**Regulatory Basis:** [eIDAS Regulation 2014/910/EU](https://eur-lex.europa.eu/eli/reg/2014/910/2024-10-18) together with the current EUDI Wallet implementing regulations referenced by the upstream ARF repository.
 
 ---
 
@@ -26,19 +26,25 @@ The **ARF On-Ramp Pack** distills the upstream ARF into role-oriented reading pa
 
 | Resource | Latest Version | Release Date | On-Ramp Coverage | Regulatory Authority | Status |
 |----------|-----------------|--------------|-----------------|--------|--------|
-| **ARF Main Document** | 2.8.0 | 2026-02-02 | Aligned with v2.8.0 | [ARF Repo](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) | ✅ Current |
-| **Technical Specifications** | Active | Ongoing | Referenced | [Tech Specs Roadmap](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/tree/main/docs/technical-specifications) | 📝 Partial |
-| **Discussion Topics** | Multiple active | Ongoing | Topics F, P, Q, R, S, T, AA mapped | [GitHub Discussions](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/discussion-topics) | 📝 In progress |
-| **High-Level Requirements (Annex 2)** | Current | 2025-11-10 | Structured for conformance | [ARF Annexes](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/annexes) | ✅ Current |
+| **ARF Main Document** | 2.8.0 | 2026-02-02 | Aligned with v2.8.0 | [ARF Repo](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) | ✅ Current |
+| **Technical Specifications / STS** | Active | Ongoing | Referenced | [STS Repository](https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications) | 📝 Partial |
+| **Discussion Topics** | Multiple active | Ongoing | Topics F, P, Q, R, S, T, AA mapped | [GitHub Discussions](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/tree/main/docs/discussion-topics) | 📝 In progress |
+| **High-Level Requirements (Annex 2)** | Current | 2025-11-10 | Structured for conformance | [ARF Annexes](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/tree/main/docs/annexes) | ✅ Current |
 | **Rulebooks Catalog** | Active | 2025-09-12 | Linked & referenced | [Rulebooks Repo](https://github.com/eu-digital-identity-wallet/eudi-doc-attestation-rulebooks-catalog/) | ✅ Linked |
-| **CIR 2024/1183 Implementation** | Final | 2024-10-18 | Governance and control mappings | [EUR-Lex](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) | ✅ Mapped |
+| **Implementing Regulations Set** | Active | Ongoing | Partially reflected in guidance | [Upstream ARF README](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework) | 📝 Needs periodic review |
 
 **Repository Links:**
-- **Upstream ARF (authoritative):** https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework
-- **ARF Main Document (v2.8.0):** https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md
+- **Upstream ARF (authoritative):** https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework
+- **ARF Main Document (v2.8.0):** https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md
 - **Attestation Rulebooks Catalog:** https://github.com/eu-digital-identity-wallet/eudi-doc-attestation-rulebooks-catalog/
-- **Discussion Topics & Consultation:** https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/discussion-topics
-- **Technical Specifications Roadmap:** https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/technical-specifications
+- **Discussion Topics & Consultation:** https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/tree/main/docs/discussion-topics
+- **Technical Specifications Roadmap:** https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications
+
+### Synchronization Notes
+
+- The canonical upstream ARF repository is now `eudi-doc-architecture-and-reference-framework`; links in this pack have been updated accordingly.
+- Standards and Technical Specifications work is tracked in the dedicated STS repository, so technical-specification references now point there by default.
+- The upstream ARF now frames the wallet against a broader implementing-regulation set than this pack originally cited. Treat this repository as companion guidance, and use the upstream ARF plus EUR-Lex for authoritative regulatory scope.
 
 ---
 
@@ -80,15 +86,14 @@ The **Architecture and Reference Framework** (ARF) is the technical blueprint ma
 - **Wallet roles and responsibilities** — Wallet Provider, Wallet Instance, Wallet Unit, Wallet Solution (ARF Ch. 3)
 - **Trust model** — PID Provider, Attestation Provider, Relying Party, Supervisory Bodies (ARF Ch. 3–4)
 - **Data flows** — Proximity (NFC), Remote (same-device, cross-device), registration flows (ARF Ch. 4)
-- **Protocol requirements** — [OpenID4VCI v1.0](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html), [OpenID4VP v1.0](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html), [HAIP](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/technical-specifications/), and other standards (ARF Ch. 5)
+- **Protocol requirements** — [OpenID4VCI v1.0](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html), [OpenID4VP v1.0](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html), [the STS repository](https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications), and other standards (ARF Ch. 5)
 - **Governance & compliance** — Conformance profiles (AL1–AL4), certification rules, supervisory oversight (ARF Ch. 7)
 - **Security, integrity & accessibility** — Controls (ARF Ch. 6), assurance evidence, accessible design (ARF Ch. 8)
 
 **Regulatory Implementation:**
 - **eIDAS Regulation 2014/910/EU** (amended by [Regulation 2024/1183/EU](https://eur-lex.europa.eu/eli/reg/2024/1183/oj)): Articles 5–6 define the wallet
-- **Commission Implementing Regulation (EU) 2023/1411**: Technical specifications for pilot phase
-- **Commission Implementing Regulation (EU) 2024/1183**: Final technical specifications and conformance rules
-- **Digital Identity Cooperation Group (DICG)**: Governance and interoperability oversight
+- **Current EUDI Wallet implementing regulations**: The upstream ARF now references a broader suite of implementing regulations, including technical, certification, notification, relying party registration, and supervisory reporting measures
+- **European Digital Identity Cooperation Group (EDICG)**: Governance and interoperability oversight
 
 ### What This On-Ramp Adds
 
@@ -98,9 +103,9 @@ The **Architecture and Reference Framework** (ARF) is the technical blueprint ma
 | ARF Explained | Simplified structural guide | ARF Chapters 1–8 summary | "What are the main layers?" |
 | Architecture Layer Map | Logical decomposition | ARF Ch. 3–5, 7 architecture refs | "How does X relate to Y?" |
 | Conformance Companion | Implementation-facing interpretation | ARF Annex 2 (HLRs 1–55) | "What does this requirement mean for my code?" |
-| Governance to Control Mapping | Links governance to technical controls | eIDAS + CIR 2024/1183 + ARF Ch. 6 | "How do I implement policy requirement Z?" |
+| Governance to Control Mapping | Links governance to technical controls | eIDAS + implementing regulations + ARF Ch. 6 | "How do I implement policy requirement Z?" |
 | Upstream Alignment Guide | Track ARF changes and impact | ARF versioning, CIR amendments | "What changed and how does it affect us?" |
-| Quick Reference | Glossary, links, regulations | All referenced standards/CIRs | "What does WSCA mean? What's the latest CIR?" |
+| Quick Reference | Glossary, links, regulations | Current upstream references and cited standards | "What does WSCA mean? What's the latest upstream source?" |
 
 ---
 
@@ -152,17 +157,17 @@ arf-onramp-pack/
 
 ### Official ARF Documentation
 
-- **[Architecture & Reference Framework Main Document (v2.8.0, Feb 2026)](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md)**
+- **[Architecture & Reference Framework Main Document (v2.8.0, Feb 2026)](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md)**
   - 389 KB comprehensive reference document
   - Chapters 1–8: Scope, Overview, Roles, Flows, Protocols, Security, Governance, Accessibility
   
-- **[ARF Annexes (High-Level Requirements & Mappings)](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/annexes)**
+- **[ARF Annexes (High-Level Requirements & Mappings)](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/tree/main/docs/annexes)**
   - Annex 1: Acronyms and Definitions
   - Annex 2: High-Level Requirements (HLRs 1–55) with traceability
   - Annex 3: ARF-to-CIR Mapping
   - Annex 4: Member State Declarations & Governance
 
-- **[Discussion Topics (Open Consultation)](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/discussion-topics)**
+- **[Discussion Topics (Open Consultation)](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/tree/main/docs/discussion-topics)**
   - Topic F: Trust Registry Query Protocol (TRQP)
   - Topic P: Device Binding and Hardware Security
   - Topic Q: Relying Party Federation Models
@@ -172,7 +177,7 @@ arf-onramp-pack/
 
 ### Technical Specifications
 
-- **[Technical Specifications Roadmap](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/technical-specifications)**
+- **[Technical Specifications Roadmap](https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications)**
   - OpenID4VCI binding specifications
   - OpenID4VP binding specifications
   - SD-JWT and CWT serialization
@@ -198,7 +203,7 @@ arf-onramp-pack/
   - Pilot phase outcomes
   - Community resources
 
-- **[ARF GitHub Repository](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework)** — Issues, discussions, release notes
+- **[ARF GitHub Repository](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework)** — Issues, discussions, release notes
 
 ---
 
@@ -254,10 +259,10 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for detailed contribution guidelines, c
 
 The upstream ARF updates regularly, and Commission Implementing Regulations are amended through the legislative process. To stay current:
 
-1. **Monitor ARF releases:** [ARF Releases Page](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/releases)
-2. **Read the ARF CHANGELOG:** [CHANGELOG.md](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/CHANGELOG.md)
+1. **Monitor ARF releases:** [ARF Releases Page](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/releases)
+2. **Read the ARF CHANGELOG:** [CHANGELOG.md](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/CHANGELOG.md)
 3. **Track CIR amendments:** [EUR-Lex Search](https://eur-lex.europa.eu/search.html?queryText=2024/1183&type=reg) for updates to CIR 2024/1183
-4. **Monitor Discussion Topics:** [GitHub Discussions](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/discussion-topics) guide upcoming ARF changes
+4. **Monitor Discussion Topics:** [GitHub Discussions](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/tree/main/docs/discussion-topics) guide upcoming ARF changes
 5. **Use our alignment guide:** [upstream-alignment-guide.md](./docs/upstream-alignment-guide.md) maps recent changes to on-ramp docs
 
 **On-Ramp Update Cadence:**
@@ -289,7 +294,7 @@ This on-ramp pack is provided under the same license as the upstream ARF. See [L
 
 ## Questions or Feedback?
 
-- **ARF questions:** See the [upstream repository](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework) and its issue tracker
+- **ARF questions:** See the [upstream repository](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework) and its issue tracker
 - **Regulatory questions (eIDAS, CIRs):** See [EUR-Lex](https://eur-lex.europa.eu/) or [EDICG](https://digital-strategy.ec.europa.eu/en/policies/european-digital-identity-cooperation-group)
 - **On-ramp guidance questions:** File an issue in this repository (cite relevant ARF section and use case)
 - **Official EUDI support:** https://commission.europa.eu/about-european-commission/contact_en
@@ -300,10 +305,10 @@ This on-ramp pack is provided under the same license as the upstream ARF. See [L
 
 | Role | Start Here | Then Read | Regulatory Reference |
 |------|------------|-----------|----------------------|
-| **Policy / Leadership** | [reading-path-policy-leadership.md](./docs/reading-paths/reading-path-policy-leadership.md) | [arf-explained.md](./docs/arf-explained.md) → [ARF main Ch. 1–3](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) | [eIDAS Reg. Art. 5–6](https://eur-lex.europa.eu/eli/reg/2014/910/2024-10-18), [CIR 2024/1183 Art. 9–13](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) |
-| **Architect** | [reading-path-architect.md](./docs/reading-paths/reading-path-architect.md) | [architecture-layer-map.md](./docs/architecture-layer-map.md) → [ARF main Ch. 2–5](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) | ARF Ch. 3 (Roles), Ch. 5 (Protocols), [Technical Specs](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/technical-specifications) |
-| **Implementer** | [reading-path-implementer.md](./docs/reading-paths/reading-path-implementer.md) | [conformance-interpretation-companion.md](./docs/conformance-interpretation-companion.md) → [ARF main Ch. 5–6](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md), [OpenID Specs](https://openid.net/) | ARF Annex 2 (HLRs), [Technical Specs](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/technical-specifications), [CIR 2024/1183 Art. 1–8](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) |
-| **Security / Assurance** | [reading-path-security-assurance.md](./docs/reading-paths/reading-path-security-assurance.md) | [governance-to-control-mapping.md](./docs/governance-to-control-mapping.md) → [ARF main Ch. 6](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) | ARF Ch. 6 (Security), [CIR 2024/1183 Art. 9](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) (Conformance) |
+| **Policy / Leadership** | [reading-path-policy-leadership.md](./docs/reading-paths/reading-path-policy-leadership.md) | [arf-explained.md](./docs/arf-explained.md) → [ARF main Ch. 1–3](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) | [eIDAS Reg. Art. 5–6](https://eur-lex.europa.eu/eli/reg/2014/910/2024-10-18), [CIR 2024/1183 Art. 9–13](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) |
+| **Architect** | [reading-path-architect.md](./docs/reading-paths/reading-path-architect.md) | [architecture-layer-map.md](./docs/architecture-layer-map.md) → [ARF main Ch. 2–5](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) | ARF Ch. 3 (Roles), Ch. 5 (Protocols), [Technical Specs](https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications) |
+| **Implementer** | [reading-path-implementer.md](./docs/reading-paths/reading-path-implementer.md) | [conformance-interpretation-companion.md](./docs/conformance-interpretation-companion.md) → [ARF main Ch. 5–6](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md), [OpenID Specs](https://openid.net/) | ARF Annex 2 (HLRs), [Technical Specs](https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications), [CIR 2024/1183 Art. 1–8](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) |
+| **Security / Assurance** | [reading-path-security-assurance.md](./docs/reading-paths/reading-path-security-assurance.md) | [governance-to-control-mapping.md](./docs/governance-to-control-mapping.md) → [ARF main Ch. 6](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) | ARF Ch. 6 (Security), [CIR 2024/1183 Art. 9](https://eur-lex.europa.eu/eli/reg/2024/1183/oj) (Conformance) |
 
 ---
 

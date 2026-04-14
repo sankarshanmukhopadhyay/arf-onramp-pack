@@ -91,7 +91,7 @@ The EUDI ecosystem has governance at three levels:
 
 **Read:** [ARF Explained](../arf-explained.md) → "Key Concepts" section
 
-**Then:** Review [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → **Chapter 1** (Introduction) and **Chapter 2** (Roles & Governance)
+**Then:** Review [ARF Main Document](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → **Chapter 1** (Introduction) and **Chapter 2** (Roles & Governance)
 
 **Key Questions to Answer:**
 - [ ] What is a wallet and what does it do?
@@ -104,7 +104,7 @@ The EUDI ecosystem has governance at three levels:
 
 **Read:** [ARF Explained](../arf-explained.md) → "Governance & Oversight" section
 
-**Then:** [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → **Chapter 7** (Conformance & Certification)
+**Then:** [ARF Main Document](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → **Chapter 7** (Conformance & Certification)
 
 **Also Read:** [Commission Implementing Regulation 2024/2981](https://data.europa.eu/eli/reg_impl/2024/2981/oj) → Certification criteria (executive summary)
 
@@ -120,7 +120,7 @@ The EUDI ecosystem has governance at three levels:
 
 **Read:** [Conformance Interpretation Companion](../conformance-interpretation-companion.md) → "Conformance Certification Process" section
 
-**Then:** [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → **Chapter 7** in detail
+**Then:** [ARF Main Document](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → **Chapter 7** in detail
 
 **Key Questions to Answer:**
 - [ ] What is the certification process?
@@ -134,7 +134,7 @@ The EUDI ecosystem has governance at three levels:
 
 **Read:** [ARF Explained](../arf-explained.md) → "Interoperability" section
 
-**Then:** [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → **Chapter 2, Section 2.3** (Cross-border interoperability)
+**Then:** [ARF Main Document](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → **Chapter 2, Section 2.3** (Cross-border interoperability)
 
 **Key Questions to Answer:**
 - [ ] How do member state wallets recognize each other?
@@ -148,7 +148,7 @@ The EUDI ecosystem has governance at three levels:
 ### If You're Designing Member State Wallet Strategy
 
 **Additional Reading:**
-1. [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → Chapter 3 (Wallet Architecture)
+1. [ARF Main Document](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → Chapter 3 (Wallet Architecture)
 2. [Governance to Control Mapping](../governance-to-control-mapping.md) → Understand how governance translates to controls
 3. [Upstream Alignment Guide](../upstream-alignment-guide.md) → Understand ARF evolution and plan for updates
 
@@ -163,7 +163,7 @@ The EUDI ecosystem has governance at three levels:
 **Additional Reading:**
 1. [CIR 2024/2981](https://data.europa.eu/eli/reg_impl/2024/2981/oj) → Full certification regulation
 2. [CIR 2024/2980](https://data.europa.eu/eli/reg_impl/2024/2980/oj) → Ecosystem notifications
-3. [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → Chapter 7 (Supervisory Body Responsibilities)
+3. [ARF Main Document](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → Chapter 7 (Supervisory Body Responsibilities)
 
 **Questions to Explore:**
 - What is the certification approval timeline?
@@ -175,7 +175,7 @@ The EUDI ecosystem has governance at three levels:
 
 **Additional Reading:**
 1. [EDICG Page](https://digital-strategy.ec.europa.eu/en/policies/european-digital-identity-cooperation-group) → Governance body info
-2. [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → Chapter 2, Section 2.3 (Interoperability)
+2. [ARF Main Document](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → Chapter 2, Section 2.3 (Interoperability)
 3. [CIR 2025/846](https://data.europa.eu/eli/reg_impl/2025/846/oj) → Cross-border identity matching
 
 **Questions to Explore:**
@@ -366,9 +366,9 @@ Recommendation: Join EDICG, participate in trust list maintenance
 - **Other CIRs:** See [Quick Reference](../quick-reference.md)
 
 ### ARF Documentation
-- **ARF Main Document:** https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md
-- **ARF Annexes (high-level requirements):** https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/annexes
-- **ARF Repository:** https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework
+- **ARF Main Document:** https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md
+- **ARF Annexes (high-level requirements):** https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/tree/main/docs/annexes
+- **ARF Repository:** https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework
 
 ### Community & Governance
 - **EDICG (European Digital Identity Cooperation Group):** https://digital-strategy.ec.europa.eu/en/policies/european-digital-identity-cooperation-group

@@ -112,7 +112,7 @@ Certification requires proof that controls work:
 
 **Read:** [ARF Explained](../arf-explained.md) → "Assurance Levels" section
 
-**Then:** [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → **Chapter 6** (Security, Integrity, Accessibility)
+**Then:** [ARF Main Document](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → **Chapter 6** (Security, Integrity, Accessibility)
 
 **Key Questions to Answer:**
 - [ ] What are the assurance levels (L0–L3)?
@@ -142,7 +142,7 @@ Certification requires proof that controls work:
 
 ### Section 3: Privacy Requirements (10 min)
 
-**Read:** [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → **Chapter 6, Section 6.4** (Privacy)
+**Read:** [ARF Main Document](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → **Chapter 6, Section 6.4** (Privacy)
 
 **Also:** [Governance to Control Mapping](../governance-to-control-mapping.md) → "User Consent Controls" pattern
 
@@ -193,7 +193,7 @@ Certification requires proof that controls work:
 ### If You're Designing Wallet Security Architecture
 
 **Additional Reading:**
-1. [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → Chapter 6 in detail
+1. [ARF Main Document](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → Chapter 6 in detail
 2. [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework) → Risk management
 3. [ISO 27005](https://www.iso.org/standard/80585.html) → Risk assessment (if accessible)
 4. [OWASP Threat Modeling](https://owasp.org/www-community/Threat_Model_Info_and_Common_Approaches) → Practical approach
@@ -227,7 +227,7 @@ Certification requires proof that controls work:
 
 **Additional Reading:**
 1. [CIR 2024/2981](https://data.europa.eu/eli/reg_impl/2024/2981/oj) → Full certification regulation
-2. [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → Chapter 7 (Conformance & Certification)
+2. [ARF Main Document](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → Chapter 7 (Conformance & Certification)
 3. ISO 27001 audit checklists (sample format)
 
 **Topics to Cover:**
@@ -242,7 +242,7 @@ Certification requires proof that controls work:
 ### If You're Designing Privacy Controls
 
 **Additional Reading:**
-1. [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → Chapter 6, Section 6.4 (Privacy)
+1. [ARF Main Document](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → Chapter 6, Section 6.4 (Privacy)
 2. [GDPR Regulation](https://eur-lex.europa.eu/eli/reg/2016/679/oj) → Chapters 3–4 (User Rights & Consent)
 3. [Privacy by Design Framework](https://www.ipc.on.ca/wp-content/uploads/Resources/7foundationalprinciples.pdf) → Design principles
 
@@ -584,7 +584,7 @@ Solution: Log operations but delete personal data after audit period
 - **ISO 27701:** Privacy management
 
 ### ARF Documentation
-- **ARF Chapter 6:** https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md (Security & Privacy)
+- **ARF Chapter 6:** https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md (Security & Privacy)
 - **CIR 2024/2981:** https://data.europa.eu/eli/reg_impl/2024/2981/oj (Certification)
 - **Governance to Control Mapping:** [../governance-to-control-mapping.md](../governance-to-control-mapping.md)
 

@@ -6,7 +6,7 @@ Thank you for considering contributing to the ARF On-Ramp Pack! This guide expla
 
 ## What Is This Project?
 
-The **ARF On-Ramp Pack** is a **companion documentation project**, not the authoritative source. Its goal is to help implementers, architects, policy leaders, and assurance teams navigate the upstream [Architecture and Reference Framework (ARF)](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework).
+The **ARF On-Ramp Pack** is a **companion documentation project**, not the authoritative source. Its goal is to help implementers, architects, policy leaders, and assurance teams navigate the upstream [Architecture and Reference Framework (ARF)](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework).
 
 ---
 
@@ -72,7 +72,7 @@ Want to expand a guide or add a new one? **Propose a pull request.**
 The on-ramp tracks the upstream ARF. When the ARF updates, this project needs updates too.
 
 **How to help:**
-1. Watch the [ARF releases](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/releases)
+1. Watch the [ARF releases](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/releases)
 2. When a new version is released, open an issue: "Update for ARF vX.Y.Z"
 3. Suggest which guides need updating
 4. Or contribute the updates yourself (see "Contribute Content" above)
@@ -149,7 +149,7 @@ New documents should fit logically into this structure. If creating a new catego
 
 ### Links & References
 
-- **Link to upstream ARF:** Use full GitHub URLs: `https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/...`
+- **Link to upstream ARF:** Use full GitHub URLs: `https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/...`
 - **Link internally:** Use relative paths: `../quick-reference.md`
 - **Link to regulations:** Use EUR-Lex URLs: `https://eur-lex.europa.eu/...`
 - **Link to standards:** Use official URLs (OpenID, NIST, ISO, etc.)
@@ -233,7 +233,7 @@ Or link to images:
 
 If you find an error in the upstream ARF (not this on-ramp), please report it upstream:
 
-**GitHub:** https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/issues
+**GitHub:** https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/issues
 
 **Process:**
 1. Check if issue already exists
@@ -320,7 +320,7 @@ When writing guidance, cite:
 ```markdown
 According to ARF Chapter 5, Section 5.3 (Protocol Bindings), 
 wallet implementations MUST support OpenID4VCI 1.0 and OpenID4VP 1.0 protocols.
-**Reference:** [ARF Chapter 5](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md), 
+**Reference:** [ARF Chapter 5](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md), 
 Section 5.3
 ```
 
@@ -372,7 +372,7 @@ For larger contributions:
 
 - **Use this reference guide:** [REFERENCES.md](./REFERENCES.md) (comprehensive citation guide)
 - **EUR-Lex search:** https://eur-lex.europa.eu/ for CIR lookup
-- **ARF releases:** https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/releases
+- **ARF releases:** https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/releases
 - **OpenID specs:** https://openid.net/developers/specs/ for protocol versions
 
 ### Handling Outdated References

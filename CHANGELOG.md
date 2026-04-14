@@ -6,6 +6,23 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+## [1.0.1] - 2026-04-14
+
+### Changed
+
+- Synchronized repository references from the legacy ARF GitHub path to the current canonical upstream repository: `eudi-doc-architecture-and-reference-framework`.
+- Repointed technical-specification references to the dedicated STS repository: `eudi-doc-standards-and-technical-specifications`.
+- Updated reference framing so the pack no longer presents CIR 2024/1183 as the sole current regulatory basis for the upstream ARF.
+- Corrected reference metadata in `REFERENCES.md`, including the upstream license signal and Data Governance Act labeling.
+
+### Documentation
+
+- Added synchronization notes to `README.md`.
+- Added 2026 synchronization findings to `docs/upstream-alignment-guide.md`.
+- Refreshed upstream URLs across docs and reading paths for consistency and reduced link drift.
+
+---
+
 ## [1.0.0] - 2026-03-20
 
 ### Added
@@ -66,7 +83,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Known Limitations
 
-- This is a companion documentation project; it does not replace the authoritative [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md)
+- This is a companion documentation project; it does not replace the authoritative [ARF Main Document](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md)
 - On-ramp updates lag ARF updates by design (we synthesize, not mirror)
 - Community is early-stage; response times may vary
 
@@ -100,11 +117,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 **Current Maintainers:**
 - Project: [ARF On-Ramp Pack](https://github.com/sankarshanmukhopadhyay/arf-onramp-pack)
-- Upstream: [EU Digital Identity Wallet - Architecture and Reference Framework](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework)
+- Upstream: [EU Digital Identity Wallet - Architecture and Reference Framework](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework)
 
 **Support Channels:**
 - **Issues & Discussions:** GitHub (this repository)
-- **Upstream ARF Questions:** GitHub ([ARF repository](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework))
+- **Upstream ARF Questions:** GitHub ([ARF repository](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework))
 - **EUDI Coordination:** [EDICG](https://digital-strategy.ec.europa.eu/en/policies/european-digital-identity-cooperation-group)
 
 **Maintenance Schedule:**
@@ -128,7 +145,7 @@ If you find an error in the on-ramp documentation:
 
 ### Upstream ARF Issues
 If you find an error in the upstream ARF itself:
-1. Report to [ARF repository](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/issues)
+1. Report to [ARF repository](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/issues)
 2. Notify on-ramp maintainers if it affects our guidance
 
 ### Feature Requests
@@ -155,7 +172,7 @@ Thank you for helping improve EUDI implementation guidance! 🙏
 
 ## Acknowledgments
 
-This on-ramp pack was created to help implementers, architects, policy leaders, and assurance teams navigate the upstream [Architecture and Reference Framework](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework), which is maintained by the European Digital Identity Cooperation Group (EDICG) under the European Commission.
+This on-ramp pack was created to help implementers, architects, policy leaders, and assurance teams navigate the upstream [Architecture and Reference Framework](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework), which is maintained by the European Digital Identity Cooperation Group (EDICG) under the European Commission.
 
 **Credits:**
 - Original project structure inspired by EUDI ecosystem needs

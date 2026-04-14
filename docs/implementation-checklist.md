@@ -395,7 +395,7 @@ This document provides **executable checklists** for different implementation sc
 Every quarter (Feb, May, Aug, Nov):
 
 - [ ] **Check for ARF updates**
-  - [ ] Visit: https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/releases
+  - [ ] Visit: https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/releases
   - [ ] Read CHANGELOG
   - [ ] Check discussion topics
   - [ ] Review technical specifications progress

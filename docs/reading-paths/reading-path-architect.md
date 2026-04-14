@@ -93,7 +93,7 @@ Device generates key → Credential embeds device public key
 
 **Then:** [Architecture Layer Map](../architecture-layer-map.md) → Full document
 
-**Then:** [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → **Chapter 3** (Wallet Architecture & Components)
+**Then:** [ARF Main Document](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → **Chapter 3** (Wallet Architecture & Components)
 
 **Key Questions to Answer:**
 - [ ] What are the five architecture layers?
@@ -104,7 +104,7 @@ Device generates key → Credential embeds device public key
 
 ### Section 2: Wallet Interior Architecture (15 min)
 
-**Read:** [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → **Chapter 4, Sections 4.1–4.3** (Ecosystem, Trust, Wallet Lifecycle)
+**Read:** [ARF Main Document](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → **Chapter 4, Sections 4.1–4.3** (Ecosystem, Trust, Wallet Lifecycle)
 
 **Then:** Revisit [Architecture Layer Map](../architecture-layer-map.md) → "Architecture Patterns" section
 
@@ -118,7 +118,7 @@ Device generates key → Credential embeds device public key
 
 ### Section 3: Data Flows & Integration Points (15 min)
 
-**Read:** [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → **Chapter 5** (Data Flows)
+**Read:** [ARF Main Document](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → **Chapter 5** (Data Flows)
 
 **Focus on:**
 - Section 5.1: Proximity authentication (NFC) flow
@@ -135,7 +135,7 @@ Device generates key → Credential embeds device public key
 
 ### Section 4: Security Architecture (10 min)
 
-**Read:** [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → **Chapter 6** (Security, Integrity, Accessibility)
+**Read:** [ARF Main Document](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → **Chapter 6** (Security, Integrity, Accessibility)
 
 **Then:** [Governance to Control Mapping](../governance-to-control-mapping.md) → Sections on cryptographic and security controls
 
@@ -148,7 +148,7 @@ Device generates key → Credential embeds device public key
 
 ### Section 5: Accessibility & Design for All (5 min)
 
-**Read:** [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → **Chapter 8** (Accessibility)
+**Read:** [ARF Main Document](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → **Chapter 8** (Accessibility)
 
 **Also:** [Governance to Control Mapping](../governance-to-control-mapping.md) → "User Consent Controls" pattern
 
@@ -163,7 +163,7 @@ Device generates key → Credential embeds device public key
 ### If You're Designing Wallet Provider Backend
 
 **Additional Reading:**
-1. [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → Chapter 4, Sections 4.1 (Ecosystem), 4.4 (Wallet Lifecycle)
+1. [ARF Main Document](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → Chapter 4, Sections 4.1 (Ecosystem), 4.4 (Wallet Lifecycle)
 2. [Conformance Interpretation Companion](../conformance-interpretation-companion.md) → "Requirement Categories by Topic" → Governance Topics (1–10)
 3. [CIR 2024/2980](https://data.europa.eu/eli/reg_impl/2024/2980/oj) → Ecosystem notifications
 
@@ -177,7 +177,7 @@ Device generates key → Credential embeds device public key
 ### If You're Designing Mobile/Web Wallet Instance
 
 **Additional Reading:**
-1. [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → Chapter 3 (Wallet Architecture), Chapter 5 (Data Flows)
+1. [ARF Main Document](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → Chapter 3 (Wallet Architecture), Chapter 5 (Data Flows)
 2. [Quick Reference](../quick-reference.md) → OpenID4VCI, OpenID4VP, HAIP protocol links
 3. Platform security guides (iOS Secure Enclave, Android TEE, web crypto APIs)
 
@@ -190,7 +190,7 @@ Device generates key → Credential embeds device public key
 ### If You're Designing Issuer Integration
 
 **Additional Reading:**
-1. [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → Chapter 4, Section 4.2 (Attestation & Issuance)
+1. [ARF Main Document](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → Chapter 4, Section 4.2 (Attestation & Issuance)
 2. [Attestation Rulebooks](https://github.com/eu-digital-identity-wallet/eudi-doc-attestation-rulebooks-catalog) → PID rulebook, any other rulebooks you support
 3. [OpenID4VCI Spec](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html) (technical, for developers)
 
@@ -203,8 +203,8 @@ Device generates key → Credential embeds device public key
 ### If You're Designing Service Integration
 
 **Additional Reading:**
-1. [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → Chapter 4, Section 4.5 (Relying Parties)
-2. [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → Chapter 5, Sections 5.2–5.3 (Remote flows)
+1. [ARF Main Document](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → Chapter 4, Section 4.5 (Relying Parties)
+2. [ARF Main Document](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) → Chapter 5, Sections 5.2–5.3 (Remote flows)
 3. [OpenID4VP Spec](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html) (technical)
 4. [CIR 2025/848](https://data.europa.eu/eli/reg_impl/2025/848/oj) → RP registration
 
@@ -492,7 +492,7 @@ Before moving to implementation, review your architecture:
 ## Key Resources
 
 ### ARF Documentation
-- **ARF Main Document:** https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md (Chapters 3–6)
+- **ARF Main Document:** https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md (Chapters 3–6)
 - **Architecture Layer Map:** [../architecture-layer-map.md](../architecture-layer-map.md)
 - **Attestation Rulebooks:** https://github.com/eu-digital-identity-wallet/eudi-doc-attestation-rulebooks-catalog
 

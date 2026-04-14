@@ -183,7 +183,7 @@ Each layer depends on the layers beneath it. Changes at lower layers propagate u
 | **Interop Profiles** | Subset of ARF for cross-border use | ARF Section 2.3, Annex 4 |
 | **Metadata Exchange** | Discovery of issuers, formats, policies | ARF Section 4.1 |
 | **Cross-Border Flows** | Multi-country scenarios | ARF Section 2.3, CIR 2025/846 |
-| **Technical Specifications** | OpenID, CBOR, cryptography specs | ARF [Technical Specs](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/technical-specifications) |
+| **Technical Specifications** | OpenID, CBOR, cryptography specs | ARF [Technical Specs](https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications) |
 | **Compatibility Testing** | Conformance suites, test vectors | ARF Section 7.3, CIR 2024/2981 |
 
 ### Key Decisions at This Layer

@@ -9,7 +9,7 @@ It focuses on:
 - **Interoperability assumptions** — How wallets work across borders and services
 - **Key concepts** — Core ideas you'll encounter throughout the ARF
 
-**Important:** This is not normative guidance. Refer to the official [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) for authoritative requirements.
+**Important:** This is not normative guidance. Refer to the official [ARF Main Document](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) for authoritative requirements.
 
 ---
 
@@ -210,7 +210,7 @@ The ARF is organized into five layers. Think of this like a building:
 - Proximity and remote authentication flows
 - Registration and enrollment processes
 
-**ARF Chapters:** 4.1, 5, and [Technical Specifications](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/technical-specifications)
+**ARF Chapters:** 4.1, 5, and [Technical Specifications](https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications)
 
 ### Layer 5: Interoperability (The Standards)
 
@@ -458,7 +458,7 @@ This allows vendors to innovate while maintaining baseline interoperability.
 ## Next Steps
 
 1. **Read your role-specific reading path** ([reading-paths/README.md](./reading-paths/README.md))
-2. **Study the ARF main document** for normative details (https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md)
+2. **Study the ARF main document** for normative details (https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md)
 3. **Review annexes** for high-level requirements (Annex 2) and detailed specs (Annexes 3+)
 4. **Check technical specifications** for protocol-level details
 5. **Use [upstream-alignment-guide.md](./upstream-alignment-guide.md)** to track ARF changes

@@ -110,7 +110,7 @@ These cross-cutting guides apply to all roles:
 
 Each reading path references specific ARF chapters and sections. Here's the upstream ARF structure:
 
-**ARF Main Document:** https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md (~389 KB)
+**ARF Main Document:** https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md (~389 KB)
 
 | Chapter | Content | Who Should Read |
 |---------|---------|---|
@@ -140,15 +140,15 @@ Each reading path references specific ARF chapters and sections. Here's the upst
 → Read: [ARF Explained](../arf-explained.md) + your [reading path](#available-reading-paths) + [Architecture Layer Map](../architecture-layer-map.md)
 
 ### If You're Implementing Now
-→ Read: Your [reading path](#available-reading-paths) + [Conformance Interpretation Companion](../conformance-interpretation-companion.md) + [ARF Main Document](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) relevant chapters
+→ Read: Your [reading path](#available-reading-paths) + [Conformance Interpretation Companion](../conformance-interpretation-companion.md) + [ARF Main Document](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md) relevant chapters
 
 ---
 
 ## Tips for Effective Reading
 
 1. **Skim first** — Get the structure and main points before diving deep
-2. **Bookmark the glossary** — [ARF Annex 1](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/tree/main/docs/annexes) and [Quick Reference](../quick-reference.md) for unfamiliar terms
-3. **Use the requirements CSV** — [Annex 2 CSV](https://github.com/eu-digital-identity-wallet/architecture-and-reference-framework/blob/main/hltr/high-level-requirements.csv) is searchable and sortable
+2. **Bookmark the glossary** — [ARF Annex 1](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/tree/main/docs/annexes) and [Quick Reference](../quick-reference.md) for unfamiliar terms
+3. **Use the requirements CSV** — [Annex 2 CSV](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/hltr/high-level-requirements.csv) is searchable and sortable
 4. **Draw diagrams** — Especially helpful: wallet architecture, data flows, trust model
 5. **Ask questions** — Create GitHub issues if guidance is unclear
 6. **Iterate** — Reading paths are not linear; jump around as needed
