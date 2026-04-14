@@ -1,8 +1,25 @@
+version: 1
+metadata:
+  profile: arf-onramp-pack
+  purpose: >
+    Monitor authoritative upstream repositories and legal texts that define,
+    constrain, or materially affect the companion guidance in this repository.
+  authority_order:
+    - eu_law
+    - implementing_acts
+    - arf_upstream
+    - sts_upstream
+    - local_companion_docs
+
 sources:
   - id: arf
     type: github_repo
     owner: eu-digital-identity-wallet
     repo: eudi-doc-architecture-and-reference-framework
+    canonical_url: https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework
+    description: >
+      Canonical upstream Architecture and Reference Framework repository for the
+      EUDI Wallet ecosystem.
     watch:
       releases: true
       default_branch: true
@@ -11,28 +28,216 @@ sources:
         - CHANGELOG.md
         - docs/architecture-and-reference-framework-main.md
         - docs/annexes/
+        - docs/discussion-topics/README.md
+        - docs/technical-specifications/README.md
     labels:
       - upstream-sync
       - arf
     severity_rules:
       release_change: high
       branch_change: medium
-      path_change: medium
+      path_change: high
+    local_impact:
+      docs:
+        - README.md
+        - REFERENCES.md
+        - docs/arf-explained.md
+        - docs/upstream-alignment-guide.md
+        - docs/quick-reference.md
+      rationale: >
+        ARF changes can alter terminology, architecture framing, annex guidance,
+        and companion interpretation boundaries.
 
   - id: sts
     type: github_repo
     owner: eu-digital-identity-wallet
     repo: eudi-doc-standards-and-technical-specifications
+    canonical_url: https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications
+    description: >
+      Dedicated standards and technical specifications upstream for EUDI Wallet.
     watch:
       releases: true
       default_branch: true
       paths:
         - README.md
-        - docs/
+        - docs/guide.md
+        - docs/technical-specifications/
     labels:
       - upstream-sync
       - sts
     severity_rules:
-      release_change: medium
+      release_change: high
       branch_change: medium
-      path_change: medium
+      path_change: high
+    local_impact:
+      docs:
+        - README.md
+        - REFERENCES.md
+        - docs/conformance-interpretation-companion.md
+        - docs/governance-to-control-mapping.md
+        - docs/implementation-checklist.md
+      rationale: >
+        STS changes can affect implementation guidance, specification tracking,
+        and the line between companion interpretation and technical normativity.
+
+  - id: eidas_regulation_2024_1183
+    type: eurlex_document
+    celex: "32024R1183"
+    canonical_url: https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32024R1183
+    title: >
+      Regulation (EU) 2024/1183 amending Regulation (EU) No 910/2014 as regards
+      establishing the European Digital Identity Framework
+    description: >
+      Core legislative baseline for the European Digital Identity Framework.
+    jurisdiction: eu
+    authority_level: primary_law
+    watch:
+      document_metadata: true
+      eli_metadata: true
+      content_fragments:
+        - "European Digital Identity Framework"
+        - "European Digital Identity Wallet"
+        - "relying parties"
+        - "person identification data"
+        - "electronic attestation of attributes"
+      publication_nodes:
+        - "/legal-content/EN/ALL/"
+        - "/legal-content/EN/TXT/"
+    labels:
+      - upstream-sync
+      - legal
+      - eidas2
+    severity_rules:
+      metadata_change: medium
+      content_change: critical
+      fragment_change: critical
+    local_impact:
+      docs:
+        - README.md
+        - REFERENCES.md
+        - docs/legal-baseline-2026.md
+        - docs/arf-explained.md
+        - docs/faq-by-role.md
+        - docs/reading-paths/reading-path-policy-leadership.md
+      rationale: >
+        This is a primary authority source. Any substantive change or corrigendum
+        must trigger a full re-check of companion legal interpretation.
+    review_requirements:
+      require_human_review: true
+      issue_template_section: legal_impact
+      checklist:
+        - confirm whether a corrigendum, consolidation, or metadata-only change occurred
+        - verify whether terminology in companion docs remains accurate
+        - update legal-baseline and references if changed
+
+  - id: onboarding_ir_2026_798
+    type: eurlex_document
+    celex: "32026R0798"
+    canonical_url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202600798
+    canonical_pdf_url: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202600798
+    title: >
+      Commission Implementing Regulation (EU) 2026/798 of 7 April 2026 laying
+      down rules for the application of Regulation (EU) No 910/2014 as regards
+      onboarding of users to the European Digital Identity Wallets
+    description: >
+      Implementing regulation for wallet-user onboarding and related assurance
+      expectations.
+    jurisdiction: eu
+    authority_level: implementing_act
+    watch:
+      document_metadata: true
+      eli_metadata: true
+      content_fragments:
+        - "onboarding of users"
+        - "verification of the identity"
+        - "European Digital Identity Wallets"
+        - "trust and security"
+        - "harmonised approach"
+      publication_nodes:
+        - "/legal-content/EN/TXT/"
+        - "/legal-content/EN/TXT/PDF/"
+    labels:
+      - upstream-sync
+      - legal
+      - onboarding
+    severity_rules:
+      metadata_change: medium
+      content_change: critical
+      fragment_change: critical
+    local_impact:
+      docs:
+        - REFERENCES.md
+        - docs/legal-baseline-2026.md
+        - docs/implementation-checklist.md
+        - docs/conformance-interpretation-companion.md
+        - docs/quick-reference.md
+      rationale: >
+        This directly affects onboarding interpretation and implementer-facing
+        guidance. Drift should be treated as release-relevant.
+    review_requirements:
+      require_human_review: true
+      issue_template_section: legal_impact
+      checklist:
+        - verify whether onboarding control descriptions remain accurate
+        - confirm whether companion checklists need revision
+        - assess whether a patch or minor release is warranted
+
+  - id: eudi_wallet_portal
+    type: web_page
+    canonical_url: https://eu-digital-identity-wallet.github.io/
+    title: European Digital Identity Wallet portal
+    description: >
+      Public ecosystem landing page and discovery layer for current EUDI Wallet
+      materials.
+    watch:
+      content_fragments:
+        - "European Digital Identity Wallet"
+        - "Architecture and Reference Framework"
+        - "Standards and Technical Specifications"
+      page_hash: true
+    labels:
+      - upstream-sync
+      - portal
+    severity_rules:
+      page_change: low
+      fragment_change: medium
+    local_impact:
+      docs:
+        - README.md
+        - INDEX.md
+        - REFERENCES.md
+      rationale: >
+        Portal changes are lower authority than law or upstream repos but can
+        signal moved references or discovery-layer drift.
+
+policies:
+  deduplication:
+    key: source_id
+    strategy: update_existing_issue
+  issue_routing:
+    default_labels:
+      - upstream-sync
+    severity_to_priority:
+      critical: P1
+      high: P2
+      medium: P3
+      low: P4
+  legal_review:
+    required_for_types:
+      - eurlex_document
+    assignee_hint: legal-and-governance-review
+  release_gating:
+    block_minor_or_major_release_on_open_severities:
+      - critical
+      - high
+
+notes:
+  - >
+    Legal sources are authoritative over local companion interpretations.
+    Drift in legal sources should never be auto-remediated without human review.
+  - >
+    ARF and STS are authoritative upstream repositories, but they are not a
+    substitute for the legal texts.
+  - >
+    This manifest assumes the upstream monitoring script supports source types
+    beyond github_repo.
