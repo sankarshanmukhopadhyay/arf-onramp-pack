@@ -1,3 +1,5 @@
+> **2026 re-audit note:** Read this document together with `legal-baseline-2026.md`. It remains a companion architectural decomposition and should not be treated as a substitute for the current implementing-act layer or the canonical ARF and STS repositories.
+
 # Architecture Layer Map
 
 This document decomposes the ARF into five logical architectural layers, showing how governance principles flow through to protocol implementation. Use this to understand system structure, identify your implementation scope, and navigate the ARF document.
@@ -412,5 +414,5 @@ Evidence: [Test case / documentation]
 
 ---
 
-**Last Updated:** March 2026  
+**Last Updated:** April 14, 2026  
 **ARF Alignment:** 2.8.0 (2026-02-02)

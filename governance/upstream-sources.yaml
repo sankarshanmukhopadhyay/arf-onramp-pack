@@ -1,0 +1,38 @@
+sources:
+  - id: arf
+    type: github_repo
+    owner: eu-digital-identity-wallet
+    repo: eudi-doc-architecture-and-reference-framework
+    watch:
+      releases: true
+      default_branch: true
+      paths:
+        - README.md
+        - CHANGELOG.md
+        - docs/architecture-and-reference-framework-main.md
+        - docs/annexes/
+    labels:
+      - upstream-sync
+      - arf
+    severity_rules:
+      release_change: high
+      branch_change: medium
+      path_change: medium
+
+  - id: sts
+    type: github_repo
+    owner: eu-digital-identity-wallet
+    repo: eudi-doc-standards-and-technical-specifications
+    watch:
+      releases: true
+      default_branch: true
+      paths:
+        - README.md
+        - docs/
+    labels:
+      - upstream-sync
+      - sts
+    severity_rules:
+      release_change: medium
+      branch_change: medium
+      path_change: medium
