@@ -6,6 +6,7 @@
 - [REFERENCES.md](./REFERENCES.md)
 - [CONTRIBUTING.md](./CONTRIBUTING.md)
 - [ENHANCEMENT_SUMMARY.md](./ENHANCEMENT_SUMMARY.md)
+- [RELEASE_NOTES_1.2.0.md](./RELEASE_NOTES_1.2.0.md)
 - [RELEASE_NOTES_1.1.0.md](./RELEASE_NOTES_1.1.0.md)
 
 ## Core docs
@@ -19,6 +20,7 @@
 - [docs/faq-by-role.md](./docs/faq-by-role.md)
 - [docs/upstream-alignment-guide.md](./docs/upstream-alignment-guide.md)
 - [docs/upstream-monitoring.md](./docs/upstream-monitoring.md)
+- [docs/upstream-sync-review-2026-06.md](./docs/upstream-sync-review-2026-06.md)
 
 ## Reading paths
 - [docs/reading-paths/README.md](./docs/reading-paths/README.md)

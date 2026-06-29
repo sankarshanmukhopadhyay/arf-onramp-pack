@@ -17,11 +17,12 @@ Understand where authority lives, what has changed in the legal and operational 
 - which implementing acts materially affect onboarding, certification, relying-party registration, breach response, and cross-border operation?
 - who owns synchronization with upstream changes?
 
-## Specific 1.1.0 watchpoints
+## Specific 1.2.0 watchpoints
 
 - Regulation (EU) 2024/1183 must be cited correctly
 - wallet operations now sit within a fuller implementing-act landscape than older summaries implied
-- April 2026 onboarding rules may affect rollout planning and communications
+- CIR (EU) 2026/798 may affect remote onboarding rollout planning and communications
+- ARF 2.9.0 and the public EUDI portal should be treated as the current documentation discovery baseline
 
 ## Deliverables a program team should produce
 

@@ -37,7 +37,7 @@ Anchor this work in the implementing acts on notifications, relying-party regist
 Anchor this work in the implementing act on reactions to security breaches and connect it to local operational runbooks.
 
 ### 5. Onboarding and user enrollment
-Anchor this work in the April 2026 onboarding implementing regulation and test how it changes enrollment assumptions in local documentation and architecture.
+Anchor this work in CIR (EU) 2026/798. Treat it as a remote-onboarding control surface for cases where assurance level substantial electronic identification means are combined with additional remote onboarding procedures to meet assurance level high.
 
 ## Evidence planning model
 
@@ -64,6 +64,9 @@ Do not assume the ARF alone answers procedural questions now addressed in later 
 
 ### Guardrail 3
 Do not treat STS tracking as decorative. It is part of the moving implementation surface.
+
+### Guardrail 4
+Do not treat attestation rulebooks as optional reading when a credential-specific implementation depends on PID, mDL, or another rulebook profile.
 
 ## Recommended next step
 

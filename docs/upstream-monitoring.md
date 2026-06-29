@@ -1,6 +1,6 @@
 # Upstream Monitoring
 
-This document describes the governance synchronization control plane added in release 1.1.0.
+This document describes the governance synchronization control plane added in release 1.1.0 and expanded in release 1.2.0.
 
 ## Goal
 
@@ -34,7 +34,19 @@ The control plane is designed to detect:
 - new releases
 - branch SHA changes
 - watched-path drift
+- content-hash drift for configured public pages and legal texts
+- watched-fragment drift for configured public pages and legal texts
 - link or repository authority changes encoded in the manifest
+
+## Supported source types
+
+| Source type | What is checked | Evidence produced |
+|---|---|---|
+| `github_repo` | latest release, default branch SHA, watched path SHAs | release tag, branch SHA, path SHA map |
+| `eurlex_document` | canonical URL, response metadata, content hash, watched fragments | URL, status, content hash, fragment map |
+| `web_page` | canonical URL, response metadata, content hash, watched fragments | URL, status, content hash, fragment map |
+
+Issue creation requires a configured target GitHub repository. Snapshot generation and report writing can run locally without issue credentials.
 
 ## Issue model
 

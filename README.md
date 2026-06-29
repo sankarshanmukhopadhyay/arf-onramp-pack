@@ -12,26 +12,29 @@ It is **not** the authoritative source of law, specification, or conformance. Th
 
 ## Release status
 
-**On-ramp version:** 1.1.0  
-**Previous release:** 1.0.2  
-**ARF alignment target:** 2.8.0  
-**Re-audit basis:** April 2026 legal and upstream synchronization refresh
+**On-ramp version:** 1.2.0  
+**Previous release:** 1.1.0  
+**ARF alignment target:** 2.9.0  
+**Re-audit basis:** June 2026 upstream synchronization refresh
 
-## What changed in 1.1.0
+## What changed in 1.2.0
 
-This release does two substantive things:
+This release does three substantive things:
 
-1. **Adds a governance synchronization control plane**
-   - machine-readable upstream source manifest
-   - scheduled GitHub Action for drift monitoring
-   - issue automation for upstream changes
-   - JSON evidence outputs and persisted state
+1. **Updates the upstream baseline**
+   - aligns the pack to the current public ARF 2.9.0 documentation surface
+   - treats `https://eudi.dev/` as the public EUDI documentation portal
+   - keeps the ARF, STS, and attestation rulebooks repositories distinct
 
-2. **Re-baselines the companion content against the latest legal texts**
-   - corrects the treatment of **Regulation (EU) 2024/1183** as an amending regulation rather than a Commission implementing regulation
-   - updates the wallet-core implementing regulation inventory to reflect the 2024 and 2025 package and the April 2026 onboarding regulation
-   - realigns ARF and STS references to the current upstream repositories
-   - tightens the distinction between explanation, implementation guidance, and legal authority
+2. **Hardens the governance synchronization control plane**
+   - monitors GitHub repositories, EUR-Lex documents, and public web pages declared in the manifest
+   - adds the attestation rulebooks catalog to the monitored source inventory
+   - makes local validation possible without requiring GitHub issue credentials
+
+3. **Tightens onboarding and assurance language**
+   - reflects the fuller title and scope of **CIR (EU) 2026/798**
+   - clarifies that remote onboarding can combine assurance level substantial eID means with additional remote procedures where the combination meets assurance level high
+   - keeps companion interpretation separate from legal or certification authority
 
 ## Current authority stack
 
@@ -62,12 +65,13 @@ Use this ordering when interpreting the pack:
 - **CIR (EU) 2025/847** — reactions to security breaches of wallets
 - **CIR (EU) 2025/848** — registration of wallet relying parties
 - **CIR (EU) 2025/849** — list of certified wallets
-- **CIR (EU) 2026/798** — onboarding of users to wallets by electronic identification means
+- **CIR (EU) 2026/798** — reference standards and specifications for remote onboarding of wallet users by assurance level substantial eID means combined with additional remote procedures where the combination meets assurance level high
 
 ### Current upstream repositories
 - **ARF:** `eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework`
 - **STS:** `eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications`
 - **Rulebooks catalog:** `eu-digital-identity-wallet/eudi-doc-attestation-rulebooks-catalog`
+- **Public documentation portal:** `https://eudi.dev/`
 
 ## What this pack does
 
@@ -81,10 +85,11 @@ This repository helps teams answer practical questions such as:
 ## Documentation map
 
 ### Start here
-- [docs/legal-baseline-2026.md](./docs/legal-baseline-2026.md) — current legal and repository baseline used for the 1.1.0 refresh
+- [docs/legal-baseline-2026.md](./docs/legal-baseline-2026.md) — current legal and repository baseline used for the 1.2.0 refresh
 - [docs/arf-explained.md](./docs/arf-explained.md) — plain-language structural orientation to ARF
 - [docs/upstream-alignment-guide.md](./docs/upstream-alignment-guide.md) — how to track and assess upstream drift
 - [docs/upstream-monitoring.md](./docs/upstream-monitoring.md) — automation design and operating model
+- [docs/upstream-sync-review-2026-06.md](./docs/upstream-sync-review-2026-06.md) — synchronization review evidence for 1.2.0
 
 ### Companion guidance
 - [docs/conformance-interpretation-companion.md](./docs/conformance-interpretation-companion.md)
@@ -118,13 +123,14 @@ The repository now includes an executable monitoring layer for upstream drift.
 - default branch SHA drift
 - selected watched paths
 - legal/reference drift that maintainers explicitly configure in the source manifest
+- content hashes and watched fragments for EUR-Lex and public web sources
 
 ### What it produces
 - machine-readable state
 - machine-readable drift report
 - GitHub issue creation or update when synchronization action is needed
 
-## Re-audit posture for 1.1.0
+## Re-audit posture for 1.2.0
 
 The semantic re-audit in this release follows four rules:
 
@@ -193,5 +199,6 @@ Every synchronization change should include:
 
 - `1.0.2` — prior release baseline
 - `1.1.0` — adds control plane and April 2026 legal re-baseline
+- `1.2.0` — synchronizes to ARF 2.9.0, adds rulebooks monitoring, and hardens non-GitHub upstream checks
 
 See [CHANGELOG.md](./CHANGELOG.md) for release details.

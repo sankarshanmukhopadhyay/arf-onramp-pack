@@ -17,8 +17,9 @@ Build a control and evidence view that reflects the latest legal and upstream su
 - what evidence must be produced?
 - what repository or legal drift would invalidate a current control interpretation?
 
-## Specific 1.1.0 watchpoints
+## Specific 1.2.0 watchpoints
 
 - align breach-response planning with CIR (EU) 2025/847
 - align certification planning with CIR (EU) 2024/2981
+- align remote onboarding evidence with CIR (EU) 2026/798 where assurance level substantial eID means are combined with additional remote procedures
 - incorporate upstream drift monitoring into assurance governance for documentation and traceability

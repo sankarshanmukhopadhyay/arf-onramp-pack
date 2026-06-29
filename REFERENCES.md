@@ -33,7 +33,7 @@ These are the principal wallet-core implementing acts currently reflected in the
 - **CIR (EU) 2025/847** — reactions to security breaches of wallets
 - **CIR (EU) 2025/848** — registration of wallet relying parties
 - **CIR (EU) 2025/849** — list of certified wallets
-- **CIR (EU) 2026/798** — onboarding of users to wallets by electronic identification means
+- **CIR (EU) 2026/798** — reference standards and specifications for remote onboarding of wallet users by assurance level substantial electronic identification means in conjunction with additional remote onboarding procedures where the combination meets assurance level high
 
 ## 3. Official upstream repositories
 
@@ -61,6 +61,15 @@ What it provides:
 ### Rulebooks catalog repository
 Canonical repository:
 `https://github.com/eu-digital-identity-wallet/eudi-doc-attestation-rulebooks-catalog`
+
+### Public EUDI documentation portal
+Canonical portal:
+`https://eudi.dev/`
+
+What it provides:
+- public rendered documentation for the current EUDI Wallet materials
+- versioned ARF documentation, including the current 2.9.0 public baseline
+- discovery links for technical specifications, reference implementation, and functional conformance material
 
 ## 4. Official European Commission pages
 
@@ -99,8 +108,9 @@ When updating repository content:
 - cite wallet-core implementing regulations individually when the obligation or procedure comes from an implementing act
 - cite the **ARF repository** for technical narrative and annex structure
 - cite the **STS repository** for technical-specification development and tracking
+- cite the **attestation rulebooks catalog** when the implementation decision depends on a specific credential or attestation rulebook
 - avoid collapsing law, implementation guidance, and companion interpretation into a single authority layer
 
 ## Repository synchronization note
 
-The reference register above was refreshed as part of the 1.1.0 release preparation and April 2026 semantic re-audit.
+The reference register above was refreshed as part of the 1.2.0 release preparation and June 2026 upstream synchronization review.

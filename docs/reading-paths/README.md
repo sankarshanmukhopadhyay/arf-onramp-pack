@@ -8,7 +8,8 @@ Read in this order:
 
 1. legal baseline
 2. upstream architecture and standards structure
-3. role-specific implementation or governance material
+3. credential-specific rulebooks where they affect the implementation scope
+4. role-specific implementation or governance material
 
 ## Paths
 

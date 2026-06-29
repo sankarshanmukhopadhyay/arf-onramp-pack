@@ -49,10 +49,10 @@ Each layer depends on the layers beneath it. Changes at lower layers propagate u
 
 | Component | Description | ARF Reference |
 |-----------|-------------|---|
-| **Regulatory Framework** | EU Digital Identity Regulation + CIRs | Reg 2024/910, CIRs 2024/2977–2024/2982 |
+| **Regulatory Framework** | EU Digital Identity Regulation + CIRs | Regulation (EU) No 910/2014 as amended by Regulation (EU) 2024/1183; wallet-core CIRs |
 | **Roles & Responsibilities** | Wallet Provider, PID Provider, Attestation Provider, RP, Supervisory Bodies | ARF Section 2.2 |
 | **Certification Model** | Wallet Solution certification criteria and processes | ARF Chapter 7, CIR 2024/2981 |
-| **Conformance Profiles** | Requirement sets for different deployment contexts | ARF Annex 2 (Topics 1–10) |
+| **Conformance and assurance profiles** | Requirement and evidence sets for deployment contexts | ARF 2.9.0, implementing acts, and certification guidance |
 | **Ecosystem Notification** | Registry of wallets, providers, and trusted entities | ARF Section 4.1, CIR 2024/2980 |
 | **Supervisory Oversight** | Compliance monitoring and incident response | ARF Chapter 7 |
 | **Interoperability Governance** | Cross-border coordination and compatibility | ARF Section 2.3 |
@@ -60,7 +60,7 @@ Each layer depends on the layers beneath it. Changes at lower layers propagate u
 ### Key Decisions at This Layer
 
 - **Who operates the wallet?** (Government, private provider, hybrid)
-- **What conformance profile applies?** (L0–L3 assurance level)
+- **What conformance or assurance profile applies?** (legal assurance level, certification scope, and local evidence scope)
 - **What governance model?** (Centralized, decentralized, federated)
 - **Who certifies compliance?** (Member state, independent body)
 
@@ -84,7 +84,7 @@ Each layer depends on the layers beneath it. Changes at lower layers propagate u
 | **Credential Binding** | Cryptographic link between credential and wallet/holder | ARF Section 4.2.1 |
 | **Attestation Models** | PID, EAA, QEAA, custom attestations | ARF Section 4.2 |
 | **Key Binding** | Public key infrastructure for wallet signatures | ARF Section 3.4 |
-| **Trust Anchors** | Root certificates, trust lists, certificate transparency | ARF Topic 55 (ARF 2.8.0+) |
+| **Trust Anchors** | Root certificates, trust lists, certificate transparency | ARF 2.9.0, STS, and trust-list specifications |
 | **Cross-Border Trust** | Recognition of foreign issuers and credentials | ARF Section 2.3, CIR 2025/846 |
 | **Holder Identity** | Binding between physical person and wallet | ARF Section 4.3 |
 
@@ -181,11 +181,11 @@ Each layer depends on the layers beneath it. Changes at lower layers propagate u
 | Component | Description | ARF Reference |
 |-----------|-------------|---|
 | **Credential Format Standards** | SD-JWT, CWT, CBOR, JSON structures | CIR 2024/2977, Rulebooks |
-| **Attestation Rulebooks** | PID, mDL, custom rulebooks | https://github.com/eu-digital-identity-wallet/eudi-doc-attestation-rulebooks-catalog |
+| **Attestation Rulebooks** | PID, mDL, custom rulebooks | `eu-digital-identity-wallet/eudi-doc-attestation-rulebooks-catalog` |
 | **Interop Profiles** | Subset of ARF for cross-border use | ARF Section 2.3, Annex 4 |
 | **Metadata Exchange** | Discovery of issuers, formats, policies | ARF Section 4.1 |
 | **Cross-Border Flows** | Multi-country scenarios | ARF Section 2.3, CIR 2025/846 |
-| **Technical Specifications** | OpenID, CBOR, cryptography specs | ARF [Technical Specs](https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications) |
+| **Technical Specifications** | OpenID, CBOR, cryptography specs | STS repository and public EUDI technical specifications |
 | **Compatibility Testing** | Conformance suites, test vectors | ARF Section 7.3, CIR 2024/2981 |
 
 ### Key Decisions at This Layer
@@ -232,7 +232,7 @@ Layer 5 (Interop):       Format: PID Rulebook (SD-JWT format + claim structure)
 ### Example 3: Security Controls (Governance → Infrastructure → Protocol)
 
 ```
-Layer 1 (Governance):    Requirement: Wallet L2 assurance (CIR 2024/2981)
+Layer 1 (Governance):    Requirement: certification and assurance scope (CIR 2024/2981)
                           ↓
 Layer 3 (Infrastructure): Control: Device binding + biometric auth + encrypted storage
                           ↓
@@ -284,7 +284,7 @@ Protocol Changes (Layer 4)
 Standard Updates (Layer 5)
 ```
 
-**Example:** If governance adds a new assurance level (L3.5), you may need:
+**Example:** If governance changes certification or assurance expectations, you may need:
 - New trust boundaries (Layer 2)
 - Enhanced key management (Layer 3)
 - New protocol extensions (Layer 4)
@@ -372,9 +372,9 @@ Layer 1 (Governance): Mobile-specific conformance profile
 | [conformance-interpretation-companion.md](./conformance-interpretation-companion.md) | Layers 1 → 4 (how to test each) |
 | [governance-to-control-mapping.md](./governance-to-control-mapping.md) | Layers 1 → 3 (governance → controls) |
 | [upstream-alignment-guide.md](./upstream-alignment-guide.md) | Changes across all layers |
-| [reading-path-architect.md](../reading-paths/reading-path-architect.md) | Layers 2–3 (system design) |
-| [reading-path-implementer.md](../reading-paths/reading-path-implementer.md) | Layers 3–5 (code & protocol) |
-| [reading-path-security-assurance.md](../reading-paths/reading-path-security-assurance.md) | Layers 1–3 (controls & evidence) |
+| [reading-path-architect.md](./reading-paths/reading-path-architect.md) | Layers 2–3 (system design) |
+| [reading-path-implementer.md](./reading-paths/reading-path-implementer.md) | Layers 3–5 (code & protocol) |
+| [reading-path-security-assurance.md](./reading-paths/reading-path-security-assurance.md) | Layers 1–3 (controls & evidence) |
 
 ---
 
@@ -415,4 +415,4 @@ Evidence: [Test case / documentation]
 ---
 
 **Last Updated:** April 14, 2026  
-**ARF Alignment:** 2.8.0 (2026-02-02)
+**ARF Alignment:** 2.9.0 (June 2026 public documentation baseline)

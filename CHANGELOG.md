@@ -2,6 +2,29 @@
 
 All notable changes to this project are documented here.
 
+## [1.2.0] - 2026-06-28
+
+### Added
+- monitoring support for `eurlex_document` and `web_page` sources in `scripts/check_upstream_sync.py`
+- attestation rulebooks catalog source in `governance/upstream-sources.yaml`
+- public EUDI documentation portal monitoring through `https://eudi.dev/`
+- local snapshot/report execution path that does not require issue-creation credentials
+- release notes for the 1.2.0 synchronization refresh
+
+### Changed
+- updated the repository alignment target from ARF 2.8.0 to ARF 2.9.0
+- tightened CIR (EU) 2026/798 language to reflect remote onboarding by assurance level substantial eID means plus additional remote procedures where the combination meets assurance level high
+- expanded quick reference, legal baseline, reading paths, and implementation checklist to include attestation rulebook governance
+- updated upstream monitoring documentation to describe supported source types and evidence outputs
+
+### Fixed
+- corrected the upstream monitor so the manifest no longer declares source types that the script cannot process
+- removed stale ARF 2.8.0 release posture from current release-facing documentation
+- corrected architecture-map terminology that implied non-authoritative local assurance levels
+
+### Assurance note
+This release synchronizes the companion pack with the June 2026 public ARF 2.9.0 documentation baseline and improves the evidence-producing control plane. Legal and EUR-Lex drift remains a human-review trigger; the automation detects drift, but does not create legal interpretation.
+
 ## [1.1.0] - 2026-04-14
 
 ### Added

@@ -15,11 +15,13 @@ Translate the current legal and upstream baseline into build, test, and evidence
 
 - which obligations come from implementing acts versus ARF narrative?
 - which technical-specification dependencies should be tracked in STS?
+- which credential-specific dependencies should be tracked in the attestation rulebooks catalog?
 - what test, configuration, or runbook artifacts demonstrate implementation readiness?
 
-## Specific 1.1.0 watchpoints
+## Specific 1.2.0 watchpoints
 
 - fix any legacy links to deprecated ARF paths
-- review onboarding assumptions against CIR (EU) 2026/798
+- review remote onboarding assumptions against CIR (EU) 2026/798
+- review PID, mDL, and other rulebook assumptions against the attestation rulebooks catalog
 - review relying-party registration assumptions against CIR (EU) 2025/848
 - review incident handling against CIR (EU) 2025/847

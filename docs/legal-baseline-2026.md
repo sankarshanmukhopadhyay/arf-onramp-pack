@@ -1,6 +1,6 @@
 # Legal Baseline 2026
 
-This document states the legal and upstream baseline used for the 1.1.0 refresh of the ARF On-Ramp Pack.
+This document states the legal and upstream baseline used for the 1.2.0 refresh of the ARF On-Ramp Pack.
 
 ## Purpose
 
@@ -29,13 +29,20 @@ For this repository, the wallet-core implementing-act layer currently includes:
 - CIR (EU) 2025/847
 - CIR (EU) 2025/848
 - CIR (EU) 2025/849
-- CIR (EU) 2026/798
+- CIR (EU) 2026/798, covering reference standards and specifications for remote onboarding of wallet users by assurance level substantial electronic identification means in conjunction with additional remote onboarding procedures where the combination meets assurance level high
 
 ### 3. Upstream technical-documentation layer
 The current canonical upstream repositories are:
 
 - `eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework`
 - `eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications`
+- `eu-digital-identity-wallet/eudi-doc-attestation-rulebooks-catalog`
+
+The public rendered documentation portal is:
+
+- `https://eudi.dev/`
+
+The current ARF alignment target for this pack is **ARF 2.9.0**.
 
 ## Key interpretation rules adopted here
 
@@ -49,6 +56,9 @@ The current canonical upstream repositories are:
 **STS work belongs to the STS repository, not the old technical-specifications path inside legacy ARF repository assumptions.**
 
 ### Rule 4
+**Attestation rulebook work belongs to the attestation rulebooks catalog when credential-specific data models or rulebook requirements are in scope.**
+
+### Rule 5
 **Companion interpretations in this repository must be framed as implementation guidance, not binding legal conclusions.**
 
 ## Implications for maintainers

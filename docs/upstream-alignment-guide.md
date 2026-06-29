@@ -24,6 +24,7 @@ A high-quality update process should answer four questions:
 - ARF repository
 - STS repository
 - attestation rulebooks catalog repository where relevant
+- public EUDI documentation portal at `https://eudi.dev/`
 
 ## Typical drift classes
 
@@ -51,7 +52,9 @@ Example: a local guide still frames an older legal or repository model after ups
 |---|---|---|
 | ARF release change | `README.md`, reading paths, companion docs | update references, summaries, and affected guidance |
 | STS change | implementation docs, quick reference, reading paths | repoint technical-specification references |
+| attestation rulebook change | implementation checklist, architecture map, quick reference | update credential-specific guidance and evidence expectations |
 | new implementing regulation | legal baseline, checklist, governance mapping | add legal inventory entry and revise affected guidance |
+| EUR-Lex content or metadata change | legal baseline, references, role FAQs | escalate for human legal review before changing interpretation |
 | file move / renamed upstream path | all docs with direct links | repair links and note in changelog |
 
 ## Maintainer checklist
@@ -69,6 +72,7 @@ Run a broader semantic re-audit when:
 - an amending regulation changes the legal structure
 - a new wallet-core implementing act is adopted
 - the canonical upstream repository changes
+- the public documentation portal changes current ARF version or discovery structure
 - ARF integrates discussion topics that materially change the interpretation surface
 
 ## Release note expectation

@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import json
 import os
+import re
+from hashlib import sha256
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
@@ -15,19 +17,20 @@ MANIFEST_PATH = ROOT / "governance" / "upstream-sources.yaml"
 STATE_PATH = ROOT / "state" / "upstream-state.json"
 REPORT_PATH = ROOT / "reports" / "upstream-drift-report.json"
 
-TOKEN = os.environ["GITHUB_TOKEN"]
-TARGET_REPOSITORY = os.environ["REPOSITORY"]
+TOKEN = os.environ.get("GITHUB_TOKEN")
+TARGET_REPOSITORY = os.environ.get("REPOSITORY")
 API_ROOT = "https://api.github.com"
 
 SESSION = requests.Session()
 SESSION.headers.update(
     {
-        "Authorization": f"Bearer {TOKEN}",
         "Accept": "application/vnd.github+json",
         "X-GitHub-Api-Version": "2022-11-28",
         "User-Agent": "arf-onramp-pack-upstream-monitor",
     }
 )
+if TOKEN:
+    SESSION.headers["Authorization"] = f"Bearer {TOKEN}"
 
 
 @dataclass
@@ -111,6 +114,28 @@ def get_content_sha(owner: str, repo: str, path: str, ref: str) -> str | None:
     return data.get("sha")
 
 
+def normalize_text(value: str) -> str:
+    return re.sub(r"\s+", " ", value).strip()
+
+
+def hash_text(value: str) -> str:
+    return sha256(value.encode("utf-8")).hexdigest()
+
+
+def fetch_text(url: str) -> tuple[str, dict[str, Any]]:
+    response = SESSION.get(url, timeout=30)
+    response.raise_for_status()
+    text = response.text
+    headers = {
+        "etag": response.headers.get("ETag"),
+        "last_modified": response.headers.get("Last-Modified"),
+        "content_type": response.headers.get("Content-Type"),
+        "final_url": response.url,
+        "status_code": response.status_code,
+    }
+    return text, headers
+
+
 def get_repo_snapshot(source: dict[str, Any]) -> dict[str, Any]:
     owner = source["owner"]
     repo = source["repo"]
@@ -132,19 +157,57 @@ def get_repo_snapshot(source: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def get_web_snapshot(source: dict[str, Any]) -> dict[str, Any]:
+    text, headers = fetch_text(source["canonical_url"])
+    watch = source.get("watch", {})
+    normalized = normalize_text(text)
+    fragments = watch.get("content_fragments", [])
+    fragment_presence = {fragment: fragment in text for fragment in fragments}
+    snapshot: dict[str, Any] = {
+        "type": source["type"],
+        "canonical_url": source["canonical_url"],
+        "fetched_url": headers["final_url"],
+        "status_code": headers["status_code"],
+        "content_type": headers["content_type"],
+        "etag": headers["etag"],
+        "last_modified": headers["last_modified"],
+        "content_hash": hash_text(normalized) if watch.get("page_hash", True) else None,
+        "content_fragments": fragment_presence,
+    }
+    if source.get("celex"):
+        snapshot["celex"] = source["celex"]
+    return snapshot
+
+
+def get_snapshot(source: dict[str, Any]) -> dict[str, Any]:
+    source_type = source.get("type")
+    if source_type == "github_repo":
+        return get_repo_snapshot(source)
+    if source_type in {"web_page", "eurlex_document"}:
+        return get_web_snapshot(source)
+    raise ValueError(f"Unsupported upstream source type: {source_type}")
+
+
+def pick_severity(current: str, candidate: str) -> str:
+    order = {"low": 0, "medium": 1, "high": 2, "critical": 3}
+    return candidate if order.get(candidate, 0) > order.get(current, 0) else current
+
+
 def compare_states(source: dict[str, Any], previous: dict[str, Any], current: dict[str, Any]) -> DriftEvent | None:
     reasons: list[str] = []
     severity = "low"
     rules = source.get("severity_rules", {})
 
-    if previous.get("latest_release") != current.get("latest_release"):
-        reasons.append("latest_release_changed")
-        severity = rules.get("release_change", severity)
+    if not previous:
+        return None
 
-    if previous.get("default_branch_sha") != current.get("default_branch_sha"):
+    if "latest_release" in current and previous.get("latest_release") != current.get("latest_release"):
+        reasons.append("latest_release_changed")
+        severity = pick_severity(severity, rules.get("release_change", severity))
+
+    if "default_branch_sha" in current and previous.get("default_branch_sha") != current.get("default_branch_sha"):
         reasons.append("default_branch_sha_changed")
-        if severity == "low":
-            severity = rules.get("branch_change", severity)
+        severity = pick_severity(severity, rules.get("branch_change", severity))
 
     previous_paths = previous.get("path_shas", {})
     current_paths = current.get("path_shas", {})
@@ -153,8 +216,25 @@ def compare_states(source: dict[str, Any], previous: dict[str, Any], current: di
     )
     if changed_paths:
         reasons.append("watched_paths_changed:" + ", ".join(changed_paths))
-        if severity == "low":
-            severity = rules.get("path_change", severity)
+        severity = pick_severity(severity, rules.get("path_change", severity))
+
+    if "content_hash" in current and previous.get("content_hash") != current.get("content_hash"):
+        reasons.append("content_hash_changed")
+        severity = pick_severity(severity, rules.get("content_change", rules.get("page_change", severity)))
+
+    previous_fragments = previous.get("content_fragments", {})
+    current_fragments = current.get("content_fragments", {})
+    changed_fragments = sorted(
+        fragment for fragment, value in current_fragments.items() if previous_fragments.get(fragment) != value
+    )
+    if changed_fragments:
+        reasons.append("content_fragments_changed:" + ", ".join(changed_fragments))
+        severity = pick_severity(severity, rules.get("fragment_change", severity))
+
+    for field in ("etag", "last_modified", "fetched_url"):
+        if field in current and previous.get(field) != current.get(field):
+            reasons.append(f"{field}_changed")
+            severity = pick_severity(severity, rules.get("metadata_change", severity))
 
     if not reasons:
         return None
@@ -195,6 +275,16 @@ def render_issue_body(event: DriftEvent) -> str:
     if path_shas:
         lines.extend(["", "### Watched paths", *[f"- `{p}`" for p in sorted(path_shas.keys())]])
 
+    fragments = event.current.get("content_fragments", {})
+    if fragments:
+        lines.extend(
+            [
+                "",
+                "### Watched content fragments",
+                *[f"- `{fragment}`: `{present}`" for fragment, present in sorted(fragments.items())],
+            ]
+        )
+
     lines.extend(
         [
             "",
@@ -223,6 +313,8 @@ def find_open_issue(source_id: str) -> dict[str, Any] | None:
 
 
 def ensure_issue(event: DriftEvent) -> None:
+    if not TARGET_REPOSITORY:
+        return
     title = issue_title(event.source_id)
     body = render_issue_body(event)
     existing = find_open_issue(event.source_id)
@@ -244,9 +336,23 @@ def main() -> None:
     previous_state = load_json(STATE_PATH, {})
     current_state: dict[str, Any] = {}
     drift_events: list[DriftEvent] = []
+    errors: list[dict[str, str]] = []
 
     for source in manifest.get("sources", []):
-        snapshot = get_repo_snapshot(source)
+        try:
+            snapshot = get_snapshot(source)
+        except Exception as exc:
+            errors.append(
+                {
+                    "source_id": source["id"],
+                    "source_type": source.get("type", "unknown"),
+                    "error": str(exc),
+                }
+            )
+            previous_snapshot = previous_state.get(source["id"])
+            if previous_snapshot is not None:
+                current_state[source["id"]] = previous_snapshot
+            continue
         current_state[source["id"]] = snapshot
         previous_snapshot = previous_state.get(source["id"], {})
         event = compare_states(source, previous_snapshot, snapshot)
@@ -255,6 +361,8 @@ def main() -> None:
 
     report = {
         "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "monitored_sources": sorted(current_state.keys()),
+        "errors": errors,
         "drift": [
             {
                 "source_id": event.source_id,

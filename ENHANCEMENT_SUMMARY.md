@@ -1,27 +1,28 @@
 # Enhancement Summary
 
-## 1.1.0 release objective
+## 1.2.0 release objective
 
-Prepare the ARF On-Ramp Pack for a 1.1.0 release by doing two things in one pass:
+Prepare the ARF On-Ramp Pack for a 1.2.0 release by doing three things in one pass:
 
-- build an executable governance synchronization control plane for tracking upstream drift and opening issues
-- complete a semantic re-audit of the companion guidance against the latest legal texts and upstream repository structure available as of April 2026
+- synchronize the companion pack with the current public ARF 2.9.0 baseline
+- harden the executable governance synchronization control plane so it covers every source type declared in the manifest
+- update onboarding and rulebook guidance so implementers can map authority, implementation controls, and evidence more precisely
 
 ## Major improvements delivered
 
 ### Governance synchronization control plane
-- added a machine-readable upstream source manifest
-- added a scheduled GitHub Action for monitoring upstream drift
-- added issue automation for synchronization work
-- added persisted state and a machine-readable drift report
-- added maintainers' documentation for operating the control plane
+- expanded source support from GitHub repositories to GitHub repositories, EUR-Lex documents, and public web pages
+- added attestation rulebooks catalog monitoring
+- added public EUDI portal monitoring
+- preserved issue automation for synchronization work
+- preserved persisted state and machine-readable drift reporting
 
 ### Legal and upstream re-baseline
-- corrected the authority model used across the pack
-- corrected the treatment of Regulation (EU) 2024/1183
-- updated the inventory of wallet-core implementing regulations
-- aligned references with the canonical ARF and STS repositories
-- refreshed role-based reading paths and implementation guidance
+- updated the ARF alignment target to 2.9.0
+- retained the correct treatment of Regulation (EU) 2024/1183 as an amending regulation
+- tightened CIR (EU) 2026/798 onboarding language
+- aligned references with the canonical ARF, STS, and attestation rulebooks repositories
+- refreshed role-based reading paths, quick reference, implementation checklist, and monitoring documentation
 
 ## Assurance outcome
 

@@ -1,4 +1,7 @@
 {
-  "generated_at": null,
-  "drift": []
+  "generated_at": "2026-06-28T00:00:00Z",
+  "monitored_sources": [],
+  "errors": [],
+  "drift": [],
+  "note": "Run the Upstream Sync Monitor workflow after publishing to initialize live upstream state."
 }
