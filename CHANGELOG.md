@@ -2,6 +2,23 @@
 
 All notable changes to this project are documented here.
 
+## [1.3.0] - 2026-07-06
+
+### Added
+- explicit repository licensing for documentation and automation reuse
+- fixture-based tests for upstream drift classification
+- CI workflow for deterministic pull-request testing
+- Code of Conduct
+- misclassification report issue template for legal, authority, and companion-interpretation defects
+- README sync-status and license sections
+- `.gitignore` hygiene for local metadata and Python build artifacts
+
+### Fixed
+- removed committed `.DS_Store`
+
+### Assurance note
+This release does not change the upstream source manifest, drift-report shape, or companion interpretation. It improves the evidence loop around the synchronization monitor so drift-detection logic is tested before merge rather than only exercised against live upstream state.
+
 ## [1.2.0] - 2026-06-28
 
 ### Added

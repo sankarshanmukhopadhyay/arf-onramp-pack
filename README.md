@@ -12,29 +12,40 @@ It is **not** the authoritative source of law, specification, or conformance. Th
 
 ## Release status
 
-**On-ramp version:** 1.2.0  
-**Previous release:** 1.1.0  
+**On-ramp version:** 1.3.0  
+**Previous release:** 1.2.0  
 **ARF alignment target:** 2.9.0  
-**Re-audit basis:** June 2026 upstream synchronization refresh
+**Re-audit basis:** June 2026 upstream synchronization refresh plus trust and reuse hardening
 
-## What changed in 1.2.0
+## Sync status
+
+The latest committed drift report is `reports/upstream-drift-report.json`.
+
+- Last generated: `2026-06-28T00:00:00Z`
+- Monitored source snapshot: not initialized in the committed baseline
+- Drift events: `0`
+- Current note: run the Upstream Sync Monitor workflow after publication to initialize live upstream state
+
+The committed report is evidence of repository state, not a substitute for legal review. Any detected upstream drift should trigger human assessment before companion guidance is changed.
+
+## What changed in 1.3.0
 
 This release does three substantive things:
 
-1. **Updates the upstream baseline**
-   - aligns the pack to the current public ARF 2.9.0 documentation surface
-   - treats `https://eudi.dev/` as the public EUDI documentation portal
-   - keeps the ARF, STS, and attestation rulebooks repositories distinct
+1. **Clarifies reuse rights**
+   - adds an explicit repository license
+   - distinguishes documentation reuse from automation-code reuse
+   - preserves the boundary between companion interpretation and authoritative legal or upstream material
 
-2. **Hardens the governance synchronization control plane**
-   - monitors GitHub repositories, EUR-Lex documents, and public web pages declared in the manifest
-   - adds the attestation rulebooks catalog to the monitored source inventory
-   - makes local validation possible without requiring GitHub issue credentials
+2. **Makes the synchronization monitor testable**
+   - adds fixture-based drift classification tests
+   - adds pull-request CI for the monitor logic
+   - keeps scheduled live upstream checks separate from deterministic regression tests
 
-3. **Tightens onboarding and assurance language**
-   - reflects the fuller title and scope of **CIR (EU) 2026/798**
-   - clarifies that remote onboarding can combine assurance level substantial eID means with additional remote procedures where the combination meets assurance level high
-   - keeps companion interpretation separate from legal or certification authority
+3. **Improves contributor and quality intake**
+   - adds a code of conduct
+   - adds a misclassification report template for legal, authority, or interpretation defects
+   - removes committed local OS metadata and adds `.gitignore` hygiene
 
 ## Current authority stack
 
@@ -149,6 +160,10 @@ This repository does **not** replace:
 - upstream ARF or STS issue triage
 - certification decisions by competent bodies
 
+## License
+
+Documentation content is licensed under CC BY 4.0. Automation scripts, tests, and workflow code are licensed under Apache-2.0. See [LICENSE](./LICENSE).
+
 ## Recommended usage model
 
 ### For policy and program teams
@@ -200,5 +215,6 @@ Every synchronization change should include:
 - `1.0.2` — prior release baseline
 - `1.1.0` — adds control plane and April 2026 legal re-baseline
 - `1.2.0` — synchronizes to ARF 2.9.0, adds rulebooks monitoring, and hardens non-GitHub upstream checks
+- `1.3.0` — adds licensing, fixture-based sync monitor tests, CI, contributor trust signals, and repository hygiene
 
 See [CHANGELOG.md](./CHANGELOG.md) for release details.

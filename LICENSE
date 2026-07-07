@@ -1,0 +1,22 @@
+ARF On-Ramp Pack Licensing
+
+Copyright (c) 2026 ARF On-Ramp Pack contributors
+
+Documentation content in this repository is licensed under the Creative Commons
+Attribution 4.0 International License (CC BY 4.0).
+
+Automation scripts, tests, and workflow code are licensed under the Apache
+License, Version 2.0.
+
+You may obtain the full license texts at:
+
+- https://creativecommons.org/licenses/by/4.0/legalcode
+- https://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed
+under the Apache License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
+OR CONDITIONS OF ANY KIND, either express or implied.
+
+When reusing this companion pack, preserve the distinction between authoritative
+legal or upstream specification material and the repository's non-authoritative
+implementation guidance.

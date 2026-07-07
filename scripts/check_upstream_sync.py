@@ -9,8 +9,12 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-import requests
 import yaml
+
+try:
+    import requests
+except ModuleNotFoundError:  # pragma: no cover - exercised in minimal local environments
+    requests = None
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST_PATH = ROOT / "governance" / "upstream-sources.yaml"
@@ -21,16 +25,19 @@ TOKEN = os.environ.get("GITHUB_TOKEN")
 TARGET_REPOSITORY = os.environ.get("REPOSITORY")
 API_ROOT = "https://api.github.com"
 
-SESSION = requests.Session()
-SESSION.headers.update(
-    {
-        "Accept": "application/vnd.github+json",
-        "X-GitHub-Api-Version": "2022-11-28",
-        "User-Agent": "arf-onramp-pack-upstream-monitor",
-    }
-)
-if TOKEN:
-    SESSION.headers["Authorization"] = f"Bearer {TOKEN}"
+if requests is not None:
+    SESSION = requests.Session()
+    SESSION.headers.update(
+        {
+            "Accept": "application/vnd.github+json",
+            "X-GitHub-Api-Version": "2022-11-28",
+            "User-Agent": "arf-onramp-pack-upstream-monitor",
+        }
+    )
+    if TOKEN:
+        SESSION.headers["Authorization"] = f"Bearer {TOKEN}"
+else:
+    SESSION = None
 
 
 @dataclass
@@ -63,24 +70,32 @@ def save_json(path: Path, data: Any) -> None:
 
 
 def gh_get(path: str, params: dict[str, Any] | None = None) -> Any:
+    if SESSION is None:
+        raise RuntimeError("requests is required for live upstream synchronization")
     response = SESSION.get(f"{API_ROOT}{path}", params=params, timeout=30)
     response.raise_for_status()
     return response.json()
 
 
 def gh_post(path: str, payload: dict[str, Any]) -> Any:
+    if SESSION is None:
+        raise RuntimeError("requests is required for live upstream synchronization")
     response = SESSION.post(f"{API_ROOT}{path}", json=payload, timeout=30)
     response.raise_for_status()
     return response.json()
 
 
 def gh_patch(path: str, payload: dict[str, Any]) -> Any:
+    if SESSION is None:
+        raise RuntimeError("requests is required for live upstream synchronization")
     response = SESSION.patch(f"{API_ROOT}{path}", json=payload, timeout=30)
     response.raise_for_status()
     return response.json()
 
 
 def get_latest_release(owner: str, repo: str) -> dict[str, Any] | None:
+    if SESSION is None:
+        raise RuntimeError("requests is required for live upstream synchronization")
     response = SESSION.get(
         f"{API_ROOT}/repos/{owner}/{repo}/releases/latest",
         timeout=30,
@@ -97,6 +112,8 @@ def get_head_commit(owner: str, repo: str, branch: str) -> dict[str, Any]:
 
 
 def get_content_sha(owner: str, repo: str, path: str, ref: str) -> str | None:
+    if SESSION is None:
+        raise RuntimeError("requests is required for live upstream synchronization")
     response = SESSION.get(
         f"{API_ROOT}/repos/{owner}/{repo}/contents/{path}",
         params={"ref": ref},
@@ -123,6 +140,8 @@ def hash_text(value: str) -> str:
 
 
 def fetch_text(url: str) -> tuple[str, dict[str, Any]]:
+    if SESSION is None:
+        raise RuntimeError("requests is required for live upstream synchronization")
     response = SESSION.get(url, timeout=30)
     response.raise_for_status()
     text = response.text
