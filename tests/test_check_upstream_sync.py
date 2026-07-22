@@ -1,3 +1,4 @@
+from scripts import check_upstream_sync as monitor
 from scripts.check_upstream_sync import compare_states
 
 
@@ -92,3 +93,27 @@ def test_empty_previous_state_initializes_without_drift():
     current = {"latest_release": "v1.0.0", "default_branch_sha": "abc"}
 
     assert compare_states(source, {}, current) is None
+
+
+def test_upstream_manifest_is_valid_and_conflict_free():
+    text = monitor.MANIFEST_PATH.read_text(encoding="utf-8")
+    assert "<<<<<<<" not in text
+    assert "=======" not in text
+    assert ">>>>>>>" not in text
+
+    manifest = monitor.load_yaml(monitor.MANIFEST_PATH)
+    assert manifest["version"] == 1
+    source_ids = [source["id"] for source in manifest["sources"]]
+    assert len(source_ids) == len(set(source_ids))
+    assert {"arf", "rulebooks_catalog", "sts"}.issubset(source_ids)
+
+
+def test_manifest_sources_have_required_fields():
+    manifest = monitor.load_yaml(monitor.MANIFEST_PATH)
+    for source in manifest["sources"]:
+        assert source["id"]
+        assert source["type"] in {"github_repo", "eurlex_document", "web_page"}
+        assert source["canonical_url"].startswith("https://")
+        if source["type"] == "github_repo":
+            assert source["owner"]
+            assert source["repo"]

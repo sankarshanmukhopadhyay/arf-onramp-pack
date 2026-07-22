@@ -2,30 +2,39 @@ name: Upstream Sync Monitor
 
 on:
   schedule:
-    - cron: "17 3 * * *"
+    # Calendar-based ten-day cadence at 03:17 UTC (days 1, 11, and 21).
+    - cron: "17 3 1,11,21 * *"
   workflow_dispatch:
 
 permissions:
   contents: write
   issues: write
 
+concurrency:
+  group: upstream-sync-monitor
+  cancel-in-progress: false
+
 jobs:
   monitor:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pyyaml requests
+          python -m pip install pyyaml requests pytest
+
+      - name: Validate monitor configuration
+        run: python -m pytest -q tests/test_check_upstream_sync.py
 
       - name: Run upstream drift check
         env:

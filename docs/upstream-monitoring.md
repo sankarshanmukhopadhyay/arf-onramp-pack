@@ -16,7 +16,7 @@ Defines what is monitored, at what granularity, and with which labels.
 ### Workflow
 `.github/workflows/upstream-sync.yml`
 
-Runs on a schedule and on manual dispatch.
+Runs at 03:17 UTC on calendar days 1, 11, and 21, and also supports manual dispatch. This is the most transparent GitHub Actions cron representation of an approximately ten-day cadence; month boundaries produce intervals of 8 to 11 days.
 
 ### Detection script
 `scripts/check_upstream_sync.py`
@@ -60,7 +60,7 @@ When drift is detected, the workflow creates or updates a GitHub issue with:
 
 ## Maintainer workflow
 
-1. monitor scheduled workflow results
+1. monitor the approximately ten-day scheduled workflow results
 2. inspect the drift issue and generated report
 3. update local docs and references if needed
 4. update changelog or release notes when appropriate

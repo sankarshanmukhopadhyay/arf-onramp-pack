@@ -29,10 +29,7 @@ sources:
         - docs/architecture-and-reference-framework-main.md
         - docs/annexes/
         - docs/discussion-topics/README.md
-<<<<<<< Updated upstream
         - docs/technical-specifications/README.md
-=======
->>>>>>> Stashed changes
     labels:
       - upstream-sync
       - arf
@@ -54,25 +51,16 @@ sources:
   - id: rulebooks_catalog
     type: github_repo
     owner: eu-digital-identity-wallet
-<<<<<<< Updated upstream
-    repo: eudi-doc-standards-and-technical-specifications
-    canonical_url: https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications
-    description: >
-      Dedicated standards and technical specifications upstream for EUDI Wallet.
-=======
     repo: eudi-doc-attestation-rulebooks-catalog
     canonical_url: https://github.com/eu-digital-identity-wallet/eudi-doc-attestation-rulebooks-catalog
     description: >
       Attestation rulebooks catalog for PID, mDL, and other attestation
       rulebooks referenced by the EUDI Wallet implementation surface.
->>>>>>> Stashed changes
     watch:
       releases: true
       default_branch: true
       paths:
         - README.md
-<<<<<<< Updated upstream
-=======
         - rulebooks/
     labels:
       - upstream-sync
@@ -104,7 +92,6 @@ sources:
       default_branch: true
       paths:
         - README.md
->>>>>>> Stashed changes
         - docs/guide.md
         - docs/technical-specifications/
     labels:
@@ -183,12 +170,6 @@ sources:
     title: >
       Commission Implementing Regulation (EU) 2026/798 of 7 April 2026 laying
       down rules for the application of Regulation (EU) No 910/2014 as regards
-<<<<<<< Updated upstream
-      onboarding of users to the European Digital Identity Wallets
-    description: >
-      Implementing regulation for wallet-user onboarding and related assurance
-      expectations.
-=======
       reference standards and specifications for remote onboarding of users to
       the European Digital Identity Wallets
     description: >
@@ -196,7 +177,6 @@ sources:
       level substantial electronic identification means together with
       additional remote onboarding procedures where the combination meets
       assurance level high.
->>>>>>> Stashed changes
     jurisdiction: eu
     authority_level: implementing_act
     watch:
@@ -239,11 +219,7 @@ sources:
 
   - id: eudi_wallet_portal
     type: web_page
-<<<<<<< Updated upstream
-    canonical_url: https://eu-digital-identity-wallet.github.io/
-=======
     canonical_url: https://eudi.dev/
->>>>>>> Stashed changes
     title: European Digital Identity Wallet portal
     description: >
       Public ecosystem landing page and discovery layer for current EUDI Wallet
@@ -251,13 +227,8 @@ sources:
     watch:
       content_fragments:
         - "European Digital Identity Wallet"
-<<<<<<< Updated upstream
-        - "Architecture and Reference Framework"
-        - "Standards and Technical Specifications"
-=======
         - "Architecture and reference framework"
         - "Technical specifications"
->>>>>>> Stashed changes
       page_hash: true
     labels:
       - upstream-sync
@@ -303,10 +274,5 @@ notes:
     ARF and STS are authoritative upstream repositories, but they are not a
     substitute for the legal texts.
   - >
-<<<<<<< Updated upstream
-    This manifest assumes the upstream monitoring script supports source types
-    beyond github_repo.
-=======
     The upstream monitoring script supports GitHub repositories, EUR-Lex
     documents, and public web pages declared in this manifest.
->>>>>>> Stashed changes

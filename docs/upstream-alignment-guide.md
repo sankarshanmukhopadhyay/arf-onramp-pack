@@ -42,7 +42,7 @@ Example: a local guide still frames an older legal or repository model after ups
 
 ## Recommended review cadence
 
-- **Automated:** daily or weekly through the control plane
+- **Automated:** approximately every ten days through the control plane
 - **Human review:** monthly for documentation quality, or immediately when a drift issue is opened
 - **Release review:** before every tagged release of this repository
 
