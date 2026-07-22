@@ -93,6 +93,18 @@ This repository helps teams answer practical questions such as:
 - How should a team structure implementation, evidence, and governance work around ARF?
 - How should a program office distinguish legal obligation from technical guidance from companion interpretation?
 
+
+## Documentation site
+
+The repository now provides a Just the Docs learning and adoption site under [`docs/`](./docs/index.md). The rendered site includes hierarchical navigation, search, Mermaid diagrams, role-based journeys, and explicit **Previous / Next** controls on sequenced pages.
+
+Start with:
+
+- [Documentation Home](./docs/index.md)
+- [Choose Your Path](./docs/start-here/choose-your-path.md)
+- [Guided Learning](./docs/learning/index.md)
+- [Operations](./docs/operations/index.md)
+
 ## Documentation map
 
 ### Start here

@@ -64,6 +64,18 @@ Where relevant, contributors should validate:
 - workflow syntax for GitHub Actions
 - JSON/YAML validity for machine-readable artifacts
 
+
+## Documentation architecture requirements
+
+Pages published through GitHub Pages must include valid YAML front matter, an authority classification, upstream dependencies where applicable, and a stable permalink. Sequenced pages must render `{% include page-nav.html %}` and define `previous_page` and/or `next_page` metadata.
+
+Run before submitting documentation changes:
+
+```bash
+python scripts/validate_docs.py
+bundle exec jekyll build --trace
+```
+
 ## Synchronization workflow
 
 If your change is driven by upstream drift:

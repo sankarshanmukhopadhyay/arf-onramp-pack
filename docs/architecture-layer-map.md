@@ -1,3 +1,22 @@
+---
+layout: default
+title: "Architecture Layer Map"
+parent: "Architecture"
+grand_parent: "Documentation Home"
+nav_order: 1
+permalink: /docs/architecture-layer-map/
+authority_level: companion-guidance
+last_reviewed: 2026-07-22
+upstream_dependencies:
+  - arf
+  - sts
+previous_page:
+  title: "Architecture"
+  url: "/docs/architecture/"
+next_page:
+  title: "Governance to Control Mapping"
+  url: "/docs/governance-to-control-mapping/"
+---
 > **2026 re-audit note:** Read this document together with `legal-baseline-2026.md`. It remains a companion architectural decomposition and should not be treated as a substitute for the current implementing-act layer or the canonical ARF and STS repositories.
 
 # Architecture Layer Map
@@ -416,3 +435,5 @@ Evidence: [Test case / documentation]
 
 **Last Updated:** April 14, 2026  
 **ARF Alignment:** 2.9.0 (June 2026 public documentation baseline)
+
+{% include page-nav.html %}

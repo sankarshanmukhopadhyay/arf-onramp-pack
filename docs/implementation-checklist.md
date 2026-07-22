@@ -1,3 +1,22 @@
+---
+layout: default
+title: "Implementation Checklist"
+parent: "Implementation"
+grand_parent: "Documentation Home"
+nav_order: 2
+permalink: /docs/implementation-checklist/
+authority_level: companion-guidance
+last_reviewed: 2026-07-22
+upstream_dependencies:
+  - arf
+  - sts
+previous_page:
+  title: "Conformance Interpretation Companion"
+  url: "/docs/conformance-interpretation-companion/"
+next_page:
+  title: "Implementation Workbook"
+  url: "/docs/implementation/implementation-workbook/"
+---
 # Implementation Checklist
 
 Use this checklist to convert the current legal and upstream baseline into work items.
@@ -52,3 +71,5 @@ Use this checklist to convert the current legal and upstream baseline into work 
 - [ ] validate workflow syntax
 - [ ] validate JSON and YAML artifacts
 - [ ] confirm the legal baseline document remains accurate at release time
+
+{% include page-nav.html %}

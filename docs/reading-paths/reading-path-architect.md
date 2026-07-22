@@ -1,3 +1,16 @@
+---
+layout: default
+title: "Reading Path: Architect"
+permalink: /docs/reading-paths/architect/
+nav_exclude: true
+authority_level: companion-guidance
+last_reviewed: 2026-07-22
+upstream_dependencies:
+  - arf
+  - sts
+---
+> **Guided replacement:** Continue with [Architect Journey]({{ site.baseurl }}/docs/learning/architect-path/) for learning objectives, completion artifacts, and Previous/Next navigation.
+
 # Reading Path: Architect
 
 ## Goal

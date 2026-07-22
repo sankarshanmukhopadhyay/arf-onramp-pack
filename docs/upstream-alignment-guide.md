@@ -1,3 +1,22 @@
+---
+layout: default
+title: "Upstream Alignment Guide"
+parent: "Operations"
+grand_parent: "Documentation Home"
+nav_order: 1
+permalink: /docs/upstream-alignment-guide/
+authority_level: companion-guidance
+last_reviewed: 2026-07-22
+upstream_dependencies:
+  - arf
+  - sts
+previous_page:
+  title: "Operations"
+  url: "/docs/operations/"
+next_page:
+  title: "Upstream Monitoring"
+  url: "/docs/upstream-monitoring/"
+---
 # Upstream Alignment Guide
 
 This guide explains how to keep the on-ramp synchronized with upstream legal and technical sources.
@@ -78,3 +97,5 @@ Run a broader semantic re-audit when:
 ## Release note expectation
 
 Synchronization updates should not be hidden as editorial noise when they materially change the authority model or implementation posture of the repository.
+
+{% include page-nav.html %}

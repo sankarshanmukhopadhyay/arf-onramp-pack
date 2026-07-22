@@ -1,3 +1,22 @@
+---
+layout: default
+title: "Legal Baseline 2026"
+parent: "Foundations"
+grand_parent: "Documentation Home"
+nav_order: 2
+permalink: /docs/legal-baseline-2026/
+authority_level: companion-guidance
+last_reviewed: 2026-07-22
+upstream_dependencies:
+  - arf
+  - sts
+previous_page:
+  title: "ARF Explained"
+  url: "/docs/arf-explained/"
+next_page:
+  title: "Quick Reference"
+  url: "/docs/quick-reference/"
+---
 # Legal Baseline 2026
 
 This document states the legal and upstream baseline used for the 1.2.0 refresh of the ARF On-Ramp Pack.
@@ -73,3 +92,5 @@ When updating this repository:
 ## Scope boundary
 
 This repository does not attempt to reproduce all legal texts in full. It provides a working implementation companion anchored to the authority stack above.
+
+{% include page-nav.html %}

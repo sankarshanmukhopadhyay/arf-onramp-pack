@@ -1,3 +1,16 @@
+---
+layout: default
+title: "Reading Paths"
+permalink: /docs/reading-paths/
+nav_exclude: true
+authority_level: companion-guidance
+last_reviewed: 2026-07-22
+upstream_dependencies:
+  - arf
+  - sts
+---
+> **Guided replacement:** Continue with [Guided Learning]({{ site.baseurl }}/docs/learning/) for learning objectives, completion artifacts, and Previous/Next navigation.
+
 # Reading Paths
 
 These reading paths are designed to get different audiences productive quickly without flattening the authority structure.

@@ -1,3 +1,16 @@
+---
+layout: default
+title: "Reading Path: Implementer"
+permalink: /docs/reading-paths/implementer/
+nav_exclude: true
+authority_level: companion-guidance
+last_reviewed: 2026-07-22
+upstream_dependencies:
+  - arf
+  - sts
+---
+> **Guided replacement:** Continue with [Implementer Journey]({{ site.baseurl }}/docs/learning/implementer-path/) for learning objectives, completion artifacts, and Previous/Next navigation.
+
 # Reading Path: Implementer
 
 ## Goal

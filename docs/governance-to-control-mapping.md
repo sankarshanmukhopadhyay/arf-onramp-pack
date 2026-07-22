@@ -1,3 +1,22 @@
+---
+layout: default
+title: "Governance to Control Mapping"
+parent: "Governance and Assurance"
+grand_parent: "Documentation Home"
+nav_order: 1
+permalink: /docs/governance-to-control-mapping/
+authority_level: companion-guidance
+last_reviewed: 2026-07-22
+upstream_dependencies:
+  - arf
+  - sts
+previous_page:
+  title: "Architecture Layer Map"
+  url: "/docs/architecture-layer-map/"
+next_page:
+  title: "Assurance Evidence"
+  url: "/docs/governance-assurance/assurance-evidence/"
+---
 # Governance to Control Mapping
 
 This document maps governance requirements and upstream authority sources to concrete implementation and assurance controls.
@@ -63,3 +82,5 @@ For each major governance requirement, maintain:
 - review cadence
 
 That division of responsibility is more durable than a single narrative document.
+
+{% include page-nav.html %}

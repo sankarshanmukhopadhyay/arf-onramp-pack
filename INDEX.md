@@ -1,60 +1,55 @@
-# Index
+# Repository Index
 
-## Root documents
-- [README.md](./README.md)
-- [CHANGELOG.md](./CHANGELOG.md)
-- [REFERENCES.md](./REFERENCES.md)
-- [CONTRIBUTING.md](./CONTRIBUTING.md)
-- [ENHANCEMENT_SUMMARY.md](./ENHANCEMENT_SUMMARY.md)
-- [RELEASE_NOTES_1.2.0.md](./RELEASE_NOTES_1.2.0.md)
-- [RELEASE_NOTES_1.1.0.md](./RELEASE_NOTES_1.1.0.md)
+## Documentation experience
 
-## Core docs
-- [docs/legal-baseline-2026.md](./docs/legal-baseline-2026.md)
-- [docs/arf-explained.md](./docs/arf-explained.md)
-- [docs/architecture-layer-map.md](./docs/architecture-layer-map.md)
-- [docs/conformance-interpretation-companion.md](./docs/conformance-interpretation-companion.md)
-- [docs/governance-to-control-mapping.md](./docs/governance-to-control-mapping.md)
-- [docs/implementation-checklist.md](./docs/implementation-checklist.md)
-- [docs/quick-reference.md](./docs/quick-reference.md)
-- [docs/faq-by-role.md](./docs/faq-by-role.md)
-- [docs/upstream-alignment-guide.md](./docs/upstream-alignment-guide.md)
-- [docs/upstream-monitoring.md](./docs/upstream-monitoring.md)
-- [docs/upstream-sync-review-2026-06.md](./docs/upstream-sync-review-2026-06.md)
+- [Documentation Home](./docs/index.md)
+- [Start Here](./docs/start-here/index.md)
+- [Foundations](./docs/foundations/index.md)
+- [Architecture](./docs/architecture/index.md)
+- [Implementation](./docs/implementation/index.md)
+- [Governance and Assurance](./docs/governance-assurance/index.md)
+- [Guided Learning](./docs/learning/index.md)
+- [Operations](./docs/operations/index.md)
+- [Reference](./docs/reference/index.md)
 
-## Reading paths
-- [docs/reading-paths/README.md](./docs/reading-paths/README.md)
-- [docs/reading-paths/reading-path-policy-leadership.md](./docs/reading-paths/reading-path-policy-leadership.md)
-- [docs/reading-paths/reading-path-architect.md](./docs/reading-paths/reading-path-architect.md)
-- [docs/reading-paths/reading-path-implementer.md](./docs/reading-paths/reading-path-implementer.md)
-- [docs/reading-paths/reading-path-security-assurance.md](./docs/reading-paths/reading-path-security-assurance.md)
+## Guided journeys
 
-## Governance synchronization control plane
-- [governance/upstream-sources.yaml](./governance/upstream-sources.yaml)
-- [.github/workflows/upstream-sync.yml](./.github/workflows/upstream-sync.yml)
-- [scripts/check_upstream_sync.py](./scripts/check_upstream_sync.py)
-- [.github/ISSUE_TEMPLATE/upstream_drift.md](./.github/ISSUE_TEMPLATE/upstream_drift.md)
-- [state/upstream-state.json](./state/upstream-state.json)
-- [reports/upstream-drift-report.json](./reports/upstream-drift-report.json)
+- [Executive Briefing](./docs/learning/executive-briefing.md)
+- [Architect Journey](./docs/learning/architect-path.md)
+- [Implementer Journey](./docs/learning/implementer-path.md)
+- [Assurance Journey](./docs/learning/assurance-path.md)
+- [Maintainer Journey](./docs/learning/maintainer-path.md)
 
-## Suggested reading order
+## Core companion documents
 
-### Policy or program leadership
-1. `docs/legal-baseline-2026.md`
-2. `docs/reading-paths/reading-path-policy-leadership.md`
-3. `docs/upstream-alignment-guide.md`
+- [Legal Baseline 2026](./docs/legal-baseline-2026.md)
+- [ARF Explained](./docs/arf-explained.md)
+- [Architecture Layer Map](./docs/architecture-layer-map.md)
+- [Conformance Interpretation Companion](./docs/conformance-interpretation-companion.md)
+- [Governance to Control Mapping](./docs/governance-to-control-mapping.md)
+- [Implementation Checklist](./docs/implementation-checklist.md)
+- [Quick Reference](./docs/quick-reference.md)
+- [FAQ by Role](./docs/faq-by-role.md)
 
-### Architecture
-1. `docs/arf-explained.md`
-2. `docs/architecture-layer-map.md`
-3. `docs/reading-paths/reading-path-architect.md`
+## Synchronization control plane
 
-### Implementation
-1. `docs/conformance-interpretation-companion.md`
-2. `docs/implementation-checklist.md`
-3. `docs/reading-paths/reading-path-implementer.md`
+- [Upstream source manifest](./governance/upstream-sources.yaml)
+- [Upstream monitor workflow](./.github/workflows/upstream-sync.yml)
+- [Upstream monitor script](./scripts/check_upstream_sync.py)
+- [Upstream state](./state/upstream-state.json)
+- [Drift report](./reports/upstream-drift-report.json)
 
-### Security and assurance
-1. `docs/governance-to-control-mapping.md`
-2. `docs/reading-paths/reading-path-security-assurance.md`
-3. `docs/upstream-monitoring.md`
+## Documentation delivery
+
+- [Just the Docs configuration](./_config.yml)
+- [GitHub Pages workflow](./.github/workflows/pages.yml)
+- [Previous/Next navigation include](./_includes/page-nav.html)
+- [Documentation validator](./scripts/validate_docs.py)
+
+## Project governance
+
+- [README](./README.md)
+- [Contributing](./CONTRIBUTING.md)
+- [Changelog](./CHANGELOG.md)
+- [References](./REFERENCES.md)
+- [License](./LICENSE)

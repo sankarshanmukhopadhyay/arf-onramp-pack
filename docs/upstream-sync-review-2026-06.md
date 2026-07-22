@@ -1,3 +1,22 @@
+---
+layout: default
+title: "Upstream Synchronization Review: June 2026"
+parent: "Operations"
+grand_parent: "Documentation Home"
+nav_order: 4
+permalink: /docs/upstream-sync-review-2026-06/
+authority_level: companion-guidance
+last_reviewed: 2026-07-22
+upstream_dependencies:
+  - arf
+  - sts
+previous_page:
+  title: "Drift Assessment"
+  url: "/docs/operations/drift-assessment/"
+next_page:
+  title: "Reference"
+  url: "/docs/reference/"
+---
 # Upstream Synchronization Review: June 2026
 
 ## Purpose
@@ -26,3 +45,5 @@ This note records the release review used to prepare ARF On-Ramp Pack 1.2.0.
 ## Operational Note
 
 The packaged archive does not contain a live GitHub Actions state snapshot. Maintainers should run the `Upstream Sync Monitor` workflow manually after publishing the repository so GitHub-hosted execution can initialize `state/upstream-state.json` and `reports/upstream-drift-report.json` from live upstream APIs.
+
+{% include page-nav.html %}

@@ -1,3 +1,22 @@
+---
+layout: default
+title: "ARF Explained"
+parent: "Foundations"
+grand_parent: "Documentation Home"
+nav_order: 1
+permalink: /docs/arf-explained/
+authority_level: companion-guidance
+last_reviewed: 2026-07-22
+upstream_dependencies:
+  - arf
+  - sts
+previous_page:
+  title: "Foundations"
+  url: "/docs/foundations/"
+next_page:
+  title: "Legal Baseline 2026"
+  url: "/docs/legal-baseline-2026/"
+---
 # ARF Explained
 
 This document is a simplified orientation to the upstream Architecture and Reference Framework (ARF).
@@ -76,3 +95,5 @@ This repository adds:
 - [legal-baseline-2026.md](./legal-baseline-2026.md)
 - [conformance-interpretation-companion.md](./conformance-interpretation-companion.md)
 - [implementation-checklist.md](./implementation-checklist.md)
+
+{% include page-nav.html %}

@@ -1,3 +1,22 @@
+---
+layout: default
+title: "FAQ by Role"
+parent: "Foundations"
+grand_parent: "Documentation Home"
+nav_order: 4
+permalink: /docs/faq-by-role/
+authority_level: companion-guidance
+last_reviewed: 2026-07-22
+upstream_dependencies:
+  - arf
+  - sts
+previous_page:
+  title: "Quick Reference"
+  url: "/docs/quick-reference/"
+next_page:
+  title: "Architecture"
+  url: "/docs/architecture/"
+---
 # FAQ by Role
 
 ## Shared questions
@@ -45,3 +64,5 @@ Controls, runbooks, tests, source mappings, and drift-response actions.
 
 ### What new assurance control exists in this repo?
 The upstream synchronization control plane. It produces issues and evidence artifacts when upstream drift is detected.
+
+{% include page-nav.html %}

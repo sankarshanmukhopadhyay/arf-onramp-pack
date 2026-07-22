@@ -1,3 +1,22 @@
+---
+layout: default
+title: "Upstream Monitoring"
+parent: "Operations"
+grand_parent: "Documentation Home"
+nav_order: 2
+permalink: /docs/upstream-monitoring/
+authority_level: companion-guidance
+last_reviewed: 2026-07-22
+upstream_dependencies:
+  - arf
+  - sts
+previous_page:
+  title: "Upstream Alignment Guide"
+  url: "/docs/upstream-alignment-guide/"
+next_page:
+  title: "Drift Assessment"
+  url: "/docs/operations/drift-assessment/"
+---
 # Upstream Monitoring
 
 This document describes the governance synchronization control plane added in release 1.1.0 and expanded in release 1.2.0.
@@ -75,3 +94,5 @@ Without a control plane, repository alignment depends on memory. With a control 
 - explicit remediation tracking
 
 That is a stronger operational posture for a companion pack that sits downstream of multiple moving authority sources.
+
+{% include page-nav.html %}

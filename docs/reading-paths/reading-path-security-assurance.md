@@ -1,3 +1,16 @@
+---
+layout: default
+title: "Reading Path: Security, Privacy, and Assurance"
+permalink: /docs/reading-paths/security-assurance/
+nav_exclude: true
+authority_level: companion-guidance
+last_reviewed: 2026-07-22
+upstream_dependencies:
+  - arf
+  - sts
+---
+> **Guided replacement:** Continue with [Assurance Journey]({{ site.baseurl }}/docs/learning/assurance-path/) for learning objectives, completion artifacts, and Previous/Next navigation.
+
 # Reading Path: Security, Privacy, and Assurance
 
 ## Goal

@@ -1,0 +1,47 @@
+title: ARF On-Ramp Pack
+description: Guided implementation, governance, and assurance companion for the EU Digital Identity Wallet ARF.
+url: "https://sankarshanmukhopadhyay.github.io"
+baseurl: "/arf-onramp-pack"
+remote_theme: just-the-docs/just-the-docs
+color_scheme: light
+search_enabled: true
+heading_anchors: true
+aux_links:
+  "View on GitHub":
+    - "https://github.com/sankarshanmukhopadhyay/arf-onramp-pack"
+aux_links_new_tab: true
+nav_external_links:
+  - title: Authoritative EUDI documentation
+    url: https://eudi.dev/
+    hide_icon: false
+mermaid:
+  version: "10.9.1"
+callouts:
+  authority:
+    title: Authority boundary
+    color: red
+  evidence:
+    title: Evidence requirement
+    color: blue
+  decision:
+    title: Decision checkpoint
+    color: yellow
+  upstream:
+    title: Upstream dependency
+    color: purple
+footer_content: "ARF On-Ramp Pack. Companion guidance only; verify decisions against applicable law and authoritative upstream sources."
+exclude:
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - scripts
+  - tests
+  - governance
+  - state
+  - reports
+  - RELEASE_NOTES_1.1.0.md
+  - RELEASE_NOTES_1.2.0.md
+  - RELEASE_NOTES_1.3.0.md
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag

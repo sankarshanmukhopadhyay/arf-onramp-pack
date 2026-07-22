@@ -1,3 +1,22 @@
+---
+layout: default
+title: "Quick Reference"
+parent: "Foundations"
+grand_parent: "Documentation Home"
+nav_order: 3
+permalink: /docs/quick-reference/
+authority_level: companion-guidance
+last_reviewed: 2026-07-22
+upstream_dependencies:
+  - arf
+  - sts
+previous_page:
+  title: "Legal Baseline 2026"
+  url: "/docs/legal-baseline-2026/"
+next_page:
+  title: "FAQ by Role"
+  url: "/docs/faq-by-role/"
+---
 # Quick Reference
 
 ## Authority stack
@@ -54,3 +73,5 @@ Read `docs/upstream-monitoring.md`
 
 ### Need a role-specific start?
 Read `docs/reading-paths/README.md`
+
+{% include page-nav.html %}

@@ -1,3 +1,22 @@
+---
+layout: default
+title: "Conformance Interpretation Companion"
+parent: "Implementation"
+grand_parent: "Documentation Home"
+nav_order: 1
+permalink: /docs/conformance-interpretation-companion/
+authority_level: companion-guidance
+last_reviewed: 2026-07-22
+upstream_dependencies:
+  - arf
+  - sts
+previous_page:
+  title: "Implementation"
+  url: "/docs/implementation/"
+next_page:
+  title: "Implementation Checklist"
+  url: "/docs/implementation-checklist/"
+---
 # Conformance Interpretation Companion
 
 This document helps teams translate the legal and upstream technical landscape into implementation and evidence-planning work.
@@ -75,3 +94,5 @@ Pair this guide with:
 - [implementation-checklist.md](./implementation-checklist.md)
 - [governance-to-control-mapping.md](./governance-to-control-mapping.md)
 - [upstream-alignment-guide.md](./upstream-alignment-guide.md)
+
+{% include page-nav.html %}

@@ -2,6 +2,23 @@
 
 All notable changes to this project are documented here.
 
+## [Unreleased]
+
+### Added
+- Just the Docs documentation site with GitHub Pages deployment workflow
+- hierarchical Start Here, Foundations, Architecture, Implementation, Governance and Assurance, Guided Learning, Operations, and Reference hubs
+- role-based guided journeys with explicit objectives, decision checkpoints, completion artifacts, and validation criteria
+- rendered Previous and Next controls for sequenced documentation pages
+- Mermaid diagrams for authority, evidence traceability, learning, and upstream drift flows
+- documentation architecture validator for front matter, navigation inclusion, links, and merge markers
+
+### Changed
+- preserved existing documentation files and inbound links while adding stable rendered permalinks and navigation metadata
+- retained legacy reading-path pages as compatibility entry points to the new guided journeys
+
+### Assurance note
+The documentation architecture makes authority, decision ownership, enforcement, evidence, and reassessment triggers explicit. It does not change the legal or upstream interpretation baseline.
+
 ## [1.3.0] - 2026-07-06
 
 ### Added
