@@ -1,1 +1,94 @@
-{}
+{
+  "arf": {
+    "owner": "eu-digital-identity-wallet",
+    "repo": "eudi-doc-architecture-and-reference-framework",
+    "html_url": "https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework",
+    "default_branch": "main",
+    "default_branch_sha": "c217e71c2d558b818d98fa9526c5c761958d53fb",
+    "latest_release": "v3.0.0",
+    "path_shas": {
+      "README.md": "4bb4df4959803cc3bcc4f55b719b521d79068d07",
+      "CHANGELOG.md": "8775f0c7607039e5e0aca885b220fd181c4de8dd",
+      "docs/architecture-and-reference-framework-main.md": null,
+      "docs/annexes/": "dir:30333e74467b37c36c44ceac9e4c7385c75e92b0|33842b8a89664bf73f48b3e04c5e65e946b6016b|76d9acf7ad7281c05a3a81f8608f1f3de06909a4|96ff8f4a79b96de939d8f17d679744fe7b77767d|a28505ad2c4ab14aea9b184e081dc10fcdcbffb9|ad434fd7bba8c0dc1384117121d042c50e90e9c4|b822f47814a0dfb99bd21b67ef0875d2d5ce2580",
+      "docs/discussion-topics/README.md": "856b48a298d09190c2330f0b67fbe7d27e659064",
+      "docs/technical-specifications/README.md": "6a619222224480c612722ab33b92dba6a4ad78ed"
+    }
+  },
+  "rulebooks_catalog": {
+    "owner": "eu-digital-identity-wallet",
+    "repo": "eudi-doc-attestation-rulebooks-catalog",
+    "html_url": "https://github.com/eu-digital-identity-wallet/eudi-doc-attestation-rulebooks-catalog",
+    "default_branch": "main",
+    "default_branch_sha": "36f8adcf914ac06cac18d685add04e0a8a06d685",
+    "latest_release": null,
+    "path_shas": {
+      "README.md": "bd984abc5b3e78fea00f14937a42ac98b56b16a8",
+      "rulebooks/": "dir:5f82ec3f2d4fb1e1590ffdd8a8b5b0d66cc18aaa|87eb8a45cbf5b56777aec55814c970ac48db1e5d"
+    }
+  },
+  "sts": {
+    "owner": "eu-digital-identity-wallet",
+    "repo": "eudi-doc-standards-and-technical-specifications",
+    "html_url": "https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications",
+    "default_branch": "main",
+    "default_branch_sha": "b53874f1477a76f00a91c87cfd3f18abea572e65",
+    "latest_release": null,
+    "path_shas": {
+      "README.md": "f03c1dcc4d10a6a562d8fdd478579fc0b43e7c58",
+      "docs/guide.md": "46535018b69f4eae1175a38175280eaa5d624717",
+      "docs/technical-specifications/": "dir:079cf42df2e6782efca613845c6f80adfebc345b|1bccff7ebca3d64b6a33f00b601b37bd5dbeca9d|2d5537f1337d35f71f188739dc00d9b8b0c323b9|30636a3ef3658dec04406d1c78b4073b76054f6f|353d3a65ef8a9f2968f1212d68e441986f5a2b90|377ec23acda1a592a9f00d9b4b4afe3beb1485dd|3eb8a8c92d4925c5dd6e3dc752421523077cc7d9|418e3021f87450913f0b4c778b9ccb9fbb41e4d9|47f737245abf0bd8f44f9fbbf3a38902d1a6d2e2|493b565b173af9010587663747336c3a52678d6d|8a6890f37fa01c73e0e73426feb9edb533a91300|923fae464a10cfe469dd1ee9fc4adabe85e91a98|b1e5e5fc353dd89257898e4aaa8a3a4ccc378fad|c1edf42210a0fc364d57178e717ef39420f8c9c7|cd5e68ffe22a0237a891f6b20fe26c27b44ca042|cf0fb098e94476d5dcf79c482efdd9822c1a708e|fc2a1c85f3da51df9e8288352933c4133a792ade"
+    }
+  },
+  "eidas_regulation_2024_1183": {
+    "type": "eurlex_document",
+    "canonical_url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32024R1183",
+    "fetched_url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32024R1183",
+    "status_code": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "etag": null,
+    "last_modified": null,
+    "content_hash": "b30d54dbc46c4b1c7fe101ba9450b77769ddbca8918b8dd5fdffa8f24c3b4d9b",
+    "content_fragments": {
+      "European Digital Identity Framework": true,
+      "European Digital Identity Wallet": true,
+      "relying parties": true,
+      "person identification data": true,
+      "electronic attestation of attributes": true
+    },
+    "celex": "32024R1183"
+  },
+  "onboarding_ir_2026_798": {
+    "type": "eurlex_document",
+    "canonical_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202600798",
+    "fetched_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202600798",
+    "status_code": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "etag": null,
+    "last_modified": null,
+    "content_hash": "9dfef96045704de73d595948b705f122b8777afc1e544bfbab5aed3d19e3e87d",
+    "content_fragments": {
+      "onboarding of users": true,
+      "verification of the identity": true,
+      "European Digital Identity Wallets": true,
+      "trust and security": true,
+      "harmonised approach": true
+    },
+    "celex": "32026R0798"
+  },
+  "eudi_wallet_portal": {
+    "type": "web_page",
+    "canonical_url": "https://eudi.dev/",
+    "fetched_url": "https://eudi.dev/",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "etag": "W/\"6a5fb0f2-176\"",
+    "last_modified": "Tue, 21 Jul 2026 17:48:34 GMT",
+    "content_hash": "27bec435551353ec11b7534d0c990580953d079538470d077bdc451f46176df2",
+    "content_fragments": {
+      "European Digital Identity Wallet": false,
+      "Architecture and reference framework": false,
+      "Technical specifications": false
+    }
+  }
+}

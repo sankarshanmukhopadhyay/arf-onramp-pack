@@ -1,7 +1,13 @@
 {
-  "generated_at": "2026-06-28T00:00:00Z",
-  "monitored_sources": [],
+  "generated_at": "2026-07-22T03:55:17Z",
+  "monitored_sources": [
+    "arf",
+    "eidas_regulation_2024_1183",
+    "eudi_wallet_portal",
+    "onboarding_ir_2026_798",
+    "rulebooks_catalog",
+    "sts"
+  ],
   "errors": [],
-  "drift": [],
-  "note": "Run the Upstream Sync Monitor workflow after publishing to initialize live upstream state."
+  "drift": []
 }
