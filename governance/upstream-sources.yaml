@@ -229,7 +229,8 @@ sources:
         - "European Digital Identity Wallet"
         - "Architecture and reference framework"
         - "Technical specifications"
-      page_hash: true
+      page_hash: false
+      metadata_changes: false
     labels:
       - upstream-sync
       - portal

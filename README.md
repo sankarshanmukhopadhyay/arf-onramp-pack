@@ -14,7 +14,7 @@ It is **not** the authoritative source of law, specification, or conformance. Th
 
 **On-ramp version:** 1.3.0  
 **Previous release:** 1.2.0  
-**ARF alignment target:** 2.9.0  
+**ARF alignment target:** 3.0.0  
 **Re-audit basis:** June 2026 upstream synchronization refresh plus trust and reuse hardening
 
 ## Sync status
@@ -226,7 +226,7 @@ Every synchronization change should include:
 
 - `1.0.2` — prior release baseline
 - `1.1.0` — adds control plane and April 2026 legal re-baseline
-- `1.2.0` — synchronizes to ARF 2.9.0, adds rulebooks monitoring, and hardens non-GitHub upstream checks
+- `1.2.0` — synchronizes to ARF 3.0.0, adds rulebooks monitoring, and hardens non-GitHub upstream checks
 - `1.3.0` — adds licensing, fixture-based sync monitor tests, CI, contributor trust signals, and repository hygiene
 
 See [CHANGELOG.md](./CHANGELOG.md) for release details.

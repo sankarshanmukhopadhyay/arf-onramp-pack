@@ -68,7 +68,7 @@ Canonical portal:
 
 What it provides:
 - public rendered documentation for the current EUDI Wallet materials
-- versioned ARF documentation, including the current 2.9.0 public baseline
+- versioned ARF documentation, including the current 3.0.0 public baseline
 - discovery links for technical specifications, reference implementation, and functional conformance material
 
 ## 4. Official European Commission pages

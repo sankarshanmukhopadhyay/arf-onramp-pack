@@ -28,7 +28,7 @@ No. It is a companion implementation and governance pack. Authority remains with
 The biggest correction was restoring the right authority boundary around **Regulation (EU) 2024/1183** and updating the repository to the current ARF and STS upstream structure.
 
 ### What changed in 1.2.0?
-The repository now targets ARF 2.9.0, treats `https://eudi.dev/` as the public documentation portal, monitors the attestation rulebooks catalog, and supports non-GitHub upstream drift checks for EUR-Lex and public web sources.
+The repository now targets ARF 3.0.0, treats `https://eudi.dev/` as the public documentation portal, monitors the attestation rulebooks catalog, and supports non-GitHub upstream drift checks for EUR-Lex and public web sources.
 
 ### Why add automation?
 Because upstream drift is a governance problem. If a companion repository cannot detect drift and turn it into tracked remediation work, it will silently degrade.

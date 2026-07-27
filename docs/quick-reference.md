@@ -37,7 +37,7 @@ next_page:
 
 ## Current synchronization target
 
-- **ARF:** 2.9.0
+- **ARF:** 3.0.0
 - **Release posture:** 1.2.0 upstream synchronization refresh
 
 ## Wallet-core implementing regulations tracked here

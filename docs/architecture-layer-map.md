@@ -71,7 +71,7 @@ Each layer depends on the layers beneath it. Changes at lower layers propagate u
 | **Regulatory Framework** | EU Digital Identity Regulation + CIRs | Regulation (EU) No 910/2014 as amended by Regulation (EU) 2024/1183; wallet-core CIRs |
 | **Roles & Responsibilities** | Wallet Provider, PID Provider, Attestation Provider, RP, Supervisory Bodies | ARF Section 2.2 |
 | **Certification Model** | Wallet Solution certification criteria and processes | ARF Chapter 7, CIR 2024/2981 |
-| **Conformance and assurance profiles** | Requirement and evidence sets for deployment contexts | ARF 2.9.0, implementing acts, and certification guidance |
+| **Conformance and assurance profiles** | Requirement and evidence sets for deployment contexts | ARF 3.0.0, implementing acts, and certification guidance |
 | **Ecosystem Notification** | Registry of wallets, providers, and trusted entities | ARF Section 4.1, CIR 2024/2980 |
 | **Supervisory Oversight** | Compliance monitoring and incident response | ARF Chapter 7 |
 | **Interoperability Governance** | Cross-border coordination and compatibility | ARF Section 2.3 |
@@ -103,7 +103,7 @@ Each layer depends on the layers beneath it. Changes at lower layers propagate u
 | **Credential Binding** | Cryptographic link between credential and wallet/holder | ARF Section 4.2.1 |
 | **Attestation Models** | PID, EAA, QEAA, custom attestations | ARF Section 4.2 |
 | **Key Binding** | Public key infrastructure for wallet signatures | ARF Section 3.4 |
-| **Trust Anchors** | Root certificates, trust lists, certificate transparency | ARF 2.9.0, STS, and trust-list specifications |
+| **Trust Anchors** | Root certificates, trust lists, certificate transparency | ARF 3.0.0, STS, and trust-list specifications |
 | **Cross-Border Trust** | Recognition of foreign issuers and credentials | ARF Section 2.3, CIR 2025/846 |
 | **Holder Identity** | Binding between physical person and wallet | ARF Section 4.3 |
 
@@ -434,6 +434,6 @@ Evidence: [Test case / documentation]
 ---
 
 **Last Updated:** April 14, 2026  
-**ARF Alignment:** 2.9.0 (June 2026 public documentation baseline)
+**ARF Alignment:** 3.0.0 (June 2026 public documentation baseline)
 
 {% include page-nav.html %}

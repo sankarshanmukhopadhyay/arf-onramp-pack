@@ -4,6 +4,19 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+### Fixed
+- rejected non-200 and substantively empty upstream responses before they can overwrite last-known-good evidence or raise false legal drift
+- suppressed volatile portal ETag and `Last-Modified` changes while preserving semantic fragment monitoring
+- restored valid EUR-Lex baselines after HTTP 202 interstitial responses were incorrectly admitted as legal snapshots
+
+### Changed
+- accepted the monitored ARF `v3.0.0` maintenance state and updated current-facing alignment references
+- documented the language-limited corrigendum associated with CIR (EU) 2026/798
+- added a human-review disposition register for upstream-sync issues #1 through #4
+
+### Assurance note
+The resolution preserves authority ordering: legal-source failures are contained rather than interpreted, upstream repository movement is accepted only after impact review, and issue closure is backed by a machine-readable state plus a published disposition record.
+
 ### Added
 - Just the Docs documentation site with GitHub Pages deployment workflow
 - hierarchical Start Here, Foundations, Architecture, Implementation, Governance and Assurance, Guided Learning, Operations, and Reference hubs

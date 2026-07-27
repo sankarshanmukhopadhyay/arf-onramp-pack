@@ -14,8 +14,8 @@ previous_page:
   title: "Drift Assessment"
   url: "/docs/operations/drift-assessment/"
 next_page:
-  title: "Reference"
-  url: "/docs/reference/"
+  title: "July 2026 Resolution"
+  url: "/docs/upstream-sync-resolution-2026-07/"
 ---
 # Upstream Synchronization Review: June 2026
 

@@ -117,3 +117,67 @@ def test_manifest_sources_have_required_fields():
         if source["type"] == "github_repo":
             assert source["owner"]
             assert source["repo"]
+
+class FakeResponse:
+    def __init__(self, status_code=200, text="x" * 250, url="https://example.test/"):
+        self.status_code = status_code
+        self.text = text
+        self.url = url
+        self.headers = {"Content-Type": "text/html"}
+
+    def raise_for_status(self):
+        # requests does not treat 202 as an error; admission policy must.
+        if self.status_code >= 400:
+            raise RuntimeError(f"HTTP {self.status_code}")
+
+
+class FakeSession:
+    def __init__(self, response):
+        self.response = response
+
+    def get(self, *args, **kwargs):
+        return self.response
+
+
+def test_fetch_text_rejects_accepted_but_non_authoritative_202(monkeypatch):
+    monkeypatch.setattr(monitor, "SESSION", FakeSession(FakeResponse(status_code=202, text="")))
+
+    try:
+        monitor.fetch_text("https://eur-lex.example/document")
+    except RuntimeError as exc:
+        assert "non-authoritative HTTP status 202" in str(exc)
+    else:
+        raise AssertionError("HTTP 202 must not be admitted as an authority snapshot")
+
+
+def test_fetch_text_rejects_substantively_empty_200(monkeypatch):
+    monkeypatch.setattr(monitor, "SESSION", FakeSession(FakeResponse(status_code=200, text="  ")))
+
+    try:
+        monitor.fetch_text("https://eur-lex.example/document")
+    except RuntimeError as exc:
+        assert "insufficient response content" in str(exc)
+    else:
+        raise AssertionError("empty interstitial content must not be admitted")
+
+
+def test_portal_metadata_only_change_is_ignored_when_disabled():
+    source = {
+        "id": "eudi_wallet_portal",
+        "type": "web_page",
+        "watch": {"metadata_changes": False},
+    }
+    previous = {
+        "etag": "old",
+        "last_modified": "Mon",
+        "fetched_url": "https://eudi.dev/",
+        "content_fragments": {"European Digital Identity Wallet": True},
+    }
+    current = {
+        "etag": "new",
+        "last_modified": "Tue",
+        "fetched_url": "https://eudi.dev/",
+        "content_fragments": {"European Digital Identity Wallet": True},
+    }
+
+    assert compare_states(source, previous, current) is None

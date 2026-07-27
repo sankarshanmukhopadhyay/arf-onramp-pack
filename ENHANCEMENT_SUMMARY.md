@@ -4,7 +4,7 @@
 
 Prepare the ARF On-Ramp Pack for a 1.2.0 release by doing three things in one pass:
 
-- synchronize the companion pack with the current public ARF 2.9.0 baseline
+- synchronize the companion pack with the current public ARF 3.0.0 baseline
 - harden the executable governance synchronization control plane so it covers every source type declared in the manifest
 - update onboarding and rulebook guidance so implementers can map authority, implementation controls, and evidence more precisely
 

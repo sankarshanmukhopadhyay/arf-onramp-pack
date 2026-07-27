@@ -44,17 +44,17 @@
     "type": "eurlex_document",
     "canonical_url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32024R1183",
     "fetched_url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32024R1183",
-    "status_code": 202,
+    "status_code": 200,
     "content_type": "text/html; charset=UTF-8",
     "etag": null,
     "last_modified": null,
-    "content_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "content_hash": "b30d54dbc46c4b1c7fe101ba9450b77769ddbca8918b8dd5fdffa8f24c3b4d9b",
     "content_fragments": {
-      "European Digital Identity Framework": false,
-      "European Digital Identity Wallet": false,
-      "relying parties": false,
-      "person identification data": false,
-      "electronic attestation of attributes": false
+      "European Digital Identity Framework": true,
+      "European Digital Identity Wallet": true,
+      "relying parties": true,
+      "person identification data": true,
+      "electronic attestation of attributes": true
     },
     "celex": "32024R1183"
   },
@@ -62,17 +62,17 @@
     "type": "eurlex_document",
     "canonical_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202600798",
     "fetched_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202600798",
-    "status_code": 202,
+    "status_code": 200,
     "content_type": "text/html; charset=UTF-8",
     "etag": null,
     "last_modified": null,
-    "content_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "content_hash": "9dfef96045704de73d595948b705f122b8777afc1e544bfbab5aed3d19e3e87d",
     "content_fragments": {
-      "onboarding of users": false,
-      "verification of the identity": false,
-      "European Digital Identity Wallets": false,
-      "trust and security": false,
-      "harmonised approach": false
+      "onboarding of users": true,
+      "verification of the identity": true,
+      "European Digital Identity Wallets": true,
+      "trust and security": true,
+      "harmonised approach": true
     },
     "celex": "32026R0798"
   },

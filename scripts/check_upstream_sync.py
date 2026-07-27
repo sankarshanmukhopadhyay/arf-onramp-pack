@@ -145,6 +145,17 @@ def fetch_text(url: str) -> tuple[str, dict[str, Any]]:
     response = SESSION.get(url, timeout=30)
     response.raise_for_status()
     text = response.text
+
+    # A successful HTTP exchange is not necessarily a usable authority snapshot.
+    # EUR-Lex can return 202 challenge/interstitial responses with empty bodies;
+    # accepting those would overwrite the last-known-good state and create false
+    # critical drift events. Only stable 200 responses with substantive content
+    # are eligible to become evidence.
+    if response.status_code != 200:
+        raise RuntimeError(f"non-authoritative HTTP status {response.status_code} for {url}")
+    if len(normalize_text(text)) < 200:
+        raise RuntimeError(f"insufficient response content for authoritative snapshot: {url}")
+
     headers = {
         "etag": response.headers.get("ETag"),
         "last_modified": response.headers.get("Last-Modified"),
@@ -250,10 +261,12 @@ def compare_states(source: dict[str, Any], previous: dict[str, Any], current: di
         reasons.append("content_fragments_changed:" + ", ".join(changed_fragments))
         severity = pick_severity(severity, rules.get("fragment_change", severity))
 
-    for field in ("etag", "last_modified", "fetched_url"):
-        if field in current and previous.get(field) != current.get(field):
-            reasons.append(f"{field}_changed")
-            severity = pick_severity(severity, rules.get("metadata_change", severity))
+    watch = source.get("watch", {})
+    if watch.get("metadata_changes", source.get("type") == "eurlex_document"):
+        for field in ("etag", "last_modified", "fetched_url"):
+            if field in current and previous.get(field) != current.get(field):
+                reasons.append(f"{field}_changed")
+                severity = pick_severity(severity, rules.get("metadata_change", severity))
 
     if not reasons:
         return None
