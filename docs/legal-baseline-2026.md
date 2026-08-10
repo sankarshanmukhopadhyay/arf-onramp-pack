@@ -6,7 +6,7 @@ grand_parent: "Documentation Home"
 nav_order: 2
 permalink: /docs/legal-baseline-2026/
 authority_level: companion-guidance
-last_reviewed: 2026-07-27
+last_reviewed: 2026-08-10
 upstream_dependencies:
   - arf
   - sts
@@ -51,6 +51,8 @@ For this repository, the wallet-core implementing-act layer currently includes:
 - CIR (EU) 2026/798, covering reference standards and specifications for remote onboarding of wallet users by assurance level substantial electronic identification means in conjunction with additional remote onboarding procedures where the combination meets assurance level high
 
 **Corrigendum status:** EUR-Lex records corrigendum `32026R0798R(01)`, published 22 April 2026, as applying only to the German and Estonian authentic-language versions. The English-language implementation guidance in this pack therefore requires no semantic change, but the relationship is retained as legal-review evidence.
+
+**Amending-act status:** the maintained ARF 3.0.0 branch records Commission Implementing Regulations **(EU) 2026/1730**, **2026/1731**, and **2026/1735** as amendments to previously adopted implementing regulations. Until consolidated texts are available, this pack retains references to the original acts and flags the amendments as an implementation-time verification requirement.
 
 ### 3. Upstream technical-documentation layer
 The current canonical upstream repositories are:

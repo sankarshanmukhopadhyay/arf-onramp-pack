@@ -6,7 +6,7 @@ nav_order: 7
 permalink: /docs/operations/
 has_children: true
 authority_level: companion-guidance
-last_reviewed: 2026-07-22
+last_reviewed: 2026-08-10
 upstream_dependencies:
   - arf
   - sts
@@ -27,5 +27,7 @@ Operate upstream monitoring, classify drift, and preserve synchronization eviden
 - [Upstream Monitoring](../upstream-monitoring/)
 - [Drift Assessment](./drift-assessment/)
 - [June 2026 Review](../upstream-sync-review-2026-06/)
+- [July 2026 Resolution](../upstream-sync-resolution-2026-07/)
+- [August 2026 Resolution](../upstream-sync-resolution-2026-08/)
 
 {% include page-nav.html %}

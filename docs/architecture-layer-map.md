@@ -172,7 +172,7 @@ Each layer depends on the layers beneath it. Changes at lower layers propagate u
 | **Remote Same-Device** | Web/app redirect flow (RP → wallet) | ARF Section 5.2.2 |
 | **Remote Cross-Device** | QR code + polling (RP ↔ wallet) | ARF Section 5.2.3 |
 | **Device Registration** | Device → Wallet Provider registration | ARF Section 5.4.1 |
-| **RP Registration** | RP → Supervisory Body registration | ARF Section 5.4.2, CIR 2025/848 |
+| **RP Registration** | RP → Supervisory Body registration; implementation details and registration-information schemas evolve in STS TS5/TS6 | ARF Section 5.4.2, CIR 2025/848, STS TS5/TS6 |
 | **Notification Protocol** | Wallet notifications to Supervisory Bodies | ARF Section 4.1, CIR 2024/2980 |
 
 ### Key Decisions at This Layer

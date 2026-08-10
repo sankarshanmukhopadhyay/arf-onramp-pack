@@ -35,6 +35,10 @@ These are the principal wallet-core implementing acts currently reflected in the
 - **CIR (EU) 2025/849** — list of certified wallets
 - **CIR (EU) 2026/798** — reference standards and specifications for remote onboarding of wallet users by assurance level substantial electronic identification means in conjunction with additional remote onboarding procedures where the combination meets assurance level high
 
+### 2026 amendments to wallet-core implementing regulations
+
+The ARF 3.0.0 maintenance branch now records three published amending implementing regulations: **CIR (EU) 2026/1730**, **CIR (EU) 2026/1731**, and **CIR (EU) 2026/1735**. The authoritative ARF continues to cite the original acts pending consolidated versions; this pack follows the same citation discipline. Implementers should therefore check whether an obligation they rely on is affected by one of these amendments before treating the original text as operationally complete.
+
 ## 3. Official upstream repositories
 
 ### ARF repository
@@ -113,4 +117,4 @@ When updating repository content:
 
 ## Repository synchronization note
 
-The reference register above was refreshed as part of the 1.2.0 release preparation and June 2026 upstream synchronization review.
+The reference register above was refreshed through the August 2026 upstream synchronization review. The August review also records the ARF 3.0.0 maintenance amendments and the current STS TS5/TS6 relying-party-registration work without treating local companion guidance as a substitute for those upstream sources.

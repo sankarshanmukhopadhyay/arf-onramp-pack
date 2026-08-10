@@ -248,7 +248,11 @@ def compare_states(source: dict[str, Any], previous: dict[str, Any], current: di
         reasons.append("watched_paths_changed:" + ", ".join(changed_paths))
         severity = pick_severity(severity, rules.get("path_change", severity))
 
-    if "content_hash" in current and previous.get("content_hash") != current.get("content_hash"):
+    # A disabled page hash is configuration, not evidence of content drift.
+    # This also prevents a one-time false positive when a source moves from
+    # page-hash monitoring to semantic-fragment-only monitoring.
+    watch = source.get("watch", {})
+    if watch.get("page_hash", True) and "content_hash" in current and previous.get("content_hash") != current.get("content_hash"):
         reasons.append("content_hash_changed")
         severity = pick_severity(severity, rules.get("content_change", rules.get("page_change", severity)))
 
@@ -261,7 +265,6 @@ def compare_states(source: dict[str, Any], previous: dict[str, Any], current: di
         reasons.append("content_fragments_changed:" + ", ".join(changed_fragments))
         severity = pick_severity(severity, rules.get("fragment_change", severity))
 
-    watch = source.get("watch", {})
     if watch.get("metadata_changes", source.get("type") == "eurlex_document"):
         for field in ("etag", "last_modified", "fetched_url"):
             if field in current and previous.get(field) != current.get(field):

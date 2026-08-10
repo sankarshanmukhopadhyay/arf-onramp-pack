@@ -6,7 +6,7 @@ grand_parent: "Documentation Home"
 nav_order: 2
 permalink: /docs/implementation-checklist/
 authority_level: companion-guidance
-last_reviewed: 2026-07-22
+last_reviewed: 2026-08-10
 upstream_dependencies:
   - arf
   - sts
@@ -25,6 +25,7 @@ Use this checklist to convert the current legal and upstream baseline into work 
 
 - [ ] confirm the project uses the consolidated eIDAS text as amended by Regulation (EU) 2024/1183
 - [ ] confirm the project has identified which wallet-core implementing regulations apply to its scope
+- [ ] check whether CIR (EU) 2026/1730, 2026/1731, or 2026/1735 amend an implementing regulation relied on by the project; use consolidated text when available
 - [ ] confirm the project uses the current canonical ARF, STS, and attestation rulebooks repositories
 - [ ] confirm whether the public documentation view being used is the current EUDI portal at `https://eudi.dev/`
 
@@ -34,6 +35,7 @@ Use this checklist to convert the current legal and upstream baseline into work 
 - [ ] route standards and technical-specification references to the STS repository
 - [ ] route PID, mDL, and credential-specific rulebook references to the attestation rulebooks catalog
 - [ ] identify any local documents still pointing to deprecated upstream paths
+- [ ] for Wallet Provider implementations, verify support for attestations listed in the Commission-managed catalogue of attestation schemes and retain evidence of issuance, display, and presentation interoperability decisions
 
 ## 3. Onboarding and enrollment
 
@@ -44,7 +46,9 @@ Use this checklist to convert the current legal and upstream baseline into work 
 ## 4. Relying-party ecosystem operations
 
 - [ ] assess relying-party registration impacts under CIR (EU) 2025/848
+- [ ] track the current STS TS5 and TS6 specifications when implementing relying-party registration information, Wallet-Relying Party Service data, schemas, and registration lifecycle behaviour
 - [ ] map local registrar, trust-list, or metadata-lifecycle responsibilities
+- [ ] retain conformance evidence showing which TS5/TS6 revision, schema artifacts, and registration assumptions were implemented and tested
 
 ## 5. Incident and breach response
 

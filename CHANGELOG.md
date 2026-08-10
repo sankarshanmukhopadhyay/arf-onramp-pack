@@ -5,17 +5,21 @@ All notable changes to this project are documented here.
 ## [Unreleased]
 
 ### Fixed
+- prevented `page_hash: false` transitions from being misclassified as portal content drift and added regression coverage for the legacy-hash-to-disabled-hash case
 - rejected non-200 and substantively empty upstream responses before they can overwrite last-known-good evidence or raise false legal drift
 - suppressed volatile portal ETag and `Last-Modified` changes while preserving semantic fragment monitoring
 - restored valid EUR-Lex baselines after HTTP 202 interstitial responses were incorrectly admitted as legal snapshots
 
 ### Changed
+- reviewed and accepted ARF 3.0.0 maintenance drift detected in issue #5, including the 2026/1730, 2026/1731, and 2026/1735 amendment notices and the `ISSU_33b` catalogue-of-attestation-schemes requirement
+- reviewed and accepted STS TS5/TS6 maintenance drift detected in issue #6, adding explicit relying-party-registration revision and evidence checkpoints without duplicating upstream schemas
+- recorded issue #7 as a monitoring-policy state transition rather than substantive portal drift
+- added the August 2026 upstream-sync disposition record as closure evidence for issues #5 through #7
 - accepted the monitored ARF `v3.0.0` maintenance state and updated current-facing alignment references
 - documented the language-limited corrigendum associated with CIR (EU) 2026/798
 - added a human-review disposition register for upstream-sync issues #1 through #4
-
-### Assurance note
-The resolution preserves authority ordering: legal-source failures are contained rather than interpreted, upstream repository movement is accepted only after impact review, and issue closure is backed by a machine-readable state plus a published disposition record.
+- preserved existing documentation files and inbound links while adding stable rendered permalinks and navigation metadata
+- retained legacy reading-path pages as compatibility entry points to the new guided journeys
 
 ### Added
 - Just the Docs documentation site with GitHub Pages deployment workflow
@@ -25,12 +29,8 @@ The resolution preserves authority ordering: legal-source failures are contained
 - Mermaid diagrams for authority, evidence traceability, learning, and upstream drift flows
 - documentation architecture validator for front matter, navigation inclusion, links, and merge markers
 
-### Changed
-- preserved existing documentation files and inbound links while adding stable rendered permalinks and navigation metadata
-- retained legacy reading-path pages as compatibility entry points to the new guided journeys
-
 ### Assurance note
-The documentation architecture makes authority, decision ownership, enforcement, evidence, and reassessment triggers explicit. It does not change the legal or upstream interpretation baseline.
+The August disposition preserves the repository authority boundary: ARF and STS remain upstream sources of truth, local text records implementation impact and evidence requirements, legal-source failures are contained rather than interpreted, and monitor configuration changes are not promoted into false authority-change signals.
 
 ## [1.3.0] - 2026-07-06
 

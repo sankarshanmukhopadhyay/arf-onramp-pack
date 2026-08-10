@@ -181,3 +181,28 @@ def test_portal_metadata_only_change_is_ignored_when_disabled():
     }
 
     assert compare_states(source, previous, current) is None
+
+
+def test_portal_hash_disable_transition_is_not_content_drift():
+    source = {
+        "id": "eudi_wallet_portal",
+        "type": "web_page",
+        "watch": {"page_hash": False, "metadata_changes": False},
+        "severity_rules": {"page_change": "low", "fragment_change": "medium"},
+    }
+    previous = {
+        "content_hash": "legacy-hash",
+        "content_fragments": {"European Digital Identity Wallet": False},
+        "etag": "old",
+        "last_modified": "Mon",
+        "fetched_url": "https://eudi.dev/",
+    }
+    current = {
+        "content_hash": None,
+        "content_fragments": {"European Digital Identity Wallet": False},
+        "etag": "new",
+        "last_modified": "Tue",
+        "fetched_url": "https://eudi.dev/",
+    }
+
+    assert compare_states(source, previous, current) is None
