@@ -6,7 +6,7 @@ grand_parent: "Documentation Home"
 nav_order: 1
 permalink: /docs/conformance-interpretation-companion/
 authority_level: companion-guidance
-last_reviewed: 2026-07-22
+last_reviewed: 2026-08-10
 upstream_dependencies:
   - arf
   - sts
@@ -57,6 +57,14 @@ Anchor this work in the implementing act on reactions to security breaches and c
 
 ### 5. Onboarding and user enrollment
 Anchor this work in CIR (EU) 2026/798. Treat it as a remote-onboarding control surface for cases where assurance level substantial electronic identification means are combined with additional remote onboarding procedures to meet assurance level high.
+
+### 6. Functional conformance testing (FCAF) — tracked gap, not yet covered here
+ARF 3.0.0 (21 July 2026) introduced the **Functional Conformance Assessment Framework (FCAF)**, a shared, reusable test-case framework that precedes wallet certification.
+
+{: .authority }
+> This companion pack does **not yet** provide interpretation guidance for FCAF test-suite structure, terminology, or evidence mapping. Do not treat the workstream table above as covering FCAF obligations. Go directly to the upstream FCAF documentation on the EUDI portal until this section is written.
+
+`fcaf` is now a monitored source in `governance/upstream-sources.yaml` so that test-suite stabilization triggers a documentation task rather than being missed silently. This gap is closed when a dedicated companion section maps FCAF test levels to this pack's evidence-planning model below.
 
 ## Evidence planning model
 

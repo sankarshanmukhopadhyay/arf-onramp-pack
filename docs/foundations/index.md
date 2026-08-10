@@ -27,5 +27,6 @@ How ARF, law, upstream repositories, and companion interpretation fit together.
 - [Legal Baseline 2026](../legal-baseline-2026/)
 - [Quick Reference](../quick-reference/)
 - [FAQ by Role](../faq-by-role/)
+- [Glossary](../reference/glossary/)
 
 {% include page-nav.html %}

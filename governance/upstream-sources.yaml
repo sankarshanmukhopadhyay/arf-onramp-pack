@@ -217,6 +217,49 @@ sources:
         - confirm whether companion checklists need revision
         - assess whether a patch or minor release is warranted
 
+  - id: fcaf
+    type: web_page
+    canonical_url: https://eudi.dev/
+    title: Functional Conformance Assessment Framework (FCAF)
+    description: >
+      Conformance-testing framework introduced alongside ARF v3.0.0 (21 July
+      2026), defining shared reusable test cases used to assess wallet
+      solutions ahead of certification. Tracked separately from the general
+      portal watch below because it is a new, actively developing artifact
+      not yet covered by companion conformance-interpretation guidance.
+    watch:
+      content_fragments:
+        - "Functional Conformance Assessment Framework"
+        - "conformance test"
+        - "test suite"
+      page_hash: false
+      metadata_changes: false
+    labels:
+      - upstream-sync
+      - conformance
+      - fcaf
+    severity_rules:
+      page_change: medium
+      fragment_change: high
+    local_impact:
+      docs:
+        - docs/conformance-interpretation-companion.md
+        - docs/governance-to-control-mapping.md
+        - docs/architecture-layer-map.md
+        - REFERENCES.md
+      rationale: >
+        FCAF defines the shared test cases that precede certification.
+        Companion conformance guidance is currently a known gap (see
+        docs/conformance-interpretation-companion.md) and must be written
+        once FCAF test-suite structure and versioning stabilize.
+    review_requirements:
+      require_human_review: true
+      issue_template_section: legal_impact
+      checklist:
+        - confirm whether a dedicated FCAF repository or tagged test-suite release now exists
+        - assess whether test-suite structure is stable enough for companion interpretation guidance
+        - update docs/conformance-interpretation-companion.md once assessed
+
   - id: eudi_wallet_portal
     type: web_page
     canonical_url: https://eudi.dev/

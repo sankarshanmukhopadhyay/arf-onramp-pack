@@ -4,7 +4,13 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+### Added
+- `docs/reference/glossary.md`, a companion glossary of EUDI Wallet/ARF terminology (actors, credentials, trust infrastructure, assurance/conformance terms, and referenced legal instruments), closing the gap between the Foundations section's promised "shared terminology" outcome and the absence of any terminology page
+- `fcaf` as a monitored source in `governance/upstream-sources.yaml`, tracking the Functional Conformance Assessment Framework introduced with ARF v3.0.0 (21 July 2026)
+- an explicit "tracked gap" subsection in `docs/conformance-interpretation-companion.md` flagging that FCAF companion interpretation guidance does not yet exist, so implementers are pointed to the upstream source instead of an accidental documentation gap
+
 ### Fixed
+- corrected `docs/quick-reference.md` release-posture drift: it stated `1.2.0` while the repository had already shipped `1.3.0`
 - prevented `page_hash: false` transitions from being misclassified as portal content drift and added regression coverage for the legacy-hash-to-disabled-hash case
 - rejected non-200 and substantively empty upstream responses before they can overwrite last-known-good evidence or raise false legal drift
 - suppressed volatile portal ETag and `Last-Modified` changes while preserving semantic fragment monitoring

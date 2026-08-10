@@ -6,7 +6,7 @@ grand_parent: "Documentation Home"
 nav_order: 3
 permalink: /docs/quick-reference/
 authority_level: companion-guidance
-last_reviewed: 2026-07-22
+last_reviewed: 2026-08-10
 upstream_dependencies:
   - arf
   - sts
@@ -38,7 +38,7 @@ next_page:
 ## Current synchronization target
 
 - **ARF:** 3.0.0
-- **Release posture:** 1.2.0 upstream synchronization refresh
+- **Release posture:** 1.3.0 licensing, sync-monitor test, and repository hygiene refresh
 
 ## Wallet-core implementing regulations tracked here
 
