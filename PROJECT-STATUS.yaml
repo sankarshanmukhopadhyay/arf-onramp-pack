@@ -1,0 +1,31 @@
+schema_version: "1.0"
+project:
+  name: arf-onramp-pack
+  maturity: implementation-draft
+  lifecycle: active
+  operational_status: active-development
+  specification_status: working-draft
+  intended_use:
+    - implementation-onramp
+    - arf-adoption-guidance
+    - implementation-readiness-assessment
+  not_asserted:
+    - upstream-arf-authority
+    - production-certification
+    - independent-third-party-assurance
+authority:
+  normative_scope:
+    - arf-onramp-guidance
+  does_not_own:
+    - upstream-arf-specification
+    - jurisdictional-wallet-governance
+    - deployment-specific-compliance-decisions
+  delegation: "Repository maintainers govern the onramp guidance and project-local implementation artifacts; upstream ARF and jurisdictional authorities retain normative authority."
+  revocation_or_supersession: "Guidance is superseded through explicit versioned repository changes and historical states remain auditable."
+evidence:
+  validation_commands:
+    - git diff --check
+  evidence_outputs: []
+  known_limitations:
+    - upstream ARF conformance is not certified by this repository
+    - deployment-specific compliance remains outside repository authority
