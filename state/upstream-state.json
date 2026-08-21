@@ -32,12 +32,12 @@
     "repo": "eudi-doc-standards-and-technical-specifications",
     "html_url": "https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications",
     "default_branch": "main",
-    "default_branch_sha": "bdc9780224bf4fb07ae7ddc11a2a6962e4536442",
+    "default_branch_sha": "456310dfa10e99f356976a97996b0068d9d6f5a9",
     "latest_release": null,
     "path_shas": {
       "README.md": "f03c1dcc4d10a6a562d8fdd478579fc0b43e7c58",
       "docs/guide.md": "46535018b69f4eae1175a38175280eaa5d624717",
-      "docs/technical-specifications/": "dir:079cf42df2e6782efca613845c6f80adfebc345b|1bccff7ebca3d64b6a33f00b601b37bd5dbeca9d|2d5537f1337d35f71f188739dc00d9b8b0c323b9|353d3a65ef8a9f2968f1212d68e441986f5a2b90|3eb8a8c92d4925c5dd6e3dc752421523077cc7d9|418e3021f87450913f0b4c778b9ccb9fbb41e4d9|47f737245abf0bd8f44f9fbbf3a38902d1a6d2e2|493b565b173af9010587663747336c3a52678d6d|53a1fb06d382e89f4eb7bcee524b2356f050f3b9|5c5ccd18e900bc199bcab161b5e935725f262fc3|923fae464a10cfe469dd1ee9fc4adabe85e91a98|ab003027561a75867f412b4a7f125fcb767733f6|ba952d9c24820ad7e79a640ed166328afb92152d|cd5e68ffe22a0237a891f6b20fe26c27b44ca042|cf0fb098e94476d5dcf79c482efdd9822c1a708e|d574a5abe6742aeb481d03096b0d3018703e4b57|fc2a1c85f3da51df9e8288352933c4133a792ade"
+      "docs/technical-specifications/": "dir:079cf42df2e6782efca613845c6f80adfebc345b|1bccff7ebca3d64b6a33f00b601b37bd5dbeca9d|1fb0323dad0c5ade6911d301357d0263e1235973|2d5537f1337d35f71f188739dc00d9b8b0c323b9|353d3a65ef8a9f2968f1212d68e441986f5a2b90|3eb8a8c92d4925c5dd6e3dc752421523077cc7d9|47f737245abf0bd8f44f9fbbf3a38902d1a6d2e2|493b565b173af9010587663747336c3a52678d6d|53a1fb06d382e89f4eb7bcee524b2356f050f3b9|923fae464a10cfe469dd1ee9fc4adabe85e91a98|ab003027561a75867f412b4a7f125fcb767733f6|ba952d9c24820ad7e79a640ed166328afb92152d|cd5e68ffe22a0237a891f6b20fe26c27b44ca042|cf0fb098e94476d5dcf79c482efdd9822c1a708e|d574a5abe6742aeb481d03096b0d3018703e4b57|f6cd767ae81996ee8f879946672d274df04f14f2|fc2a1c85f3da51df9e8288352933c4133a792ade"
     }
   },
   "eidas_regulation_2024_1183": {
@@ -48,7 +48,7 @@
     "content_type": "text/html; charset=UTF-8",
     "etag": null,
     "last_modified": null,
-    "content_hash": "1dda06aa4020455b65aa2a25ea1def2117f7e0621abc7596f78bcf0f3cd457fd",
+    "content_hash": "7d479396b75c2e5ce8d0e7eb178b58d6a76e1e79425f99f0d53b809c69921021",
     "content_fragments": {
       "European Digital Identity Framework": true,
       "European Digital Identity Wallet": true,
@@ -66,7 +66,7 @@
     "content_type": "text/html; charset=UTF-8",
     "etag": null,
     "last_modified": null,
-    "content_hash": "91b516dcbbea47b8cfdb38717637e4488e7d483cec402059cedfe41d8746f62c",
+    "content_hash": "6d1ecf185e89aa97ddc06b0dce5ccfa61a3ec4a8401269581f05240c353d4f18",
     "content_fragments": {
       "onboarding of users": true,
       "verification of the identity": true,
