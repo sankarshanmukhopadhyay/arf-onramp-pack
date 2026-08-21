@@ -126,6 +126,7 @@ sources:
     watch:
       document_metadata: true
       eli_metadata: true
+      page_hash: false
       content_fragments:
         - "European Digital Identity Framework"
         - "European Digital Identity Wallet"
@@ -182,6 +183,7 @@ sources:
     watch:
       document_metadata: true
       eli_metadata: true
+      page_hash: false
       content_fragments:
         - "onboarding of users"
         - "verification of the identity"

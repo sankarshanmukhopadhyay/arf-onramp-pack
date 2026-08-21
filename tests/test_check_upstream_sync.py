@@ -118,6 +118,35 @@ def test_manifest_sources_have_required_fields():
             assert source["owner"]
             assert source["repo"]
 
+
+def test_eurlex_sources_do_not_use_volatile_full_page_hashes():
+    manifest = monitor.load_yaml(monitor.MANIFEST_PATH)
+    legal_sources = [source for source in manifest["sources"] if source["type"] == "eurlex_document"]
+    assert legal_sources
+    for source in legal_sources:
+        assert source["watch"].get("page_hash") is False
+        assert source["watch"].get("content_fragments")
+
+
+def test_eurlex_hash_change_is_ignored_when_page_hash_is_disabled():
+    source = {
+        "id": "eidas_regulation_2024_1183",
+        "type": "eurlex_document",
+        "watch": {"page_hash": False, "metadata_changes": False},
+        "severity_rules": {"content_change": "critical", "fragment_change": "critical"},
+    }
+    previous = {
+        "content_hash": "old-rendered-html",
+        "content_fragments": {"European Digital Identity Wallet": True},
+    }
+    current = {
+        "content_hash": None,
+        "content_fragments": {"European Digital Identity Wallet": True},
+    }
+
+    assert compare_states(source, previous, current) is None
+
+
 class FakeResponse:
     def __init__(self, status_code=200, text="x" * 250, url="https://example.test/"):
         self.status_code = status_code
@@ -126,7 +155,6 @@ class FakeResponse:
         self.headers = {"Content-Type": "text/html"}
 
     def raise_for_status(self):
-        # requests does not treat 202 as an error; admission policy must.
         if self.status_code >= 400:
             raise RuntimeError(f"HTTP {self.status_code}")
 
