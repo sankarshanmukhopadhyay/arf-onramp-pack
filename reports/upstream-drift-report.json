@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T04:02:56Z",
+  "generated_at": "2026-09-01T08:41:03Z",
   "monitored_sources": [
     "arf",
     "eidas_regulation_2024_1183",
@@ -9,25 +9,23 @@
     "rulebooks_catalog",
     "sts"
   ],
-  "errors": [],
+  "errors": [
+    {
+      "source_id": "eidas_regulation_2024_1183",
+      "source_type": "eurlex_document",
+      "error": "non-authoritative HTTP status 202 for https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32024R1183"
+    },
+    {
+      "source_id": "onboarding_ir_2026_798",
+      "source_type": "eurlex_document",
+      "error": "non-authoritative HTTP status 202 for https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202600798"
+    }
+  ],
   "drift": [
     {
       "source_id": "sts",
       "severity": "high",
       "previous": {
-        "owner": "eu-digital-identity-wallet",
-        "repo": "eudi-doc-standards-and-technical-specifications",
-        "html_url": "https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications",
-        "default_branch": "main",
-        "default_branch_sha": "bdc9780224bf4fb07ae7ddc11a2a6962e4536442",
-        "latest_release": null,
-        "path_shas": {
-          "README.md": "f03c1dcc4d10a6a562d8fdd478579fc0b43e7c58",
-          "docs/guide.md": "46535018b69f4eae1175a38175280eaa5d624717",
-          "docs/technical-specifications/": "dir:079cf42df2e6782efca613845c6f80adfebc345b|1bccff7ebca3d64b6a33f00b601b37bd5dbeca9d|2d5537f1337d35f71f188739dc00d9b8b0c323b9|353d3a65ef8a9f2968f1212d68e441986f5a2b90|3eb8a8c92d4925c5dd6e3dc752421523077cc7d9|418e3021f87450913f0b4c778b9ccb9fbb41e4d9|47f737245abf0bd8f44f9fbbf3a38902d1a6d2e2|493b565b173af9010587663747336c3a52678d6d|53a1fb06d382e89f4eb7bcee524b2356f050f3b9|5c5ccd18e900bc199bcab161b5e935725f262fc3|923fae464a10cfe469dd1ee9fc4adabe85e91a98|ab003027561a75867f412b4a7f125fcb767733f6|ba952d9c24820ad7e79a640ed166328afb92152d|cd5e68ffe22a0237a891f6b20fe26c27b44ca042|cf0fb098e94476d5dcf79c482efdd9822c1a708e|d574a5abe6742aeb481d03096b0d3018703e4b57|fc2a1c85f3da51df9e8288352933c4133a792ade"
-        }
-      },
-      "current": {
         "owner": "eu-digital-identity-wallet",
         "repo": "eudi-doc-standards-and-technical-specifications",
         "html_url": "https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications",
@@ -40,6 +38,19 @@
           "docs/technical-specifications/": "dir:079cf42df2e6782efca613845c6f80adfebc345b|1bccff7ebca3d64b6a33f00b601b37bd5dbeca9d|1fb0323dad0c5ade6911d301357d0263e1235973|2d5537f1337d35f71f188739dc00d9b8b0c323b9|353d3a65ef8a9f2968f1212d68e441986f5a2b90|3eb8a8c92d4925c5dd6e3dc752421523077cc7d9|47f737245abf0bd8f44f9fbbf3a38902d1a6d2e2|493b565b173af9010587663747336c3a52678d6d|53a1fb06d382e89f4eb7bcee524b2356f050f3b9|923fae464a10cfe469dd1ee9fc4adabe85e91a98|ab003027561a75867f412b4a7f125fcb767733f6|ba952d9c24820ad7e79a640ed166328afb92152d|cd5e68ffe22a0237a891f6b20fe26c27b44ca042|cf0fb098e94476d5dcf79c482efdd9822c1a708e|d574a5abe6742aeb481d03096b0d3018703e4b57|f6cd767ae81996ee8f879946672d274df04f14f2|fc2a1c85f3da51df9e8288352933c4133a792ade"
         }
       },
+      "current": {
+        "owner": "eu-digital-identity-wallet",
+        "repo": "eudi-doc-standards-and-technical-specifications",
+        "html_url": "https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications",
+        "default_branch": "main",
+        "default_branch_sha": "ee91a294c833af5188726fd8c302c641212192aa",
+        "latest_release": null,
+        "path_shas": {
+          "README.md": "f03c1dcc4d10a6a562d8fdd478579fc0b43e7c58",
+          "docs/guide.md": "46535018b69f4eae1175a38175280eaa5d624717",
+          "docs/technical-specifications/": "dir:00bff65d68d23e292e4a9a69aa487a6c2751368d|079cf42df2e6782efca613845c6f80adfebc345b|1bccff7ebca3d64b6a33f00b601b37bd5dbeca9d|1fb0323dad0c5ade6911d301357d0263e1235973|2d5537f1337d35f71f188739dc00d9b8b0c323b9|353d3a65ef8a9f2968f1212d68e441986f5a2b90|3eb8a8c92d4925c5dd6e3dc752421523077cc7d9|47f737245abf0bd8f44f9fbbf3a38902d1a6d2e2|493b565b173af9010587663747336c3a52678d6d|761a8c629c2689bdfda9e1fdd58f295fcf022997|923fae464a10cfe469dd1ee9fc4adabe85e91a98|ba952d9c24820ad7e79a640ed166328afb92152d|c40126948b855cda3dd0cc51a39c341b13f3a12f|cd5e68ffe22a0237a891f6b20fe26c27b44ca042|cf0fb098e94476d5dcf79c482efdd9822c1a708e|d9baf004006fa094b6d517b55efdc282a5efac87|fc2a1c85f3da51df9e8288352933c4133a792ade"
+        }
+      },
       "reasons": [
         "default_branch_sha_changed",
         "watched_paths_changed:docs/technical-specifications/"
@@ -47,102 +58,6 @@
       "labels": [
         "upstream-sync",
         "sts"
-      ]
-    },
-    {
-      "source_id": "eidas_regulation_2024_1183",
-      "severity": "critical",
-      "previous": {
-        "type": "eurlex_document",
-        "canonical_url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32024R1183",
-        "fetched_url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32024R1183",
-        "status_code": 200,
-        "content_type": "text/html; charset=UTF-8",
-        "etag": null,
-        "last_modified": null,
-        "content_hash": "1dda06aa4020455b65aa2a25ea1def2117f7e0621abc7596f78bcf0f3cd457fd",
-        "content_fragments": {
-          "European Digital Identity Framework": true,
-          "European Digital Identity Wallet": true,
-          "relying parties": true,
-          "person identification data": true,
-          "electronic attestation of attributes": true
-        },
-        "celex": "32024R1183"
-      },
-      "current": {
-        "type": "eurlex_document",
-        "canonical_url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32024R1183",
-        "fetched_url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32024R1183",
-        "status_code": 200,
-        "content_type": "text/html; charset=UTF-8",
-        "etag": null,
-        "last_modified": null,
-        "content_hash": "7d479396b75c2e5ce8d0e7eb178b58d6a76e1e79425f99f0d53b809c69921021",
-        "content_fragments": {
-          "European Digital Identity Framework": true,
-          "European Digital Identity Wallet": true,
-          "relying parties": true,
-          "person identification data": true,
-          "electronic attestation of attributes": true
-        },
-        "celex": "32024R1183"
-      },
-      "reasons": [
-        "content_hash_changed"
-      ],
-      "labels": [
-        "upstream-sync",
-        "legal",
-        "eidas2"
-      ]
-    },
-    {
-      "source_id": "onboarding_ir_2026_798",
-      "severity": "critical",
-      "previous": {
-        "type": "eurlex_document",
-        "canonical_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202600798",
-        "fetched_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202600798",
-        "status_code": 200,
-        "content_type": "text/html; charset=UTF-8",
-        "etag": null,
-        "last_modified": null,
-        "content_hash": "91b516dcbbea47b8cfdb38717637e4488e7d483cec402059cedfe41d8746f62c",
-        "content_fragments": {
-          "onboarding of users": true,
-          "verification of the identity": true,
-          "European Digital Identity Wallets": true,
-          "trust and security": true,
-          "harmonised approach": true
-        },
-        "celex": "32026R0798"
-      },
-      "current": {
-        "type": "eurlex_document",
-        "canonical_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202600798",
-        "fetched_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202600798",
-        "status_code": 200,
-        "content_type": "text/html; charset=UTF-8",
-        "etag": null,
-        "last_modified": null,
-        "content_hash": "6d1ecf185e89aa97ddc06b0dce5ccfa61a3ec4a8401269581f05240c353d4f18",
-        "content_fragments": {
-          "onboarding of users": true,
-          "verification of the identity": true,
-          "European Digital Identity Wallets": true,
-          "trust and security": true,
-          "harmonised approach": true
-        },
-        "celex": "32026R0798"
-      },
-      "reasons": [
-        "content_hash_changed"
-      ],
-      "labels": [
-        "upstream-sync",
-        "legal",
-        "onboarding"
       ]
     }
   ]
