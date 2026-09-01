@@ -17,6 +17,7 @@ All notable changes to this project are documented here.
 - restored valid EUR-Lex baselines after HTTP 202 interstitial responses were incorrectly admitted as legal snapshots
 
 ### Changed
+- reviewed and accepted September 2026 STS drift from `456310d` to `ee91a29` detected in issue #13; recorded TS5/TS6 relying-party-registration schema and naming corrections as implementation-facing synchronization evidence without duplicating upstream schemas
 - reviewed and accepted ARF 3.0.0 maintenance drift detected in issue #5, including the 2026/1730, 2026/1731, and 2026/1735 amendment notices and the `ISSU_33b` catalogue-of-attestation-schemes requirement
 - reviewed and accepted STS TS5/TS6 maintenance drift detected in issue #6, adding explicit relying-party-registration revision and evidence checkpoints without duplicating upstream schemas
 - recorded issue #7 as a monitoring-policy state transition rather than substantive portal drift
