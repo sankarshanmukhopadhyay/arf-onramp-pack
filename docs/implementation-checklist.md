@@ -6,7 +6,7 @@ grand_parent: "Documentation Home"
 nav_order: 2
 permalink: /docs/implementation-checklist/
 authority_level: companion-guidance
-last_reviewed: 2026-08-10
+last_reviewed: 2026-09-01
 upstream_dependencies:
   - arf
   - sts
@@ -47,8 +47,9 @@ Use this checklist to convert the current legal and upstream baseline into work 
 
 - [ ] assess relying-party registration impacts under CIR (EU) 2025/848
 - [ ] track the current STS TS5 and TS6 specifications when implementing relying-party registration information, Wallet-Relying Party Service data, schemas, and registration lifecycle behaviour
+- [ ] for implementations based on the August 2026 TS5/TS6 maintenance line, re-check service-scoped trade-name/contact mappings, plural collection names such as `entitlements`, `subEntitlements`, and `usesIntermediaries`, and intermediary-service identifiers against the current upstream schemas before deployment
 - [ ] map local registrar, trust-list, or metadata-lifecycle responsibilities
-- [ ] retain conformance evidence showing which TS5/TS6 revision, schema artifacts, and registration assumptions were implemented and tested
+- [ ] retain conformance evidence showing which TS5/TS6 revision, exact upstream commit or tag, schema artifacts, and registration assumptions were implemented and tested
 
 ## 5. Incident and breach response
 
