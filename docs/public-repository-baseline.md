@@ -1,3 +1,11 @@
+---
+layout: default
+title: "Public repository baseline"
+nav_exclude: true
+authority_level: repository-assurance-evidence
+last_reviewed: 2026-09-05
+---
+
 # Public repository baseline
 
 This record captures controls reviewed under issue #12. It is repository assurance evidence, not external certification.
