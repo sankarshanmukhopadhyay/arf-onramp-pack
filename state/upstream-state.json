@@ -82,8 +82,8 @@
     "fetched_url": "https://eudi.dev/",
     "status_code": 200,
     "content_type": "text/html; charset=utf-8",
-    "etag": "W/\"6a62673a-176\"",
-    "last_modified": "Thu, 23 Jul 2026 19:10:50 GMT",
+    "etag": "W/\"6a62673b-176\"",
+    "last_modified": "Thu, 23 Jul 2026 19:10:51 GMT",
     "content_hash": null,
     "content_fragments": {
       "Functional Conformance Assessment Framework": false,
@@ -97,8 +97,8 @@
     "fetched_url": "https://eudi.dev/",
     "status_code": 200,
     "content_type": "text/html; charset=utf-8",
-    "etag": "W/\"6a62673a-176\"",
-    "last_modified": "Thu, 23 Jul 2026 19:10:50 GMT",
+    "etag": "W/\"6a62673b-176\"",
+    "last_modified": "Thu, 23 Jul 2026 19:10:51 GMT",
     "content_hash": null,
     "content_fragments": {
       "European Digital Identity Wallet": false,
