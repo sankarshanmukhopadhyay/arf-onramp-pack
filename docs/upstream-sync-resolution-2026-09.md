@@ -13,8 +13,8 @@ previous_page:
   title: "August 2026 Resolution"
   url: "/docs/upstream-sync-resolution-2026-08/"
 next_page:
-  title: "Reference"
-  url: "/docs/reference/"
+  title: "October 2026 Resolution"
+  url: "/docs/upstream-sync-resolution-2026-10/"
 ---
 # Upstream Sync Resolution — September 2026
 
