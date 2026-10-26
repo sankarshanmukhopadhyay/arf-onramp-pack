@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Cite the version or commit used; this citation does not imply independent certification or upstream endorsement."
+title: "ARF On-Ramp Pack"
+type: software
+authors:
+  - family-names: Mukhopadhyay
+    given-names: Sankarshan
+repository-code: https://github.com/sankarshanmukhopadhyay/arf-onramp-pack
+version: "1.3.0"
+abstract: "Independent implementation companion for the EU Digital Identity Wallet ARF; it is not an authoritative specification or legal source."
